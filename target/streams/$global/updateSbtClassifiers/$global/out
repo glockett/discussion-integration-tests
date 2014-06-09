@@ -613,9 +613,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.0!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.0!apply-macro.jar
-[debug] :: resolution report :: resolve 1639ms :: artifacts dl 42ms
+[debug] :: resolution report :: resolve 1343ms :: artifacts dl 34ms
 [debug] 	report for automatedtests#automatedtests$sbt_2.10;1.0 default produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests$sbt_2.10-default.xml
-[debug] 	resolve done (1639ms resolve - 42ms download)
+[debug] 	resolve done (1343ms resolve - 34ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: automatedtests#automatedtests$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -956,6 +956,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.0!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.0!precompiled-2_9_3.jar(src)
 [debug] 	[NOT REQUIRED] org.jetbrains#sbt-structure;2.3.2!sbt-structure.jar(src)
-[debug] :: resolution report :: resolve 410ms :: artifacts dl 38ms
+[debug] :: resolution report :: resolve 478ms :: artifacts dl 118ms
 [debug] 	report for automatedtests#automatedtests$sources_2.10;1.0 default produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests$sources_2.10-default.xml
-[debug] 	resolve done (410ms resolve - 38ms download)
+[debug] 	resolve done (478ms resolve - 118ms download)

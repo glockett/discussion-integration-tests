@@ -4,7 +4,7 @@
 		module="automatedtests$sources_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20140609151011"
+		publication="20140609152731"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
