@@ -20,7 +20,7 @@ case class SignInSteps (implicit val driver: WebDriver, override val logger: Tes
   }
 
   def whenIViewTheSigninLocator() = {
-    logger.log("I take a look at the SigninLocator")
+    logger.log("I take a look at the SigninLocator ")
     this
   }
 

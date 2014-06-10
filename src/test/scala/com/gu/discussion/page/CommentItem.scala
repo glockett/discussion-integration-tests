@@ -3,12 +3,16 @@ package com.gu.discussion.page
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
 
-case class CommentItem (implicit override val driver: WebDriver) extends BasePage(driver) {
+case class CommentItem(implicit override val driver: WebDriver) extends BasePage(driver) {
 
   private def showCommentButton = driver.findElement(By.className(".d-comment-box__show-parent"))
+
   private def replyToCommentButton = driver.findElement(By.className(".d-comment__action--reply-text"))
+
   private def commentTextArea = driver.findElement(By.className(".d-comment-box__body"))
-  private def postReplyButton =driver.findElement(By.className(".d-comment-box__submit"))
+
+  private def postReplyButton = driver.findElement(By.className(".d-comment-box__submit"))
+
   private def cancelReplyButton = driver.findElement(By.className(".d-comment-box__cancel"))
 
 
@@ -57,7 +61,7 @@ case class CommentItem (implicit override val driver: WebDriver) extends BasePag
 
   def showAllReplies(): CommentItem = {
     showMoreRepliesButton.click()
-   this
+    this
   }
 
   def reportComment(): CommentItem = {
@@ -70,17 +74,13 @@ case class CommentItem (implicit override val driver: WebDriver) extends BasePag
     this
   }
 
-  def verifyAvatarPresent(boolean): CommentItem = {
-
-    this
+  def isAvatarPresent(): Boolean = {
+    commentAuthorAvatar.isDisplayed()
   }
 
-  def verifyDateStampPresent(boolean): ArticlePage = {
-
-    new ArticlePage()
+  def isDateStampPresent(): Boolean = {
+    commentTimeStamp.isDisplayed()
   }
-
-
 
 
 }

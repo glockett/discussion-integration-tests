@@ -2,12 +2,13 @@ package com.gu.discussion.page
 
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
+import org.openqa.selenium.support.ui.Select
 
 case class CommentModule (implicit override val driver: WebDriver) extends BasePage(driver) {
 
-  private def showMoreFeaturedComments = driver.findElement(By.className(".show-more__container--featured"))
+  private def showMoreFeaturedCommentsButton = driver.findElement(By.className(".show-more__container--featured"))
 
-  private def showAllComments = driver.findElement(By.className(".d-discussion__show-all-comments"))
+  private def showAllCommentsButton = driver.findElement(By.className(".d-discussion__show-all-comments"))
 
   private def commentTextArea = driver.findElement(By.className(".d-comment-box__body"))
 
@@ -15,7 +16,7 @@ case class CommentModule (implicit override val driver: WebDriver) extends BaseP
 
   private def cancelButton = driver.findElement(By.className(".d-comment-box__cancel"))
 
-  private def sortOrderControl = driver.findElement(By.className("d-discussion__order-control"))
+  private def sortOrderControl = new Select(driver.findElement(By.className("d-discussion__order-control")))
 
   private def previousControl = driver.findElement(By.className(".pagination__item--prev"))
 
@@ -25,7 +26,7 @@ case class CommentModule (implicit override val driver: WebDriver) extends BaseP
 
 
   def showMoreFeaturedComments(): CommentModule = {
-    showMoreFeaturedComments.click()
+    showMoreFeaturedCommentsButton.click()
     this
   }
 
@@ -41,12 +42,12 @@ case class CommentModule (implicit override val driver: WebDriver) extends BaseP
   }
 
   def showAllComments(): CommentModule = {
-    showAllComments.click()
+    showAllCommentsButton.click()
     this
   }
 
-  def sortCommentsByOrder(sortOrder): CommentModule = {
-    sortOrderControl(sortOrder).click()
+  def sortCommentsByOrder(sortOrder: String): CommentModule = {
+    sortOrderControl.selectByValue(sortOrder)
     this
   }
 

@@ -19,5 +19,17 @@ class SignInTests extends BaseTest {
         _.thenISeeMyUserName()
       }
     }
+
+    scenarioWeb("Login using valid Guardian credentials") {
+      given {
+        SignInSteps().thenISeeMyUserName()
+      }.when {
+        _.whenIViewTheSigninLocator()
+      }.then {
+        _.thenISeeMyUserName()
+      }
+    }
+
+
   }
 }
