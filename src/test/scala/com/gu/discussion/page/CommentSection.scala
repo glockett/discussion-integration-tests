@@ -3,7 +3,7 @@ package com.gu.discussion.page
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
 
-class CommentSection (driver: WebDriver) extends BasePage(driver) {
+class CommentSection(driver: WebDriver) extends BasePage(driver) {
 
   private def showMoreFeaturedComments = driver.findElement(By.className(".show-more__container--featured"))
 
@@ -15,15 +15,11 @@ class CommentSection (driver: WebDriver) extends BasePage(driver) {
 
   private def cancelButton = driver.findElement(By.className(".d-comment-box__cancel"))
 
-  private def discussionOrderControl = driver.findElement(By.className("d-discussion__order-control"))
+  private def sortOrderControl = driver.findElement(By.className("d-discussion__order-control"))
 
   private def previousControl = driver.findElement(By.className(".pagination__item--prev"))
 
   private def nextControl = driver.findElement(By.className(".pagination__item--next"))
-
-  private def commentAuthorAvatar = driver.findElement(By.className(".d-comment__avatar"))
-
-  private def commentTimeStamp = driver.findElement(By.className(".d-comment__timestamp"))
 
   private def replyToCommentButton = driver.findElement(By.className(".d-comment__action--reply-text"))
 
@@ -34,6 +30,10 @@ class CommentSection (driver: WebDriver) extends BasePage(driver) {
   private def showMoreRepliesButton = driver.findElement(By.className(".d-show-more-replies"))
 
   private def recommendCommentButton = driver.findElement(By.className(".d-comment__recommend-button"))
+
+  private def commentAuthorAvatar = driver.findElement(By.className(".d-comment__avatar"))
+
+  private def commentTimeStamp = driver.findElement(By.className(".d-comment__timestamp"))
 
   /*TODO list of functions/methods
     Add a new comment
@@ -48,58 +48,67 @@ class CommentSection (driver: WebDriver) extends BasePage(driver) {
 
    */
 
+  def showMoreFeaturedComments(): ArticlePage = {
+    showMoreFeaturedComments.click()
+    new ArticlePage(driver)
+  }
+
   def addNewComment(): ArticlePage = {
-    emailField.sendKeys(email)
-    passwordField.sendKeys(password)
-    signInButton.click()
+    commentTextArea.sendKeys("This is to become a variable")
+    postYourCommentButton.click()
+
+    new ArticlePage(driver)
+  }
+
+  def cancelNewComment(): ArticlePage = {
+    cancelButton.click()
     new ArticlePage(driver)
   }
 
   def showAllComments(): ArticlePage = {
-
+    showAllComments.click()
     new ArticlePage(driver)
   }
 
   def nextPage(): ArticlePage = {
-
+    nextControl.click()
     new ArticlePage(driver)
   }
 
   def previousPage(): ArticlePage = {
-
+    previousControl.click()
     new ArticlePage(driver)
   }
 
   def sortCommentsByOrder(sortOrder): ArticlePage = {
-
+    sortOrderControl(sortOrder).click()
     new ArticlePage(driver)
   }
 
-  def staffPickComment(): ArticlePage = {
-
+  def pickComment(): ArticlePage = {
+    pickCommentButton.click()
     new ArticlePage(driver)
   }
 
   def showAllReplies(): ArticlePage = {
-
+    showMoreRepliesButton.click()
     new ArticlePage(driver)
   }
 
   def replyToComment(): ArticlePage = {
-
+    replyToCommentButton.click()
     new ArticlePage(driver)
   }
 
   def reportComment(): ArticlePage = {
-
+    reportCommentButton.click()
     new ArticlePage(driver)
   }
 
   def recommendComment(): ArticlePage = {
-
+    recommendCommentButton.click()
     new ArticlePage(driver)
   }
-
 
 
 }

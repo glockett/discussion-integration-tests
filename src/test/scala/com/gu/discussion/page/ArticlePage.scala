@@ -19,9 +19,6 @@ class ArticlePage (driver: WebDriver)extends BasePage(driver) {
   def viewFeaturedComments() {
     //TODO - Verify that there are Featured comments are available - if so click to the first pick
 
-
   }
-
-
 
 }
