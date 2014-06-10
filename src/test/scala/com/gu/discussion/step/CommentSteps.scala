@@ -24,6 +24,8 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
     driver.get("http://www.theguardian.com/science/grrlscientist/2012/aug/07/3")
     //TODO get testArticleURL variable from config
 
+
+
     new CommentModule().sortCommentsByOrder("oldest")
 
     this
@@ -31,6 +33,8 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
 
   def thenICanPostANewComment() {
     logger.log("I can post a new comment")
+
+
     new CommentModule().addNewComment()
 
     this

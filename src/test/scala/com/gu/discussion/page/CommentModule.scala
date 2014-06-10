@@ -2,11 +2,11 @@ package com.gu.discussion.page
 
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
-import org.openqa.selenium.support.ui.Select
+import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
 
-case class CommentModule (implicit override val driver: WebDriver) extends BasePage(driver) {
+case class CommentModule(implicit override val driver: WebDriver) extends BasePage(driver) {
 
-  private def showMoreFeaturedCommentsButton = driver.findElement(By.className(".show-more__container--featured"))
+  private def showMoreFeaturedCommeLink = driver.findElement(By.className(".show-more__container--featured"))
 
   private def showAllCommentsButton = driver.findElement(By.className(".d-discussion__show-all-comments"))
 
@@ -26,22 +26,26 @@ case class CommentModule (implicit override val driver: WebDriver) extends BaseP
 
 
   def showMoreFeaturedComments(): CommentModule = {
-    showMoreFeaturedCommentsButton.click()
+    driverWait.until(ExpectedConditions.elementToBeClickable(showMoreFeaturedCommeLink))
+    showMoreFeaturedCommeLink.click()
     this
   }
 
   def addNewComment(): CommentModule = {
-    commentTextArea.sendKeys("This is to become a variable testComment")
+    driverWait.until(ExpectedConditions.elementToBeClickable(postYourCommentButton))
+    commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required. /n Lorem Ipsum Dispum comment thread text")
     postYourCommentButton.click()
     this
   }
 
   def cancelNewComment(): CommentModule = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(cancelButton))
     cancelButton.click()
     this
   }
 
   def showAllComments(): CommentModule = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(showAllCommentsButton))
     showAllCommentsButton.click()
     this
   }
@@ -52,16 +56,19 @@ case class CommentModule (implicit override val driver: WebDriver) extends BaseP
   }
 
   def nextPage(): CommentModule = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(nextControl))
     nextControl.click()
     this
   }
 
   def previousPage(): CommentModule = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(previousControl))
     previousControl.click()
     this
   }
 
   def showAllReplies(): CommentModule = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(showMoreRepliesButton))
     showMoreRepliesButton.click()
     this
   }

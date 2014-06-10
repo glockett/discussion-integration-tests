@@ -2,6 +2,7 @@ package com.gu.discussion.page
 
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
+import org.openqa.selenium.support.ui.ExpectedConditions
 
 case class ArticlePage (implicit override val driver: WebDriver) extends BasePage(driver) {
 
@@ -12,9 +13,13 @@ case class ArticlePage (implicit override val driver: WebDriver) extends BasePag
   private def commentCountLabel = driver.findElement(By.className(".commentcount__label"))
 
   def goToStartOfComments() {
-    //TODO - Verify that comments are available - if so click to the start of them
-    commentCountLabel.click()
-    new CommentModule()
+
+    if (driverWait.until(ExpectedConditions.elementToBeClickable(commentCountLabel))
+      .isDisplayed()) {
+      commentCountLabel.click()
+    } else {
+      System.err.println("There are no comments for this article");
+    }
 
   }
 

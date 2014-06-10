@@ -7,7 +7,7 @@ class CommentTests extends BaseTest {
 
   info("Set of Discussion tests to validate commenting on the NGW website")
 
-  feature("As a registered user I can join in a discussion") {
+  feature("As a registered user I can create a discussion thread") {
 
     scenarioWeb("Add a new comment to an article") {
       given {
@@ -18,7 +18,6 @@ class CommentTests extends BaseTest {
         _.thenICanPostANewComment()
       }
     }
-
 
 
   }

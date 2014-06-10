@@ -43,7 +43,7 @@ case class CommentItem(implicit override val driver: WebDriver) extends BasePage
 
   def replyToComment(): CommentItem = {
     replyToCommentButton.click()
-    commentTextArea.sendKeys("This is to become a variable for textReply")
+    commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required. /n Lorem Ipsum Dispum reply")
     postReplyButton.click()
     this
   }
