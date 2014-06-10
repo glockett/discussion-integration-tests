@@ -110,5 +110,12 @@ class CommentSection(driver: WebDriver) extends BasePage(driver) {
     new ArticlePage(driver)
   }
 
+  def verifyAvatarPresent(boolean): ArticlePage = {
+
+    new ArticlePage(driver)
+  }
+
+
+
 
 }
