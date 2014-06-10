@@ -12,7 +12,7 @@ class ArticlePage (driver: WebDriver)extends BasePage(driver) {
   def goToStartOfComments() {
     //TODO - Verify that comments are available - if so click to the start of them
     commentCountLabel.click()
-    new CommentSection(driver)
+    new CommentModule(driver)
 
   }
 
