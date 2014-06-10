@@ -3,7 +3,7 @@ package com.gu.discussion.page
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
 
-case class CommentItem(implicit override val driver: WebDriver) extends BasePage(driver) {
+case class CommentItem (implicit override val driver: WebDriver) extends BasePage(driver) {
 
   private def showCommentButton = driver.findElement(By.className(".d-comment-box__show-parent"))
   private def replyToCommentButton = driver.findElement(By.className(".d-comment__action--reply-text"))

@@ -3,7 +3,7 @@ package com.gu.discussion.page
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
 
-case class SignInPage(implicit override val driver: WebDriver) extends BasePage(driver) {
+case class SignInPage (implicit override val driver: WebDriver) extends BasePage(driver) {
 
   private def emailField = driver.findElement(By.id("email"))
   private def passwordField = driver.findElement(By.id("password"))

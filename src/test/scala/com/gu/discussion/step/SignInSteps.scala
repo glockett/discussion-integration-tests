@@ -5,7 +5,7 @@ import com.gu.support.{TestLogger, BaseSteps}
 import com.gu.discussion.page.ArticlePage
 import org.openqa.selenium.WebDriver
 
-case class SignInSteps(implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
+case class SignInSteps (implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
 
   def givenIAmSignedIn() = {
     logger.log("I am logged in to NGW")

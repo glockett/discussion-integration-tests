@@ -4,7 +4,7 @@ import com.gu.support.{ConfigLoader, TestLogger, BaseSteps}
 import org.openqa.selenium.WebDriver
 import com.gu.discussion.page.SignInPage
 
-case class CommentingSteps(implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
+case class CommentingSteps (implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
  
 
      def givenIAmSignedIn() = {

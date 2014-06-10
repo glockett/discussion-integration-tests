@@ -3,7 +3,7 @@ package com.gu.discussion.page
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
 
-case class CommentModule(implicit override val driver: WebDriver) extends BasePage(driver) {
+case class CommentModule (implicit override val driver: WebDriver) extends BasePage(driver) {
 
   private def showMoreFeaturedComments = driver.findElement(By.className(".show-more__container--featured"))
 

@@ -3,7 +3,7 @@ package com.gu.discussion.page
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
 
-case class ArticlePage(implicit override val driver: WebDriver) extends BasePage(driver) {
+case class ArticlePage (implicit override val driver: WebDriver) extends BasePage(driver) {
 
   private def featuredCommentsLabel = driver.findElement(By.className(".discussion__comments--top-comments"))
 
