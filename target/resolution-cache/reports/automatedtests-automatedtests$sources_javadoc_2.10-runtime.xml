@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140609152732"/>
+		date="20140610083143"/>
 	<dependencies>
 		<module organisation="com.gu" name="web-automation-core-scala_2.10">
 			<revision name="1.0" status="release" pubdate="20140604163502" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/guardian/scala-automation" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">

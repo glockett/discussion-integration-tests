@@ -10,8 +10,6 @@ class HomePage(driver: WebDriver) extends BasePage (driver) {
   def goToSigninPage() = {
     signInLink.click()
     new SignInPage(driver)
-
-
   }
 
 

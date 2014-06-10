@@ -4,7 +4,7 @@
 		module="automatedtests$sources_javadoc_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20140609152732"
+		publication="20140610083143"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

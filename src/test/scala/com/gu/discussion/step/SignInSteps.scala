@@ -9,7 +9,7 @@ trait SignInSteps extends BaseSteps{
     given(logger, "I am logged in to NGW")
 
     //driver.get("http://www.theguardian.com/")
-    //TODO get baseURL variable from config
+    //TODO get testBaseURL variable from config
 
     //new SignInPage(driver).signInGUDetails("it_is_me", "let_me_in")
     //TODO get user variables from config
