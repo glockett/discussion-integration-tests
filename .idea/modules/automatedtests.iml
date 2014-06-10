@@ -33,7 +33,6 @@
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.module:jackson-module-scala_2.10:2.4.0-rc2" level="project" />
     <orderEntry type="library" name="SBT: com.google.code.findbugs:jsr305:2.0.1" level="project" />
     <orderEntry type="library" name="SBT: com.google.guava:guava:15.0" level="project" />
-    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala_2.10:1.0" level="project" />
     <orderEntry type="library" name="SBT: com.thoughtworks.paranamer:paranamer:2.6" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe:config:1.2.1" level="project" />
     <orderEntry type="library" name="SBT: commons-codec:commons-codec:1.9" level="project" />
@@ -75,6 +74,7 @@
     <orderEntry type="library" name="SBT: xalan:xalan:2.7.1" level="project" />
     <orderEntry type="library" name="SBT: xerces:xercesImpl:2.11.0" level="project" />
     <orderEntry type="library" name="SBT: xml-apis:xml-apis:1.4.01" level="project" />
+    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala_2.10:1.5" level="project" />
   </component>
 </module>
 

@@ -1,48 +1,58 @@
 [info] Updating {file:/Users/glockett/Development/Projects/Commenting/AutomatedTests/}automatedtests...
-[debug] :: resolving dependencies :: automatedtests#automatedtests_2.10;1.0
+[debug] :: resolving dependencies :: automatedtests#automatedtests_2.10;1.1
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@13197df2
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1442df6c
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.2
 [debug] 	local: revision in cache: org.scala-lang#scala-library;2.10.2
 [debug] 	found org.scala-lang#scala-library;2.10.2 in sbt-chain
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->default(compile)]
-[info] Resolving com.gu#web-automation-core-scala_2.10;1.0 ...
-[debug] sbt-chain: Checking cache for: dependency: com.gu#web-automation-core-scala_2.10;1.0 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.gu#web-automation-core-scala_2.10;1.0
-[debug] 	local: revision in cache: com.gu#web-automation-core-scala_2.10;1.0
-[debug] 	found com.gu#web-automation-core-scala_2.10;1.0 in sbt-chain
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->default(compile)]
+[info] Resolving com.gu#web-automation-core-scala_2.10;1.5 ...
+[debug] sbt-chain: Checking cache for: dependency: com.gu#web-automation-core-scala_2.10;1.5 {compile=[default(compile)]}
+[debug] 		tried /Users/glockett/.ivy2/local/com.gu/web-automation-core-scala_2.10/1.5/ivys/ivy.xml
+[debug] 	local: no ivy file found for com.gu#web-automation-core-scala_2.10;1.5
+[debug] 		tried http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.pom
+[debug] 	public: found md file for com.gu#web-automation-core-scala_2.10;1.5
+[debug] 		=> http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.pom (1.5)
+[debug] downloading http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.pom ...
+[debug] 	public: downloading http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.pom
+[debug] 	public: downloading http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.pom.sha1
+[debug] sha1 OK for http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.pom
+[debug] 	[SUCCESSFUL ] com.gu#web-automation-core-scala_2.10;1.5!web-automation-core-scala_2.10.pom(pom.original) (491ms)
+[debug] 		tried /Users/glockett/.ivy2/local/com.gu/web-automation-core-scala_2.10/1.5/jars/web-automation-core-scala_2.10.jar
+[debug] 		tried http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.jar
+[debug] 	found com.gu#web-automation-core-scala_2.10;1.5 in public
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [info] Resolving org.scala-lang#scala-library;2.10.3 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.3 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3
 [debug] 	local: revision in cache: org.scala-lang#scala-library;2.10.3
 [debug] 	found org.scala-lang#scala-library;2.10.3 in sbt-chain
 [debug] 	[2.10.3] org.scala-lang#scala-library;2.10.3
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->default(compile)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->runtime]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->master]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->runtime]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->default(compile)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->runtime]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->master]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->runtime]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
 [info] Resolving org.scalatest#scalatest_2.10;2.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.10;2.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.scalatest#scalatest_2.10;2.0
 [debug] 	local: revision in cache: org.scalatest#scalatest_2.10;2.0
 [debug] 	found org.scalatest#scalatest_2.10;2.0 in sbt-chain
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
@@ -58,8 +68,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->compile]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -68,13 +78,13 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
 [info] Resolving org.seleniumhq.selenium#selenium-java;2.42.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.seleniumhq.selenium#selenium-java;2.42.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.seleniumhq.selenium#selenium-java;2.42.0
 [debug] 	local: revision in cache: org.seleniumhq.selenium#selenium-java;2.42.0
 [debug] 	found org.seleniumhq.selenium#selenium-java;2.42.0 in sbt-chain
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->master(*)]
 [info] Resolving org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -488,8 +498,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [runtime->runtime(*)]
@@ -618,13 +628,13 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
 [info] Resolving com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 ...
 [debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2
 [debug] 	local: revision in cache: com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2
 [debug] 	found com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 in sbt-chain
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -672,8 +682,8 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -694,40 +704,40 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->master(*)]
 [info] Resolving com.typesafe#config;1.2.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe#config;1.2.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe#config;1.2.1
 [debug] 	local: revision in cache: com.typesafe#config;1.2.1
 [debug] 	found com.typesafe#config;1.2.1 in sbt-chain
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->master]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->master]
 [debug] resolving dependencies for configuration 'runtime'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [runtime]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [runtime]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
@@ -738,8 +748,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [compile->master(*)]
@@ -963,8 +973,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -987,12 +997,12 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -1001,8 +1011,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [runtime->runtime(*)]
@@ -1131,8 +1141,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -1153,24 +1163,24 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->master]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->master]
 [debug] resolving dependencies for configuration 'test'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [test]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [runtime]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [test]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [runtime]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
@@ -1181,8 +1191,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [compile->master(*)]
@@ -1406,8 +1416,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -1430,12 +1440,12 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -1444,8 +1454,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [runtime->runtime(*)]
@@ -1574,8 +1584,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -1596,27 +1606,27 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->master]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->master]
 [debug] resolving dependencies for configuration 'provided'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [provided]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [provided]
 [debug] resolving dependencies for configuration 'optional'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [optional]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [optional]
 [debug] resolving dependencies for configuration 'compile-internal'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [compile-internal]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [compile-internal]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
@@ -1627,8 +1637,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [compile->master(*)]
@@ -1852,8 +1862,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -1876,12 +1886,12 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -1890,8 +1900,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [runtime->runtime(*)]
@@ -2020,8 +2030,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -2042,26 +2052,26 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->master]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [optional]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [provided]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->master]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [optional]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [provided]
 [debug] resolving dependencies for configuration 'runtime-internal'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [runtime-internal]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [runtime]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [runtime-internal]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [runtime]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
@@ -2072,8 +2082,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [compile->master(*)]
@@ -2297,8 +2307,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -2321,12 +2331,12 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -2335,8 +2345,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [runtime->runtime(*)]
@@ -2465,8 +2475,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -2487,26 +2497,26 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->master]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [optional]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->master]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [optional]
 [debug] resolving dependencies for configuration 'test-internal'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [test-internal]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [test]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [runtime]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [compile->master]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->default(compile)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [test-internal]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [test]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [runtime]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [compile->master]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->default(compile)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
@@ -2517,8 +2527,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [compile->master(*)]
@@ -2742,8 +2752,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [compile->compile(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->master(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -2766,12 +2776,12 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [compile->compile(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->master(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->master(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [compile->compile(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->master(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [compile->compile(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scala-lang#scala-library;2.10.3 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.scalatest#scalatest_2.10;2.0 [runtime->compile]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -2780,8 +2790,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->org.seleniumhq.selenium#selenium-java;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.seleniumhq.selenium#selenium-chrome-driver;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-chrome-driver;2.42.0->org.seleniumhq.selenium#selenium-remote-driver;2.42.0 [runtime->runtime(*)]
@@ -2910,8 +2920,8 @@
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-support;2.42.0->org.seleniumhq.selenium#selenium-api;2.42.0 [runtime->compile]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->runtime(*)]
 [debug] == resolving dependencies org.seleniumhq.selenium#selenium-java;2.42.0->org.webbitserver#webbit;0.4.14 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->org.scala-lang#scala-library;2.10.3 [runtime->compile]
@@ -2932,29 +2942,29 @@
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.code.findbugs#jsr305;2.0.1 [runtime->compile]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->runtime(*)]
 [debug] == resolving dependencies com.fasterxml.jackson.module#jackson-module-scala_2.10;2.4.0-rc2->com.google.guava#guava;15.0 [runtime->compile]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->runtime(*)]
-[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.0->com.typesafe#config;1.2.1 [runtime->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->com.gu#web-automation-core-scala_2.10;1.0 [compile->master]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [optional]
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [provided]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->runtime(*)]
+[debug] == resolving dependencies com.gu#web-automation-core-scala_2.10;1.5->com.typesafe#config;1.2.1 [runtime->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->com.gu#web-automation-core-scala_2.10;1.5 [compile->master]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [optional]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [provided]
 [debug] resolving dependencies for configuration 'plugin'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [plugin]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [plugin]
 [debug] resolving dependencies for configuration 'sources'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [sources]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [sources]
 [debug] resolving dependencies for configuration 'docs'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [docs]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [docs]
 [debug] resolving dependencies for configuration 'pom'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [pom]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [pom]
 [debug] resolving dependencies for configuration 'scala-tool'
-[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.0 [scala-tool]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-compiler;2.10.2 [scala-tool->default]
+[debug] == resolving dependencies for automatedtests#automatedtests_2.10;1.1 [scala-tool]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-compiler;2.10.2 [scala-tool->default]
 [info] Resolving org.scala-lang#scala-compiler;2.10.2 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.10.2 {scala-tool=[default, optional(default)]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.10.2
 [debug] 	local: revision in cache: org.scala-lang#scala-compiler;2.10.2
 [debug] 	found org.scala-lang#scala-compiler;2.10.2 in sbt-chain
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-compiler;2.10.2 [scala-tool->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-compiler;2.10.2 [scala-tool->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-compiler;2.10.2 [scala-tool->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-compiler;2.10.2 [scala-tool->compile]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.2->org.scala-lang#scala-library;2.10.2 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.2->org.scala-lang#scala-library;2.10.2 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.2->org.scala-lang#scala-library;2.10.2 [compile->default]
@@ -2977,8 +2987,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.2->org.scala-lang#scala-reflect;2.10.2 [runtime->compile]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.2->org.scala-lang#scala-library;2.10.2 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.2->org.scala-lang#scala-library;2.10.2 [runtime->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-compiler;2.10.2 [scala-tool->master]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-compiler;2.10.2 [scala-tool->optional(default)]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-compiler;2.10.2 [scala-tool->master]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-compiler;2.10.2 [scala-tool->optional(default)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.2->org.scala-lang#jline;2.10.2 [optional->master(*)]
 [info] Resolving org.scala-lang#jline;2.10.2 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.2 {optional=[compile(*), master(*)]}
@@ -2993,15 +3003,20 @@
 [debug] 	local: revision in cache: org.fusesource.jansi#jansi;1.4
 [debug] 	found org.fusesource.jansi#jansi;1.4 in sbt-chain
 [debug] == resolving dependencies org.scala-lang#jline;2.10.2->org.fusesource.jansi#jansi;1.4 [compile->compile(*)]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [scala-tool->default]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [scala-tool->runtime]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [scala-tool->compile]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [scala-tool->master]
-[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.0->org.scala-lang#scala-library;2.10.2 [scala-tool->optional(default)]
-[debug] 	resolved ivy file produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/automatedtests/automatedtests_2.10/1.0/resolved.xml.xml
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [scala-tool->default]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [scala-tool->runtime]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [scala-tool->compile]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [scala-tool->master]
+[debug] == resolving dependencies automatedtests#automatedtests_2.10;1.1->org.scala-lang#scala-library;2.10.2 [scala-tool->optional(default)]
+[debug] 	resolved ivy file produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/automatedtests/automatedtests_2.10/1.1/resolved.xml.xml
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.2!scala-library.jar
-[debug] 	[NOT REQUIRED] com.gu#web-automation-core-scala_2.10;1.0!web-automation-core-scala_2.10.jar
+[debug] 		tried http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.jar
+[info] downloading http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.jar ...
+[debug] 	public: downloading http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.jar
+[debug] 	public: downloading http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.jar.sha1
+[debug] sha1 OK for http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.jar
+[info] 	[SUCCESSFUL ] com.gu#web-automation-core-scala_2.10;1.5!web-automation-core-scala_2.10.jar (553ms)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.3!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.10;2.0!scalatest_2.10.jar
 [debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-java;2.42.0!selenium-java.jar
@@ -3054,19 +3069,19 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.2!scala-reflect.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.2!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 5776ms :: artifacts dl 73ms
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 compile produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-compile.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 runtime produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-runtime.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 test produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-test.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 provided produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-provided.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 optional produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-optional.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 compile-internal produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-compile-internal.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 runtime-internal produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-runtime-internal.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 test-internal produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-test-internal.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 plugin produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-plugin.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 sources produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-sources.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 docs produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-docs.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 pom produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-pom.xml
-[debug] 	report for automatedtests#automatedtests_2.10;1.0 scala-tool produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-scala-tool.xml
-[debug] 	resolve done (5776ms resolve - 73ms download)
+[debug] :: resolution report :: resolve 5797ms :: artifacts dl 780ms
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 compile produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-compile.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 runtime produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-runtime.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 test produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-test.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 provided produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-provided.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 optional produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-optional.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 compile-internal produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-compile-internal.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 runtime-internal produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-runtime-internal.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 test-internal produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-test-internal.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 plugin produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-plugin.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 sources produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-sources.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 docs produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-docs.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 pom produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-pom.xml
+[debug] 	report for automatedtests#automatedtests_2.10;1.1 scala-tool produced in /Users/glockett/Development/Projects/Commenting/AutomatedTests/target/resolution-cache/reports/automatedtests-automatedtests_2.10-scala-tool.xml
+[debug] 	resolve done (5797ms resolve - 780ms download)
 [info] Done updating.

@@ -1,23 +1,24 @@
 package com.gu.discussion.step
 
-import com.gu.support.BaseSteps
+import com.gu.support.{ConfigLoader, TestLogger, BaseSteps}
+import org.openqa.selenium.WebDriver
+import com.gu.discussion.page.SignInPage
 
-/** Created by glockett.  */
-trait CommentingSteps extends BaseSteps{
+case class CommentingSteps(implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
  
 
      def givenIAmSignedIn() = {
-      given(logger, "I am signed in")
-      /*driver.get("http://www.theguardian.com/")
+      logger.log("I am signed in")
+      driver.get(ConfigLoader().getTestBaseUrl())
       //TODO get testBaseURL variable from config
   
-      //new SignInPage(driver).signInGUDetails("it_is_me", "let_me_in")
+      new SignInPage().signInGUDetails(ConfigLoader()., "let_me_in")
       //TODO get user variables from config
-  */
+
     }
 
     def whenIViewArticleComments() {
-      when(logger, "I view comments on an article")
+      logger.log("I view comments on an article")
       driver.get("http://www.theguardian.com/science/grrlscientist/2012/aug/07/3")
       //TODO get testArticleURL variable from config
 
@@ -27,7 +28,7 @@ trait CommentingSteps extends BaseSteps{
     }
 
     def thenICanPostAComment() {
-      then(logger, "I can post my own comment")
+      logger.log("I can post my own comment")
     }
 
 }

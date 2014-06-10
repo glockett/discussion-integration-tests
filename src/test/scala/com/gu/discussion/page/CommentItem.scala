@@ -3,7 +3,7 @@ package com.gu.discussion.page
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
 
-class CommentThread(driver: WebDriver) extends BasePage(driver) {
+case class CommentItem(implicit override val driver: WebDriver) extends BasePage(driver) {
 
   private def showCommentButton = driver.findElement(By.className(".d-comment-box__show-parent"))
   private def replyToCommentButton = driver.findElement(By.className(".d-comment__action--reply-text"))
@@ -32,52 +32,52 @@ class CommentThread(driver: WebDriver) extends BasePage(driver) {
 
    */
 
-  def showCommentPost(): CommentThread = {
+  def showCommentPost(): CommentItem = {
     showCommentButton.click()
     this
   }
 
-  def replyToComment(): CommentThread = {
+  def replyToComment(): CommentItem = {
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is to become a variable for textReply")
     postReplyButton.click()
     this
   }
 
-  def cancelReply(): CommentThread = {
+  def cancelReply(): CommentItem = {
     cancelReplyButton.click()
     this
   }
 
 
-  def pickComment(): CommentThread = {
+  def pickComment(): CommentItem = {
     pickCommentButton.click()
     this
   }
 
-  def showAllReplies(): CommentThread = {
+  def showAllReplies(): CommentItem = {
     showMoreRepliesButton.click()
    this
   }
 
-  def reportComment(): CommentThread = {
+  def reportComment(): CommentItem = {
     reportCommentButton.click()
     this
   }
 
-  def recommendComment(): CommentThread = {
+  def recommendComment(): CommentItem = {
     recommendCommentButton.click()
     this
   }
 
-  def verifyAvatarPresent(boolean): CommentThread = {
+  def verifyAvatarPresent(boolean): CommentItem = {
 
     this
   }
 
   def verifyDateStampPresent(boolean): ArticlePage = {
 
-    new ArticlePage(driver)
+    new ArticlePage()
   }
 
 
