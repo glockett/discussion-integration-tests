@@ -10,8 +10,7 @@ case class SignInSteps (implicit val driver: WebDriver, override val logger: Tes
   def givenIAmSignedIn() = {
     logger.log("I am logged in to NGW")
     new ArticlePage()
-
-    //driver.get("http://www.theguardian.com/")
+    driver.get("http://www.theguardian.com/")
     //TODO get testBaseURL variable from config
 
     //new SignInPage(driver).signInGUDetails("it_is_me", "let_me_in")
