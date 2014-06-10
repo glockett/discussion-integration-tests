@@ -2,15 +2,22 @@ package com.gu.discussion.page
 
 import org.openqa.selenium.{By, WebDriver}
 import com.gu.support.BasePage
+import org.openqa.selenium.support.ui.ExpectedConditions
 
 case class HomePage (implicit override val driver: WebDriver) extends BasePage(driver) {
 
   private def signInLink = driver.findElement(By.className("js-profile-info control__info"))
 
   def goToSigninPage() = {
-    If (){}
-    signInLink.click()
-    new SignInPage()
+
+    if (driverWait.until(ExpectedConditions.elementToBeClickable(signInLink)).isDisplayed()) {
+      signInLink.click()
+      new SignInPage()
+
+    } else {
+      System.err.println("No Sign in link");
+    }
+
   }
 
 

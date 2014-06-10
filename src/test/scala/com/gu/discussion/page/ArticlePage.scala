@@ -26,6 +26,7 @@ case class ArticlePage (implicit override val driver: WebDriver) extends BasePag
   def viewFeaturedComments() {
     //TODO - Verify that there are Featured comments are available - if so click to the first pick
 
+
   }
 
 

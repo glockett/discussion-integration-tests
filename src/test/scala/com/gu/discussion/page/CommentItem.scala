@@ -2,6 +2,7 @@ package com.gu.discussion.page
 
 import org.openqa.selenium.{WebDriver, By}
 import com.gu.support.BasePage
+import org.openqa.selenium.support.ui.ExpectedConditions
 
 case class CommentItem(implicit override val driver: WebDriver) extends BasePage(driver) {
 
@@ -37,11 +38,13 @@ case class CommentItem(implicit override val driver: WebDriver) extends BasePage
    */
 
   def showCommentPost(): CommentItem = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(showCommentButton))
     showCommentButton.click()
     this
   }
 
   def replyToComment(): CommentItem = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required. /n Lorem Ipsum Dispum reply")
     postReplyButton.click()
@@ -49,27 +52,32 @@ case class CommentItem(implicit override val driver: WebDriver) extends BasePage
   }
 
   def cancelReply(): CommentItem = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(cancelReplyButton))
     cancelReplyButton.click()
     this
   }
 
 
   def pickComment(): CommentItem = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(pickCommentButton))
     pickCommentButton.click()
     this
   }
 
   def showAllReplies(): CommentItem = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(showMoreRepliesButton))
     showMoreRepliesButton.click()
     this
   }
 
   def reportComment(): CommentItem = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(reportCommentButton))
     reportCommentButton.click()
     this
   }
 
   def recommendComment(): CommentItem = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(recommendCommentButton))
     recommendCommentButton.click()
     this
   }
