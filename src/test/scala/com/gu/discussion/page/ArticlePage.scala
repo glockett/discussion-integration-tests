@@ -12,13 +12,16 @@ case class ArticlePage (implicit override val driver: WebDriver) extends BasePag
 
   private def commentCountLabel = driver.findElement(By.className(".commentcount__label"))
 
+
+
+
   def goToStartOfComments() {
 
     if (driverWait.until(ExpectedConditions.elementToBeClickable(commentCountLabel))
       .isDisplayed()) {
       commentCountLabel.click()
     } else {
-      System.err.println("There are no comments for this article");
+      System.err.println("There are no comments for this article yet");
     }
 
   }

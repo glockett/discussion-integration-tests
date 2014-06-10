@@ -34,7 +34,8 @@ case class CommentModule(implicit override val driver: WebDriver) extends BasePa
 
   def addNewComment(): CommentModule = {
     driverWait.until(ExpectedConditions.elementToBeClickable(postYourCommentButton))
-    commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required. /n Lorem Ipsum Dispum comment thread text")
+    commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required. \n Lorem Ipsum Dispum " +
+      "comment thread text")
     this
   }
 

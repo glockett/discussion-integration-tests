@@ -46,7 +46,12 @@ case class CommentItem(implicit override val driver: WebDriver) extends BasePage
   def replyToComment(): CommentItem = {
     driverWait.until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
     replyToCommentButton.click()
-    commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required. /n Lorem Ipsum Dispum reply")
+    commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required. \n Lorem Ipsum Dispum reply")
+    this
+  }
+
+  def postReply(): CommentItem = {
+    driverWait.until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
     postReplyButton.click()
     this
   }

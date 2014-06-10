@@ -9,13 +9,24 @@ class CommentTests extends BaseTest {
 
   feature("As a registered user I can create a discussion thread") {
 
-    scenarioWeb("Add a new comment to an article") {
+    scenarioWeb("Add a new top level comment to an article") {
       given {
         CommentSteps().givenIAmSignedIn()
       }.when {
-        _.whenIViewArticleComments()
+        _.whenIViewAnArticleWithComments()
       }.then {
         _.thenICanPostANewComment()
+      }
+    }
+
+
+    scenarioWeb("Reply to a top level comment") {
+      given {
+        CommentSteps().givenIAmSignedIn()
+      }.when {
+        _.whenIViewAnArticleWithComments()
+      }.then {
+        _.thenI()
       }
     }
 
