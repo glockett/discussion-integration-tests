@@ -30,7 +30,7 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
   }
 
   def thenICanPostANewComment() {
-    logger.log("I can post my own comment")
+    logger.log("I can post a new comment")
     new CommentModule().addNewComment()
 
     this
@@ -39,7 +39,7 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
 
 
   def thenICanPostANewReply() {
-    logger.log("I can post my own reply")
+    logger.log("I can post a new reply")
     new CommentItem().replyToComment()
 
     this

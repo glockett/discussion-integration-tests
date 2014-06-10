@@ -1,6 +1,7 @@
 package com.gu.discussion.test
 
 import com.gu.support.BaseTest
+import com.gu.discussion.step.CommentSteps
 
 class CommentTests extends BaseTest {
 
@@ -10,11 +11,11 @@ class CommentTests extends BaseTest {
 
     scenarioWeb("Add a new comment to an article") {
       given {
-        CommSteps()
+        CommentSteps().givenIAmSignedIn()
       }.when {
-        _.whenIViewTheSigninLocator()
+        _.whenIViewArticleComments()
       }.then {
-        _.thenISeeMyUserName()
+        _.thenICanPostANewComment()
       }
     }
 
