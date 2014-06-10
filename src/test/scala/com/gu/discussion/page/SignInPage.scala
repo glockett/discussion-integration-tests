@@ -29,7 +29,7 @@ case class SignInPage(implicit override val driver: WebDriver) extends BasePage(
     new HomePage()
   }
 
-  def getTimeStamp() : HomePage = {
+  def getTimeStamp() = {
     val today = Calendar.getInstance.getTime
     val curTimeFormat = new SimpleDateFormat("HH:mm:ss")
 

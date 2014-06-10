@@ -26,10 +26,9 @@ class CommentTests extends BaseTest {
       }.when {
         _.whenIViewAnArticleWithComments()
       }.then {
-        _.thenI()
+        _.()
       }
     }
-
 
   }
 }
