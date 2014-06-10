@@ -6,13 +6,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions
 
 case class ArticlePage (implicit override val driver: WebDriver) extends BasePage(driver) {
 
-  private def featuredCommentsLabel = driver.findElement(By.className(".discussion__comments--top-comments"))
+  //private def featuredCommentsLabel = driver.findElement(By.className(".discussion__comments--top-comments"))
 
-  private def featuredComment = driver.findElement(By.className(".d-comment__pick"))
+  private def featuredComment = driver.findElement(By.className(".article__meta-heading"))
 
   private def commentCountLabel = driver.findElement(By.className(".commentcount__label"))
 
-
+  private def gotoFeaturedComments = driver.findElement(By.className(".CTA Top comment bottom read more"))
 
 
   def goToStartOfComments() {
@@ -27,8 +27,13 @@ case class ArticlePage (implicit override val driver: WebDriver) extends BasePag
   }
 
   def viewFeaturedComments() {
-    //TODO - Verify that there are Featured comments are available - if so click to the first pick
 
+    if (featuredComment.getText().contains("Featured Content"))
+    {
+      gotoFeaturedComments.click()
+    }else {
+      System.err.println("There are no Featured comments for this article");
+    }
 
   }
 
