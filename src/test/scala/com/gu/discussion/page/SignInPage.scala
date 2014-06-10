@@ -29,7 +29,7 @@ case class SignInPage(implicit override val driver: WebDriver) extends BasePage(
     new HomePage()
   }
 
-  def getTimeStamp() = {
+  def getTimeStamp() : HomePage = {
     val today = Calendar.getInstance.getTime
     val curTimeFormat = new SimpleDateFormat("HH:mm:ss")
 
@@ -37,7 +37,7 @@ case class SignInPage(implicit override val driver: WebDriver) extends BasePage(
 
   }
 
-  def getRandomEmailAddress() = {
+  def getRandomEmailAddress()  = {
     this "auto" + getTimeStamp() + "@gmail.com"
   }
 

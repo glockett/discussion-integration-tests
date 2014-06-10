@@ -34,8 +34,9 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
   def thenICanPostANewComment() {
     logger.log("I can post a new comment")
 
-
     new CommentModule().addNewComment()
+
+    new CommentModule().postNewComment()
 
     this
 
