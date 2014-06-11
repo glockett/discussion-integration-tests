@@ -4,7 +4,7 @@ import org.openqa.selenium.{By, WebDriver}
 import com.gu.support.BasePage
 import org.openqa.selenium.support.ui.ExpectedConditions
 
-case class HomePage (implicit override val driver: WebDriver) extends BasePage(driver) {
+case class HomePage(implicit override val driver: WebDriver) extends BasePage(driver) {
 
   private def signInLink = driver.findElement(By.className("js-profile-info control__info"))
 

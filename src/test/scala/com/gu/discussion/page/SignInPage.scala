@@ -37,7 +37,7 @@ case class SignInPage(implicit override val driver: WebDriver) extends BasePage(
 
   }
 
-  def getRandomEmailAddress()  = {
+  def getRandomEmailAddress() = {
     "auto" + getTimeStamp() + "@gmail.com"
     this
 

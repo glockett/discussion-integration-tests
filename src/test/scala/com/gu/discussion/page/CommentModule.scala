@@ -24,6 +24,8 @@ case class CommentModule(implicit override val driver: WebDriver) extends BasePa
 
   private def showMoreRepliesButton = driver.findElement(By.className(".d-show-more-replies"))
 
+  private def newCommentDateStamp = driver.findElement(By.className(".js-timestamp"))
+
 
   def showMoreFeaturedComments(): CommentModule = {
     driverWait.until(ExpectedConditions.elementToBeClickable(showMoreFeaturedCommeLink))
@@ -35,12 +37,20 @@ case class CommentModule(implicit override val driver: WebDriver) extends BasePa
     driverWait.until(ExpectedConditions.elementToBeClickable(postYourCommentButton))
     commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required. \n Lorem Ipsum Dispum " +
       "comment thread text")
+
     this
   }
 
   def postNewComment(): CommentModule = {
     driverWait.until(ExpectedConditions.elementToBeClickable(postYourCommentButton))
     postYourCommentButton.click()
+
+    if (driverWait.until(ExpectedConditions.textToBePresentInElement(newCommentDateStamp, "Just now"))) {
+      System.err.println("Comment has posted")
+    } else {
+      System.err.println("Comment has no been posted")
+    }
+
     this
   }
 

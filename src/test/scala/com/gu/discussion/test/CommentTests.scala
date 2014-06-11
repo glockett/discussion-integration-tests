@@ -30,5 +30,19 @@ class CommentTests extends BaseTest {
       }
     }
 
+    scenarioWeb("Reply to a top level comment") {
+      given {
+        CommentSteps().givenIAmSignedIn()
+      }.when {
+        _.whenIViewAnArticleWithComments()
+      }.then {
+        _.then()
+      }
+    }
+
+
+
+
+
   }
 }

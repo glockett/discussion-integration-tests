@@ -15,7 +15,7 @@ case class ArticlePage (implicit override val driver: WebDriver) extends BasePag
   private def gotoFeaturedComments = driver.findElement(By.className(".CTA Top comment bottom read more"))
 
 
-  def goToStartOfComments() {
+  def goToStartOfComments() = {
 
     if (driverWait.until(ExpectedConditions.elementToBeClickable(commentCountLabel))
       .isDisplayed()) {
@@ -26,7 +26,7 @@ case class ArticlePage (implicit override val driver: WebDriver) extends BasePag
 
   }
 
-  def viewFeaturedComments() {
+  def viewFeaturedComments() = {
 
     if (featuredComment.getText().contains("Featured Content"))
     {
