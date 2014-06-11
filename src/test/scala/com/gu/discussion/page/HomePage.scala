@@ -14,9 +14,9 @@ case class HomePage(implicit override val driver: WebDriver) extends BasePage(dr
       signInLink.click()
       new SignInPage()
 
-    } else {
-      System.err.println("No Sign in link");
-    }
+    } else
+
+      throw new IllegalStateException("This is not the sign in page")
 
   }
 

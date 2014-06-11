@@ -18,7 +18,7 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
 
   }
 
-  def whenIViewAnArticleWithComments() {
+  def whenIViewAnArticleWithComments() = {
     logger.log("I view comments on an article")
     driver.get("http://www.theguardian.com/science/grrlscientist/2012/aug/07/3")
     //TODO get testArticleURL variable from config
@@ -26,7 +26,7 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
     this
   }
 
-  def thenICanViewAllComments() {
+  def thenICanViewAllComments() = {
     logger.log("I can post a new comment")
     CommentModule().showAllComments()
 
@@ -34,7 +34,7 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
 
   }
 
-  def thenICanPostANewComment() {
+  def thenICanPostANewComment() = {
     logger.log("I can post a new comment")
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
@@ -43,7 +43,7 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
 
   }
 
-  def thenICanSortCommentOrder() {
+  def thenICanSortCommentOrder() = {
     logger.log("I can post a new reply")
     new CommentModule().sortCommentsByOrder("oldest")
 
@@ -51,7 +51,7 @@ case class CommentSteps(implicit val driver: WebDriver, override val logger: Tes
 
   }
 
-  def thenICanPostANewReply() {
+  def thenICanPostANewReply() = {
     logger.log("I can post a new reply")
     new CommentItem().replyToComment()
     new CommentItem().postReply()

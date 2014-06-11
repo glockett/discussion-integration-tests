@@ -16,7 +16,6 @@ case class CommentItem(implicit override val driver: WebDriver) extends BasePage
 
   private def cancelReplyButton = driver.findElement(By.className(".d-comment-box__cancel"))
 
-
   private def pickCommentButton = driver.findElement(By.className(".d-comment__action--pick"))
 
   private def reportCommentButton = driver.findElement(By.className(".d-comment__action--report"))

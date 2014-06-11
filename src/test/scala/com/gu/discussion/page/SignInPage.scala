@@ -16,11 +16,11 @@ case class SignInPage(implicit override val driver: WebDriver) extends BasePage(
 
   def signInGUDetails(email: String, password: String): HomePage = {
 
-    driverWait.until(ExpectedConditions.elementToBeClickable(signInButton))
-
     if (!"Sign in to the Guardian".equals(driver.getTitle())) {
       throw new IllegalStateException("This is not the sign in page")
     }
+
+    driverWait.until(ExpectedConditions.elementToBeClickable(signInButton))
 
     emailField.sendKeys(email)
     passwordField.sendKeys(password)
