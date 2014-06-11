@@ -1,27 +1,12 @@
 package com.gu.discussion.step
 
-import com.gu.support.{ConfigLoader, TestLogger, BaseSteps}
+import com.gu.support.{TestLogger}
 import org.openqa.selenium.WebDriver
-import com.gu.discussion.page.SignInPage
 
-case class UserProfileSteps(implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
+case class UserProfileSteps(implicit override val driver: WebDriver, override val logger: TestLogger) extends SignInSteps {
 
-  def givenIAmSignedIn() = {
-    logger.log("I am signed in")
-    driver.get(ConfigLoader().getTestBaseUrl())
-    //TODO get testBaseURL variable from config
-
-    new SignInPage().signInGUDetails(ConfigLoader()."It is me", ConfigLoader()."let_me_in")
-    //TODO get user variables from config
-
-    this
-
-  }
-
-  def whenIClickACommentersAvatar() = {
+ /* def whenIClickACommentersAvatar() = {
     logger.log("I view comments on an article")
-
-    //TODO get testArticleURL variable from config
 
     this
   }
@@ -33,7 +18,7 @@ case class UserProfileSteps(implicit val driver: WebDriver, override val logger:
     this
 
   }
-
+*/
 
 
 }

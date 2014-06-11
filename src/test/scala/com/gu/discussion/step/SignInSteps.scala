@@ -1,8 +1,8 @@
 package com.gu.discussion.step
 
 
-import com.gu.support.{TestLogger, BaseSteps}
-import com.gu.discussion.page.ArticlePage
+import com.gu.support.{Config, TestLogger, BaseSteps}
+import com.gu.discussion.page.{SignInPage, ArticlePage}
 import org.openqa.selenium.WebDriver
 
 case class SignInSteps (implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
@@ -10,13 +10,18 @@ case class SignInSteps (implicit val driver: WebDriver, override val logger: Tes
   def givenIAmSignedIn() = {
     logger.log("I am logged in to NGW")
     new ArticlePage()
-    driver.get("http://www.theguardian.com/")
-    //TODO get testBaseURL variable from config
 
-    //new SignInPage(driver).signInGUDetails("it_is_me", "let_me_in")
-    //TODO get user variables from config
+    driver.get(Config().getTestBaseUrl())
+
+    val email = Config().getUserValue ("email")
+    val password = Config().getUserValue ("password")
+
+    new SignInPage().signInGUDetails(email, password)
+
     this
   }
+
+
 
   def whenIViewTheSigninLocator() = {
     logger.log("I take a look at the SigninLocator ")

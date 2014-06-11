@@ -74,7 +74,7 @@
     <orderEntry type="library" name="SBT: xalan:xalan:2.7.1" level="project" />
     <orderEntry type="library" name="SBT: xerces:xercesImpl:2.11.0" level="project" />
     <orderEntry type="library" name="SBT: xml-apis:xml-apis:1.4.01" level="project" />
-    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala_2.10:1.5" level="project" />
+    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala_2.10:1.7" level="project" />
   </component>
 </module>
 

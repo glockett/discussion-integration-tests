@@ -7,22 +7,22 @@
 		revision="1.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140611095025"/>
+		date="20140611153526"/>
 	<dependencies>
 		<module organisation="com.gu" name="web-automation-core-scala_2.10">
-			<revision name="1.5" status="release" pubdate="20140609173636" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/guardian/scala-automation" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
+			<revision name="1.7" status="release" pubdate="20140611102244" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/guardian/scala-automation" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
 				<license name="Apache V2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3183" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.pom"/>
-				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="compile, runtime" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="1.1"/>
+				<metadata-artifact status="no" details="" size="3183" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/ivy-1.7.xml" searched="false" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/staging/com/gu/web-automation-core-scala_2.10/1.7/web-automation-core-scala_2.10-1.7.pom"/>
+				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="compile, runtime" rev="1.7" rev-constraint-default="1.7" rev-constraint-dynamic="1.7" callerrev="1.1"/>
 				<artifacts>
-					<artifact name="web-automation-core-scala_2.10" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="405019" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/docs/web-automation-core-scala_2.10-1.5-javadoc.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5-javadoc.jar"/>
+					<artifact name="web-automation-core-scala_2.10" type="jar" ext="jar" status="no" details="" size="38974" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/jars/web-automation-core-scala_2.10-1.7.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/staging/com/gu/web-automation-core-scala_2.10/1.7/web-automation-core-scala_2.10-1.7.jar"/>
 					</artifact>
-					<artifact name="web-automation-core-scala_2.10" type="jar" ext="jar" status="no" details="" size="35213" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/jars/web-automation-core-scala_2.10-1.5.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5.jar"/>
+					<artifact name="web-automation-core-scala_2.10" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="415079" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/docs/web-automation-core-scala_2.10-1.7-javadoc.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/staging/com/gu/web-automation-core-scala_2.10/1.7/web-automation-core-scala_2.10-1.7-javadoc.jar"/>
 					</artifact>
-					<artifact name="web-automation-core-scala_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5656" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/srcs/web-automation-core-scala_2.10-1.5-sources.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.5/web-automation-core-scala_2.10-1.5-sources.jar"/>
+					<artifact name="web-automation-core-scala_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6144" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/srcs/web-automation-core-scala_2.10-1.7-sources.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/staging/com/gu/web-automation-core-scala_2.10/1.7/web-automation-core-scala_2.10-1.7-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

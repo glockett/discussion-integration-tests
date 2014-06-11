@@ -1,10 +1,9 @@
 package com.gu.discussion.test
 
-import com.gu.support.BaseTest
-
 import com.gu.discussion.step.SignInSteps
+import com.gu.support.WebBaseTest
 
-class SignInTests extends BaseTest {
+class SignInTests extends WebBaseTest {
 
   info("Set of Login tests to validate sign in to the NGW website")
 
