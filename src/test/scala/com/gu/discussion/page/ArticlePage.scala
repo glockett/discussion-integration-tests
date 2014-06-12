@@ -23,7 +23,7 @@ case class ArticlePage (implicit override val driver: WebDriver) extends BasePag
     } else {
       System.err.println("There are no comments for this article yet");
     }
-
+    //TODO verify that Im at the comments
   }
 
   def viewFeaturedComments() = {

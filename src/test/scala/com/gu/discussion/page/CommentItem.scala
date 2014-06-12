@@ -61,7 +61,6 @@ case class CommentItem(implicit override val driver: WebDriver) extends BasePage
     this
   }
 
-
   def pickComment(): CommentItem = {
     driverWait.until(ExpectedConditions.elementToBeClickable(pickCommentButton))
     pickCommentButton.click()

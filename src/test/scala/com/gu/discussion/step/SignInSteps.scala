@@ -8,29 +8,17 @@ import org.openqa.selenium.WebDriver
 case class SignInSteps (implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
 
   def givenIAmSignedIn() = {
-    logger.log("I am logged in to NGW")
-    new ArticlePage()
+    logger.log("I am registered signed user and signed into NGW")
 
-    driver.get(Config().getTestBaseUrl())
+    driver.get(Config().getTestBaseUrl() + "signin")
 
     val email = Config().getUserValue ("email")
     val password = Config().getUserValue ("password")
 
     new SignInPage().signInGUDetails(email, password)
 
-    this
+    CommentSteps()
   }
 
-
-
-  def whenIViewTheSigninLocator() = {
-    logger.log("I take a look at the SigninLocator ")
-    this
-  }
-
-  def thenISeeMyUserName() = {
-    logger.log("I will see my username")
-    this
-  }
 
 }

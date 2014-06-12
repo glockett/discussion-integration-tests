@@ -2,25 +2,20 @@ package com.gu.discussion.step
 
 import com.gu.support.{Config,TestLogger}
 import org.openqa.selenium.WebDriver
-import com.gu.discussion.page.{CommentItem, CommentModule}
+import com.gu.discussion.page.{ArticlePage, CommentItem, CommentModule}
 
 case class CommentSteps(implicit override val driver: WebDriver, override val logger: TestLogger) extends SignInSteps() {
 
 
- /* def whenIViewAnArticleWithComments() = {
+ def whenIViewAnArticleWithComments() = {
     logger.log("I view comments on an article")
-    driver.get(Config().getUserValue("testArticleURL"))
+    driver.get(Config().getTestBaseUrl()+Config().getUserValue("testArticleURL"))
+
+   new ArticlePage().goToStartOfComments()
 
     this
   }
 
-  def thenICanViewAllComments() = {
-    logger.log("I can post a new comment")
-    CommentModule().showAllComments()
-
-    this
-
-  }
 
   def thenICanPostANewComment() = {
     logger.log("I can post a new comment")
@@ -31,22 +26,30 @@ case class CommentSteps(implicit override val driver: WebDriver, override val lo
 
   }
 
-  def thenICanSortCommentOrder() = {
+  /*def thenICanViewAllComments() = {
+    logger.log("I can post a new comment")
+    CommentModule().showAllComments()
+
+    this
+
+  }*/
+
+  /*def thenICanSortCommentOrder() = {
     logger.log("I can post a new reply")
     new CommentModule().sortCommentsByOrder("oldest")
 
     this
 
-  }
+  }*/
 
-  def thenICanPostANewReply() = {
+  /*def thenICanPostANewReply() = {
     logger.log("I can post a new reply")
     new CommentItem().replyToComment()
     new CommentItem().postReply()
 
     this
 
-  }
-*/
+  }*/
+
 
 }

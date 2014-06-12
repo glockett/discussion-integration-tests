@@ -16,7 +16,7 @@ case class SignInPage(implicit override val driver: WebDriver) extends BasePage(
 
   def signInGUDetails(email: String, password: String): HomePage = {
 
-    if (!"Sign in to the Guardian".equals(driver.getTitle())) {
+    if (!"Sign in | Identity | The Guardian".equals(driver.getTitle())) {
       throw new IllegalStateException("This is not the sign in page")
     }
 
@@ -29,22 +29,24 @@ case class SignInPage(implicit override val driver: WebDriver) extends BasePage(
     new HomePage()
   }
 
+
+
+
   def getTimeStamp() = {
     val today = Calendar.getInstance.getTime
     val curTimeFormat = new SimpleDateFormat("HH:mm:ss")
-
     curTimeFormat.format(today)
 
   }
 
   def getRandomEmailAddress() = {
-    "auto" + getTimeStamp() + "@gmail.com"
+    "user" + getTimeStamp() + "@gmail.com"
     this
 
   }
 
   def getRandomUsername() = {
-    "auto" + getTimeStamp()
+    "user" + getTimeStamp()
     this
   }
 

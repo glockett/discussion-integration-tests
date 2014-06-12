@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver
 
 case class UserProfileSteps(implicit override val driver: WebDriver, override val logger: TestLogger) extends SignInSteps {
 
- /* def whenIClickACommentersAvatar() = {
+ /* def whenIClickUserProfileAvatar() = {
     logger.log("I view comments on an article")
 
     this
