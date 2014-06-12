@@ -6,9 +6,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions
 
 case class HomePage(implicit override val driver: WebDriver) extends BasePage(driver) {
 
-  private def signInLink = driver.findElement(By.className("js-profile-info control__info"))
+  private def signInLink = driver.findElement(By.cssSelector("span.js-profile-info.control__info"))
+
 
   def goToSigninPage() = {
+/*
 
     if (driverWait.until(ExpectedConditions.elementToBeClickable(signInLink)).isDisplayed()) {
       signInLink.click()
@@ -17,8 +19,11 @@ case class HomePage(implicit override val driver: WebDriver) extends BasePage(dr
     } else
 
       throw new IllegalStateException("This is not the sign in page")
+*/
 
+    signInLink.click()
+
+    SignInPage()
   }
-
 
 }

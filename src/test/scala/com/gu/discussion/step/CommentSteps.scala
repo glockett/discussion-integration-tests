@@ -4,12 +4,11 @@ import com.gu.support.{BaseSteps, Config, TestLogger}
 import org.openqa.selenium.WebDriver
 import com.gu.discussion.page.{ArticlePage, CommentModule}
 
-// class CommentSteps(implicit override val driver: WebDriver, override val logger: TestLogger) extends SignInSteps() {
   case class CommentSteps (implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
 
   def whenIViewAnArticleWithComments() = {
     logger.log("I view comments on an article")
-    driver.get(Config().getTestBaseUrl() + Config().getUserValue("testArticleURL"))
+    driver.get(Config().getTestBaseUrl() + Config().getUserValue("testArticlePath"))
 
     new ArticlePage().goToStartOfComments()
 

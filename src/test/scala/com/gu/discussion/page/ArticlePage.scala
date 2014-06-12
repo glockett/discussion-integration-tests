@@ -6,13 +6,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions
 
 case class ArticlePage (implicit override val driver: WebDriver) extends BasePage(driver) {
 
-  //private def featuredCommentsLabel = driver.findElement(By.className(".discussion__comments--top-comments"))
+  private def featuredCommentsLabel = driver.findElement(By.className("discussion__comments--top-comments"))
 
-  private def featuredComment = driver.findElement(By.className(".article__meta-heading"))
+  private def featuredComment = driver.findElement(By.className("article__meta-heading"))
 
-  private def commentCountLabel = driver.findElement(By.className(".commentcount__label"))
+  //private def commentCountLabel = driver.findElement(By.className("js-comment-count"))
 
-  private def gotoFeaturedComments = driver.findElement(By.className(".CTA Top comment bottom read more"))
+  private def commentCountLabel = driver.findElement(By.xpath("//article[@id='article']/div/div/div[2]/div/a/span"))
+
+
+
+  private def gotoFeaturedComments = driver.findElement(By.className("CTA Top comment bottom read more"))
 
 
   def goToStartOfComments() = {

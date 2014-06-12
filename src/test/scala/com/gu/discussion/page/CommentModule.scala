@@ -6,25 +6,25 @@ import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
 
 case class CommentModule(implicit override val driver: WebDriver) extends BasePage(driver) {
 
-  private def showMoreFeaturedCommeLink = driver.findElement(By.className(".show-more__container--featured"))
+  private def showMoreFeaturedCommeLink = driver.findElement(By.className("show-more__container--featured"))
 
-  private def showAllCommentsButton = driver.findElement(By.className(".d-discussion__show-all-comments"))
+  private def showAllCommentsButton = driver.findElement(By.className("d-discussion__show-all-comments"))
 
-  private def commentTextArea = driver.findElement(By.className(".d-comment-box__body"))
+  private def commentTextArea = driver.findElement(By.cssSelector("textarea[name=\"body\"]"))
 
-  private def postYourCommentButton = driver.findElement(By.className(".d-comment-box__submit"))
+  private def postYourCommentButton = driver.findElement(By.cssSelector("button.submit-input.d-comment-box__submit"))
 
-  private def cancelButton = driver.findElement(By.className(".d-comment-box__cancel"))
+  private def cancelButton = driver.findElement(By.className("d-comment-box__cancel"))
 
   private def sortOrderControl = new Select(driver.findElement(By.className("d-discussion__order-control")))
 
-  private def previousControl = driver.findElement(By.className(".pagination__item--prev"))
+  private def previousControl = driver.findElement(By.className("pagination__item--prev"))
 
-  private def nextControl = driver.findElement(By.className(".pagination__item--next"))
+  private def nextControl = driver.findElement(By.className("pagination__item--next"))
 
-  private def showMoreRepliesButton = driver.findElement(By.className(".d-show-more-replies"))
+  private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
 
-  private def newCommentDateStamp = driver.findElement(By.className(".js-timestamp"))
+  private def newCommentDateStamp = driver.findElement(By.className("js-timestamp"))
 
 
   def showMoreFeaturedComments(): CommentModule = {
@@ -34,7 +34,6 @@ case class CommentModule(implicit override val driver: WebDriver) extends BasePa
   }
 
   def addNewComment(): CommentModule = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(postYourCommentButton))
     commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required. \n Lorem Ipsum Dispum " +
       "comment thread text")
 

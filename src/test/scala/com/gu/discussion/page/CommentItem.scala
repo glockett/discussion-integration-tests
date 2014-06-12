@@ -6,27 +6,27 @@ import org.openqa.selenium.support.ui.ExpectedConditions
 
 case class CommentItem(implicit override val driver: WebDriver) extends BasePage(driver) {
 
-  private def showCommentButton = driver.findElement(By.className(".d-comment-box__show-parent"))
+  private def showCommentButton = driver.findElement(By.className("d-comment-box__show-parent"))
 
-  private def replyToCommentButton = driver.findElement(By.className(".d-comment__action--reply-text"))
+  private def replyToCommentButton = driver.findElement(By.className("d-comment__action--reply-text"))
 
-  private def commentTextArea = driver.findElement(By.className(".d-comment-box__body"))
+  private def commentTextArea =  driver.findElement(By.cssSelector("textarea[name=\"body\"]"))
 
-  private def postReplyButton = driver.findElement(By.className(".d-comment-box__submit"))
+  private def postReplyButton = driver.findElement(By.className("d-comment-box__submit"))
 
-  private def cancelReplyButton = driver.findElement(By.className(".d-comment-box__cancel"))
+  private def cancelReplyButton = driver.findElement(By.className("d-comment-box__cancel"))
 
-  private def pickCommentButton = driver.findElement(By.className(".d-comment__action--pick"))
+  private def pickCommentButton = driver.findElement(By.className("d-comment__action--pick"))
 
-  private def reportCommentButton = driver.findElement(By.className(".d-comment__action--report"))
+  private def reportCommentButton = driver.findElement(By.className("d-comment__action--report"))
 
-  private def showMoreRepliesButton = driver.findElement(By.className(".d-show-more-replies"))
+  private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
 
-  private def recommendCommentButton = driver.findElement(By.className(".d-comment__recommend-button"))
+  private def recommendCommentButton = driver.findElement(By.className("d-comment__recommend-button"))
 
-  private def commentAuthorAvatar = driver.findElement(By.className(".d-comment__avatar"))
+  private def commentAuthorAvatar = driver.findElement(By.className("d-comment__avatar"))
 
-  private def commentTimeStamp = driver.findElement(By.className(".d-comment__timestamp"))
+  private def commentTimeStamp = driver.findElement(By.className("d-comment__timestamp"))
 
   /*TODO list of functions/methods
     Add a reply
