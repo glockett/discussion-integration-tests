@@ -10,7 +10,7 @@ case class SignInSteps (implicit val driver: WebDriver, override val logger: Tes
   def givenIAmSignedIn() = {
     logger.log("I am registered signed user and signed into NGW")
 
-    driver.get(Config().getTestBaseUrl() + "signin")
+    driver.get(Config().getTestBaseUrl() + "/signin")
 
     val email = Config().getUserValue ("email")
     val password = Config().getUserValue ("password")
