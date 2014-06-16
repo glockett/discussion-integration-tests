@@ -43,14 +43,28 @@ case class CommentModule(implicit override val driver: WebDriver) extends BasePa
   def postNewComment(): CommentModule = {
     driverWait.until(ExpectedConditions.elementToBeClickable(postYourCommentButton))
     postYourCommentButton.click()
+    val commentDTS = driver.findElement(By.cssSelector("div.d-comment__inner > div.d-comment__meta > div.d-comment__meta-text > div.d-comment__timestamp > a.d-comment__timestamp > time.js-timestamp")).getText()
 
-    if (driverWait.until(ExpectedConditions.textToBePresentInElement(newCommentDateStamp, "Just now"))) {
+    assert(commentDTS == "Just now")
+
+    /*commentDTS should be ("Just now")
+
+    new CommentItem().isAvatarPresent()
+    new CommentItem().isDateStampPresent()
+
+    //commentDTS should be ("Just now")*/
+
+    this
+
+    /*if (assert("Just now", driver.findElement(By.cssSelector("#comment-36908861 > div.d-comment__inner > div.d-comment__meta > div.d-comment__meta-text > div.d-comment__timestamp > a.d-comment__timestamp > time.js-timestamp")).getText())) {
+
       System.err.println("Comment has posted")
+
     } else {
       System.err.println("Comment has no been posted")
     }
+*/
 
-    this
   }
 
   def cancelNewComment(): CommentModule = {

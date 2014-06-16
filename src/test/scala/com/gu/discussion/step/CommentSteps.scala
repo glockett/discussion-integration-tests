@@ -15,15 +15,25 @@ import com.gu.discussion.page.{ArticlePage, CommentModule}
     this
   }
 
-
   def thenICanPostANewComment() = {
     logger.log("I can post a new comment")
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
 
+
     this
 
   }
+
+    /*def thenICanCancelAWrittenComment() = {
+      logger.log("I can post a new comment")
+      new CommentModule().addNewComment()
+      new CommentModule().cancelNewComment()
+
+      this
+
+    }*/
+
 
   /*def thenICanViewAllComments() = {
     logger.log("I can post a new comment")

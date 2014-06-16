@@ -8,7 +8,6 @@ case class HomePage(implicit override val driver: WebDriver) extends BasePage(dr
 
   private def signInLink = driver.findElement(By.cssSelector("span.js-profile-info.control__info"))
 
-
   def goToSigninPage() = {
 /*
 

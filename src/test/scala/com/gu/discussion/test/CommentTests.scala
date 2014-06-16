@@ -13,24 +13,24 @@ class CommentTests extends WebBaseTest {
       given {
         SignInSteps().givenIAmSignedIn()
       }.when {
-         _.whenIViewAnArticleWithComments()
-      }.then {
-        _.thenICanPostANewComment()
-      }
-    }
-
-
-    /*scenarioWeb("Reply to a top level comment") {
-      given {
-        CommentSteps().givenIAmSignedIn()
-      }.when {
         _.whenIViewAnArticleWithComments()
       }.then {
         _.thenICanPostANewComment()
       }
     }
 
-    scenarioWeb("Reply to a top level comment") {
+
+    /*scenarioWeb("Cancel a written top level comment") {
+      given {
+        SignInSteps().givenIAmSignedIn()
+      }.when {
+        _.whenIViewAnArticleWithComments()
+      }.then {
+        _.thenICanCancelAWrittenComment()
+      }
+    }
+*/
+    /*scenarioWeb("Reply to a top level comment") {
       given {
         CommentSteps().givenIAmSignedIn()
       }.when {
@@ -40,9 +40,6 @@ class CommentTests extends WebBaseTest {
       }
     }
 */
-
-
-
 
   }
 }
