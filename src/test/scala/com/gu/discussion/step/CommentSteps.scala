@@ -1,6 +1,6 @@
 package com.gu.discussion.step
 
-import com.gu.automation.support.{Config, TestLogger}
+import com.gu.automation.support.{Assert, Config, TestLogger}
 import com.gu.discussion.page.{ArticlePage, CommentModule}
 import org.openqa.selenium.{By, WebDriver}
 
@@ -20,10 +20,11 @@ import org.openqa.selenium.{By, WebDriver}
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
 
-    val commentDTS = driver.findElement(By.cssSelector("div.d-comment__inner > div.d-comment__meta > div.d-comment__meta-text > div.d-comment__timestamp > a.d-comment__timestamp > time.js-timestamp")).getText()
+    /*val commentDTS = driver.findElement(By.cssSelector("div.d-comment__inner > div.d-comment__meta > div.d-comment__meta-text > div.d-comment__timestamp > a.d-comment__timestamp > time.js-timestamp")).getText()
+*/
+    val newComment = driver.findElement(By.className("d-comment__body")).getText()
 
-    //TODO assert that the new comment has been posted
-    assert(commentDTS == "Just now") //should be "Just now"
+    Assert.assert(newComment, "This is a test reply - Please ignore / delete as required. \n Lorem Ipsum Dispum reply", "Text does not match!")
     this
 
   }

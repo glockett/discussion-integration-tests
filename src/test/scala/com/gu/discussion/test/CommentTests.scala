@@ -1,6 +1,6 @@
 package com.gu.discussion.test
 
-import com.gu.support.WebBaseTest
+import com.gu.automation.support.WebBaseTest
 import com.gu.discussion.step.SignInSteps
 
 class CommentTests extends WebBaseTest {
