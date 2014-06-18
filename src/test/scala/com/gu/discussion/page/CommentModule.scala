@@ -1,10 +1,9 @@
 package com.gu.discussion.page
 
 import org.openqa.selenium.{WebDriver, By}
-import com.gu.support.BasePage
 import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
 
-case class CommentModule(implicit override val driver: WebDriver) extends BasePage(driver) {
+case class CommentModule(implicit driver: WebDriver)  {
 
   private def showMoreFeaturedCommeLink = driver.findElement(By.className("show-more__container--featured"))
 

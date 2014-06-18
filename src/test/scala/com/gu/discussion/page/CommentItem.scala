@@ -1,10 +1,10 @@
 package com.gu.discussion.page
 
 import org.openqa.selenium.{WebDriver, By}
-import com.gu.support.BasePage
+
 import org.openqa.selenium.support.ui.ExpectedConditions
 
-case class CommentItem(implicit override val driver: WebDriver) extends BasePage(driver) {
+case class CommentItem(implicit driver: WebDriver)  {
 
   private def showCommentButton = driver.findElement(By.className("d-comment-box__show-parent"))
 

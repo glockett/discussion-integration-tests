@@ -7,28 +7,28 @@
 		revision="1.1"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140611153526"/>
+		date="20140618111455"/>
 	<dependencies>
 		<module organisation="com.gu" name="web-automation-core-scala_2.10">
-			<revision name="1.7" status="release" pubdate="20140611102244" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/guardian/scala-automation" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
+			<revision name="1.9" status="release" pubdate="20140617160733" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/guardian/scala-automation" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
 				<license name="Apache V2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3183" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/ivy-1.7.xml" searched="false" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/staging/com/gu/web-automation-core-scala_2.10/1.7/web-automation-core-scala_2.10-1.7.pom"/>
-				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.7" rev-constraint-default="1.7" rev-constraint-dynamic="1.7" callerrev="1.1"/>
+				<metadata-artifact status="no" details="" size="3013" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/ivy-1.9.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.9/web-automation-core-scala_2.10-1.9.pom"/>
+				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.9" rev-constraint-default="1.9" rev-constraint-dynamic="1.9" callerrev="1.1"/>
 				<artifacts>
-					<artifact name="web-automation-core-scala_2.10" type="jar" ext="jar" status="no" details="" size="38974" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/jars/web-automation-core-scala_2.10-1.7.jar">
-						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/staging/com/gu/web-automation-core-scala_2.10/1.7/web-automation-core-scala_2.10-1.7.jar"/>
+					<artifact name="web-automation-core-scala_2.10" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="414140" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/docs/web-automation-core-scala_2.10-1.9-javadoc.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.9/web-automation-core-scala_2.10-1.9-javadoc.jar"/>
 					</artifact>
-					<artifact name="web-automation-core-scala_2.10" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="415079" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/docs/web-automation-core-scala_2.10-1.7-javadoc.jar">
-						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/staging/com/gu/web-automation-core-scala_2.10/1.7/web-automation-core-scala_2.10-1.7-javadoc.jar"/>
+					<artifact name="web-automation-core-scala_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6197" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/srcs/web-automation-core-scala_2.10-1.9-sources.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.9/web-automation-core-scala_2.10-1.9-sources.jar"/>
 					</artifact>
-					<artifact name="web-automation-core-scala_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6144" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/srcs/web-automation-core-scala_2.10-1.7-sources.jar">
-						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/staging/com/gu/web-automation-core-scala_2.10/1.7/web-automation-core-scala_2.10-1.7-sources.jar"/>
+					<artifact name="web-automation-core-scala_2.10" type="jar" ext="jar" status="no" details="" size="47064" time="0" location="/Users/glockett/.ivy2/cache/com.gu/web-automation-core-scala_2.10/jars/web-automation-core-scala_2.10-1.9.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/gu/web-automation-core-scala_2.10/1.9/web-automation-core-scala_2.10-1.9.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe" name="config">
-			<revision name="1.2.1" status="release" pubdate="20140502155416" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="46">
+			<revision name="1.2.1" status="release" pubdate="20140502155416" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="41">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2734" time="0" location="/Users/glockett/.ivy2/cache/com.typesafe/config/ivy-1.2.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.pom"/>
 				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.2.1" rev-constraint-default="1.2.1" rev-constraint-dynamic="1.2.1" callerrev="1.1"/>
@@ -41,92 +41,6 @@
 					</artifact>
 					<artifact name="config" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="132611" time="0" location="/Users/glockett/.ivy2/cache/com.typesafe/config/srcs/config-1.2.1-sources.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.fasterxml.jackson.module" name="jackson-module-scala_2.10">
-			<revision name="2.4.0-rc2" status="release" pubdate="20140510043002" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonModuleScala" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="41">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4169" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.10/ivy-2.4.0-rc2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.4.0-rc2/jackson-module-scala_2.10-2.4.0-rc2.pom"/>
-				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.4.0-rc2" rev-constraint-default="2.4.0-rc2" rev-constraint-dynamic="2.4.0-rc2" callerrev="1.1"/>
-				<artifacts>
-					<artifact name="jackson-module-scala_2.10" type="jar" ext="jar" status="no" details="" size="527493" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.10/jars/jackson-module-scala_2.10-2.4.0-rc2.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.4.0-rc2/jackson-module-scala_2.10-2.4.0-rc2.jar"/>
-					</artifact>
-					<artifact name="jackson-module-scala_2.10" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="621830" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.10/docs/jackson-module-scala_2.10-2.4.0-rc2-javadoc.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.4.0-rc2/jackson-module-scala_2.10-2.4.0-rc2-javadoc.jar"/>
-					</artifact>
-					<artifact name="jackson-module-scala_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="52420" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.10/srcs/jackson-module-scala_2.10-2.4.0-rc2-sources.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.4.0-rc2/jackson-module-scala_2.10-2.4.0-rc2-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.thoughtworks.paranamer" name="paranamer">
-			<revision name="2.6" status="release" pubdate="20131009045654" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="45">
-				<metadata-artifact status="no" details="" size="4051" time="0" location="/Users/glockett/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.pom"/>
-				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="1.1"/>
-				<artifacts>
-					<artifact name="paranamer" type="jar" ext="jar" status="no" details="" size="32806" time="0" location="/Users/glockett/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.6.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.jar"/>
-					</artifact>
-					<artifact name="paranamer" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="90529" time="0" location="/Users/glockett/.ivy2/cache/com.thoughtworks.paranamer/paranamer/docs/paranamer-2.6-javadoc.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6-javadoc.jar"/>
-					</artifact>
-					<artifact name="paranamer" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="26517" time="0" location="/Users/glockett/.ivy2/cache/com.thoughtworks.paranamer/paranamer/srcs/paranamer-2.6-sources.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
-			<revision name="2.4.0-rc2" status="release" pubdate="20140430163249" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonHome" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="44">
-				<metadata-artifact status="no" details="" size="8189" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.4.0-rc2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.4.0-rc2/jackson-databind-2.4.0-rc2.pom"/>
-				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.4.0-rc2" rev-constraint-default="2.4.0-rc2" rev-constraint-dynamic="2.4.0-rc2" callerrev="1.1"/>
-				<artifacts>
-					<artifact name="jackson-databind" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="3981658" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/docs/jackson-databind-2.4.0-rc2-javadoc.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.4.0-rc2/jackson-databind-2.4.0-rc2-javadoc.jar"/>
-					</artifact>
-					<artifact name="jackson-databind" type="jar" ext="jar" status="no" details="" size="1062582" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/jars/jackson-databind-2.4.0-rc2.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.4.0-rc2/jackson-databind-2.4.0-rc2.jar"/>
-					</artifact>
-					<artifact name="jackson-databind" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="763246" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.4.0-rc2-sources.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.4.0-rc2/jackson-databind-2.4.0-rc2-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
-			<revision name="2.4.0-rc2" status="release" pubdate="20140430162830" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonHome" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="43">
-				<metadata-artifact status="no" details="" size="5982" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.4.0-rc2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.4.0-rc2/jackson-annotations-2.4.0-rc2.pom"/>
-				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.4.0-rc2" rev-constraint-default="2.4.0-rc2" rev-constraint-dynamic="2.4.0-rc2" callerrev="1.1"/>
-				<artifacts>
-					<artifact name="jackson-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="42082" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.4.0-rc2-sources.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.4.0-rc2/jackson-annotations-2.4.0-rc2-sources.jar"/>
-					</artifact>
-					<artifact name="jackson-annotations" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="268073" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/docs/jackson-annotations-2.4.0-rc2-javadoc.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.4.0-rc2/jackson-annotations-2.4.0-rc2-javadoc.jar"/>
-					</artifact>
-					<artifact name="jackson-annotations" type="jar" ext="jar" status="no" details="" size="38540" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/jars/jackson-annotations-2.4.0-rc2.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.4.0-rc2/jackson-annotations-2.4.0-rc2.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
-			<revision name="2.4.0-rc2" status="release" pubdate="20140430162750" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonHome" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="42">
-				<metadata-artifact status="no" details="" size="6429" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.4.0-rc2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.4.0-rc2/jackson-core-2.4.0-rc2.pom"/>
-				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.4.0-rc2" rev-constraint-default="2.4.0-rc2" rev-constraint-dynamic="2.4.0-rc2" callerrev="1.1"/>
-				<artifacts>
-					<artifact name="jackson-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="233272" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.4.0-rc2-sources.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.4.0-rc2/jackson-core-2.4.0-rc2-sources.jar"/>
-					</artifact>
-					<artifact name="jackson-core" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="798750" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/docs/jackson-core-2.4.0-rc2-javadoc.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.4.0-rc2/jackson-core-2.4.0-rc2-javadoc.jar"/>
-					</artifact>
-					<artifact name="jackson-core" type="jar" ext="jar" status="no" details="" size="223409" time="0" location="/Users/glockett/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/jars/jackson-core-2.4.0-rc2.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.4.0-rc2/jackson-core-2.4.0-rc2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -799,19 +713,19 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.10.3" status="release" pubdate="20130927104454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.3/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="1">
+			<revision name="2.10.4" status="release" pubdate="20140318214629" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="1">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
-				<metadata-artifact status="no" details="" size="2585" time="0" location="/Users/glockett/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.pom"/>
-				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.10.3" rev-constraint-default="2.10.3" rev-constraint-dynamic="2.10.3" callerrev="1.1" extra-info.apiURL="http://www.scala-lang.org/api/2.10.3/"/>
+				<metadata-artifact status="no" details="" size="2585" time="0" location="/Users/glockett/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.pom"/>
+				<caller organisation="automatedtests" name="automatedtests$sources_javadoc_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="1.1" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/"/>
 				<artifacts>
-					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7126003" time="0" location="/Users/glockett/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.3.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.jar"/>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7126372" time="0" location="/Users/glockett/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.jar"/>
 					</artifact>
-					<artifact name="scala-library" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="33911475" time="0" location="/Users/glockett/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.10.3-javadoc.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3-javadoc.jar"/>
+					<artifact name="scala-library" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="33913490" time="0" location="/Users/glockett/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.10.4-javadoc.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4-javadoc.jar"/>
 					</artifact>
-					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1062304" time="0" location="/Users/glockett/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.3-sources.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3-sources.jar"/>
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1062421" time="0" location="/Users/glockett/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.4-sources.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

@@ -1,10 +1,10 @@
 package com.gu.discussion.step
 
-import com.gu.support.{BaseSteps, Config, TestLogger}
+import com.gu.support.{Config, TestLogger}
 import org.openqa.selenium.WebDriver
 import com.gu.discussion.page.{ArticlePage, CommentModule}
 
-  case class CommentSteps (implicit val driver: WebDriver, override val logger: TestLogger) extends BaseSteps(logger) {
+  case class CommentSteps (implicit val driver: WebDriver, logger: TestLogger) {
 
   def whenIViewAnArticleWithComments() = {
     logger.log("I view comments on an article")

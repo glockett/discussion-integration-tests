@@ -1,12 +1,11 @@
 package com.gu.discussion.page
 
 import org.openqa.selenium.{WebDriver, By}
-import com.gu.support.BasePage
 import org.openqa.selenium.support.ui.ExpectedConditions
 import java.util.Calendar
 import java.text.SimpleDateFormat
 
-case class SignInPage(implicit override val driver: WebDriver) extends BasePage(driver) {
+case class SignInPage(implicit driver: WebDriver) {
 
 
   private def emailField = driver.findElement(By.id("email"))

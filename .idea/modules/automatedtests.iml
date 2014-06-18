@@ -4,7 +4,7 @@
     <facet type="scala" name="Scala">
       <configuration>
         <option name="compilerLibraryLevel" value="Project" />
-        <option name="compilerLibraryName" value="SBT:: scala-compiler-bundle:2.10.2" />
+        <option name="compilerLibraryName" value="SBT:: scala-compiler-bundle:2.10.3" />
       </configuration>
     </facet>
   </component>
@@ -27,13 +27,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: cglib:cglib-nodep:2.1_3" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-annotations:2.4.0-rc2" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-core:2.4.0-rc2" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-databind:2.4.0-rc2" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.module:jackson-module-scala_2.10:2.4.0-rc2" level="project" />
-    <orderEntry type="library" name="SBT: com.google.code.findbugs:jsr305:2.0.1" level="project" />
     <orderEntry type="library" name="SBT: com.google.guava:guava:15.0" level="project" />
-    <orderEntry type="library" name="SBT: com.thoughtworks.paranamer:paranamer:2.6" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe:config:1.2.1" level="project" />
     <orderEntry type="library" name="SBT: commons-codec:commons-codec:1.9" level="project" />
     <orderEntry type="library" name="SBT: commons-collections:commons-collections:3.2.1" level="project" />
@@ -56,7 +50,6 @@
     <orderEntry type="library" name="SBT: org.eclipse.jetty:jetty-util:8.1.14.v20131031" level="project" />
     <orderEntry type="library" name="SBT: org.eclipse.jetty:jetty-websocket:8.1.14.v20131031" level="project" />
     <orderEntry type="library" name="SBT: org.json:json:20080701" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.10.3" level="project" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.10.0" level="project" />
     <orderEntry type="library" name="SBT: org.scalatest:scalatest_2.10:2.0" level="project" />
     <orderEntry type="library" name="SBT: org.seleniumhq.selenium:selenium-api:2.42.0" level="project" />
@@ -74,7 +67,8 @@
     <orderEntry type="library" name="SBT: xalan:xalan:2.7.1" level="project" />
     <orderEntry type="library" name="SBT: xerces:xercesImpl:2.11.0" level="project" />
     <orderEntry type="library" name="SBT: xml-apis:xml-apis:1.4.01" level="project" />
-    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala_2.10:1.7" level="project" />
+    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala_2.10:1.9" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.10.4" level="project" />
   </component>
 </module>
 

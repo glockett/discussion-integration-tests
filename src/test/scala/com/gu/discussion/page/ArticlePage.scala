@@ -1,17 +1,13 @@
 package com.gu.discussion.page
 
 import org.openqa.selenium.{WebDriver, By}
-import com.gu.support.BasePage
 
-case class ArticlePage(implicit override val driver: WebDriver) extends BasePage(driver) {
+
+case class ArticlePage(implicit driver: WebDriver) {
 
   private def featuredCommentsLabel = driver.findElement(By.className("discussion__comments--top-comments"))
 
   private def featuredComment = driver.findElement(By.className("article__meta-heading"))
-
-  //private def commentCountLabel = driver.findElement(By.className("commentcount"))
-
-  //private def commentCountLabel = driver.findElement(By.xpath("//article[@id='article']/div/div/div[2]/div/a/span"))
 
   private def commentCountLabel = driver.findElement(By.cssSelector("div.content__main-column.content__main-column--article div.js-comment-count a.js-show-discussion"))
 
@@ -28,7 +24,7 @@ case class ArticlePage(implicit override val driver: WebDriver) extends BasePage
 */
     commentCountLabel.click()
 
-    val allCommentsLabel = driver.findElement(By.className("discussion__heading > js-visible")).getText()
+    val allCommentsLabel = driver.findElement(By.cssSelector("h2.js-visible")).getText()
 
     assert(allCommentsLabel == "All Comments")
 
