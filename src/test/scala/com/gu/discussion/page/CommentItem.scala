@@ -1,16 +1,14 @@
 package com.gu.discussion.page
 
-import org.openqa.selenium.{WebDriver, By}
+import org.openqa.selenium.{By, WebDriver}
 
-import org.openqa.selenium.support.ui.ExpectedConditions
-
-case class CommentItem(implicit driver: WebDriver)  {
+case class CommentItem(implicit driver: WebDriver) {
 
   private def showCommentButton = driver.findElement(By.className("d-comment-box__show-parent"))
 
   private def replyToCommentButton = driver.findElement(By.className("d-comment__action--reply-text"))
 
-  private def commentTextArea =  driver.findElement(By.cssSelector("textarea[name=\"body\"]"))
+  private def commentTextArea = driver.findElement(By.cssSelector("textarea[name=\"body\"]"))
 
   private def postReplyButton = driver.findElement(By.className("d-comment-box__submit"))
 
@@ -37,50 +35,42 @@ case class CommentItem(implicit driver: WebDriver)  {
    */
 
   def showCommentPost(): CommentItem = {
-    Wait().until(ExpectedConditions.elementToBeClickable(showCommentButton))
     showCommentButton.click()
     this
   }
 
   def replyToComment(): CommentItem = {
-    Wait().until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required. \n Lorem Ipsum Dispum reply")
     this
   }
 
   def postReply(): CommentItem = {
-    Wait().until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
     postReplyButton.click()
     this
   }
 
   def cancelReply(): CommentItem = {
-    Wait().until(ExpectedConditions.elementToBeClickable(cancelReplyButton))
     cancelReplyButton.click()
     this
   }
 
   def pickComment(): CommentItem = {
-    Wait().until(ExpectedConditions.elementToBeClickable(pickCommentButton))
     pickCommentButton.click()
     this
   }
 
   def showAllReplies(): CommentItem = {
-    Wait().until(ExpectedConditions.elementToBeClickable(showMoreRepliesButton))
     showMoreRepliesButton.click()
     this
   }
 
   def reportComment(): CommentItem = {
-    Wait().until(ExpectedConditions.elementToBeClickable(reportCommentButton))
     reportCommentButton.click()
     this
   }
 
   def recommendComment(): CommentItem = {
-    Wait().until(ExpectedConditions.elementToBeClickable(recommendCommentButton))
     recommendCommentButton.click()
     this
   }

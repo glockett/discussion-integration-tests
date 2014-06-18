@@ -1,7 +1,6 @@
 package com.gu.discussion.page
 
-import org.openqa.selenium.{WebDriver, By}
-
+import org.openqa.selenium.{By, WebDriver}
 
 case class ArticlePage(implicit driver: WebDriver) {
 
@@ -23,21 +22,18 @@ case class ArticlePage(implicit driver: WebDriver) {
     }
 */
     commentCountLabel.click()
-
-    val allCommentsLabel = driver.findElement(By.cssSelector("h2.js-visible")).getText()
-
-    assert(allCommentsLabel == "All Comments")
-
     this
   }
 
   def viewFeaturedComments() = {
 
-    if (featuredComment.getText().contains("Featured Content")) {
+    /*if (featuredComment.getText().contains("Featured Content")) {
       gotoFeaturedComments.click()
     } else {
       System.err.println("There are no Featured comments for this article")
-    }
+    }*/
+
+    gotoFeaturedComments.click()
 
   }
 

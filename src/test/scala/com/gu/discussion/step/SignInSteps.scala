@@ -1,7 +1,7 @@
 package com.gu.discussion.step
 
 
-import com.gu.support.{Config, TestLogger}
+import com.gu.automation.support.{Config, TestLogger}
 import com.gu.discussion.page.{HomePage, SignInPage}
 import org.openqa.selenium.WebDriver
 
@@ -19,6 +19,7 @@ case class SignInSteps(implicit driver: WebDriver, logger: TestLogger) {
     new SignInPage().signInGUDetails(email, password)
 
     CommentSteps()
+
   }
 
 

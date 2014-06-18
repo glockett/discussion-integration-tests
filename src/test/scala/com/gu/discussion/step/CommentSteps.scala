@@ -1,8 +1,8 @@
 package com.gu.discussion.step
 
-import com.gu.support.{Config, TestLogger}
-import org.openqa.selenium.WebDriver
+import com.gu.automation.support.{Config, TestLogger}
 import com.gu.discussion.page.{ArticlePage, CommentModule}
+import org.openqa.selenium.{By, WebDriver}
 
   case class CommentSteps (implicit driver: WebDriver, logger: TestLogger) {
 
@@ -20,6 +20,10 @@ import com.gu.discussion.page.{ArticlePage, CommentModule}
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
 
+    val commentDTS = driver.findElement(By.cssSelector("div.d-comment__inner > div.d-comment__meta > div.d-comment__meta-text > div.d-comment__timestamp > a.d-comment__timestamp > time.js-timestamp")).getText()
+
+    //TODO assert that the new comment has been posted
+    assert(commentDTS == "Just now") //should be "Just now"
     this
 
   }
@@ -28,7 +32,6 @@ import com.gu.discussion.page.{ArticlePage, CommentModule}
       logger.log("I can post a new comment")
       new CommentModule().addNewComment()
       new CommentModule().cancelNewComment()
-
       this
 
     }*/
@@ -37,7 +40,6 @@ import com.gu.discussion.page.{ArticlePage, CommentModule}
   /*def thenICanViewAllComments() = {
     logger.log("I can post a new comment")
     CommentModule().showAllComments()
-
     this
 
   }*/
@@ -45,7 +47,6 @@ import com.gu.discussion.page.{ArticlePage, CommentModule}
   /*def thenICanSortCommentOrder() = {
     logger.log("I can post a new reply")
     new CommentModule().sortCommentsByOrder("oldest")
-
     this
 
   }*/
@@ -54,7 +55,6 @@ import com.gu.discussion.page.{ArticlePage, CommentModule}
     logger.log("I can post a new reply")
     new CommentItem().replyToComment()
     new CommentItem().postReply()
-
     this
 
   }*/

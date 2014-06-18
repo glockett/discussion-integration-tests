@@ -1,9 +1,11 @@
 package com.gu.discussion.page
 
-import org.openqa.selenium.{WebDriver, By}
-import org.openqa.selenium.support.ui.ExpectedConditions
-import java.util.Calendar
 import java.text.SimpleDateFormat
+import java.util.Calendar
+
+import com.gu.automation.support.Wait
+import org.openqa.selenium.support.ui.ExpectedConditions
+import org.openqa.selenium.{By, WebDriver}
 
 case class SignInPage(implicit driver: WebDriver) {
 
@@ -20,13 +22,10 @@ case class SignInPage(implicit driver: WebDriver) {
       throw new IllegalStateException("This is not the sign in page")
     }
 
-    Wait().until(ExpectedConditions.elementToBeClickable(signInButton))
     emailField.sendKeys(email)
     passwordField.sendKeys(password)
     signInButton.click()
-
     new HomePage()
-
 
   }
 
