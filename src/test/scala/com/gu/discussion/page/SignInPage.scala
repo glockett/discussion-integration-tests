@@ -20,12 +20,14 @@ case class SignInPage(implicit driver: WebDriver) {
       throw new IllegalStateException("This is not the sign in page")
     }
 
-    driverWait.until(ExpectedConditions.elementToBeClickable(signInButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(signInButton))
     emailField.sendKeys(email)
     passwordField.sendKeys(password)
     signInButton.click()
 
     new HomePage()
+
+
   }
 
   def getTimeStamp() = {

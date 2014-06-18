@@ -5,7 +5,7 @@ import com.gu.support.{Config, TestLogger}
 import com.gu.discussion.page.{HomePage, SignInPage}
 import org.openqa.selenium.WebDriver
 
-case class SignInSteps(implicit val driver: WebDriver, logger: TestLogger) {
+case class SignInSteps(implicit driver: WebDriver, logger: TestLogger) {
 
   def givenIAmSignedIn() = {
     logger.log("I am registered signed user and signed into NGW")

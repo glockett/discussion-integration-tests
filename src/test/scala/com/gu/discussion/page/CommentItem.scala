@@ -37,50 +37,50 @@ case class CommentItem(implicit driver: WebDriver)  {
    */
 
   def showCommentPost(): CommentItem = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(showCommentButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(showCommentButton))
     showCommentButton.click()
     this
   }
 
   def replyToComment(): CommentItem = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required. \n Lorem Ipsum Dispum reply")
     this
   }
 
   def postReply(): CommentItem = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(replyToCommentButton))
     postReplyButton.click()
     this
   }
 
   def cancelReply(): CommentItem = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(cancelReplyButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(cancelReplyButton))
     cancelReplyButton.click()
     this
   }
 
   def pickComment(): CommentItem = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(pickCommentButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(pickCommentButton))
     pickCommentButton.click()
     this
   }
 
   def showAllReplies(): CommentItem = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(showMoreRepliesButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(showMoreRepliesButton))
     showMoreRepliesButton.click()
     this
   }
 
   def reportComment(): CommentItem = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(reportCommentButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(reportCommentButton))
     reportCommentButton.click()
     this
   }
 
   def recommendComment(): CommentItem = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(recommendCommentButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(recommendCommentButton))
     recommendCommentButton.click()
     this
   }

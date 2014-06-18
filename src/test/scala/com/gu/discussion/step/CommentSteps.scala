@@ -4,7 +4,7 @@ import com.gu.support.{Config, TestLogger}
 import org.openqa.selenium.WebDriver
 import com.gu.discussion.page.{ArticlePage, CommentModule}
 
-  case class CommentSteps (implicit val driver: WebDriver, logger: TestLogger) {
+  case class CommentSteps (implicit driver: WebDriver, logger: TestLogger) {
 
   def whenIViewAnArticleWithComments() = {
     logger.log("I view comments on an article")
@@ -19,7 +19,6 @@ import com.gu.discussion.page.{ArticlePage, CommentModule}
     logger.log("I can post a new comment")
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
-
 
     this
 

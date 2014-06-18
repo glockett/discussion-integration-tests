@@ -27,7 +27,7 @@ case class CommentModule(implicit driver: WebDriver)  {
 
 
   def showMoreFeaturedComments(): CommentModule = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(showMoreFeaturedCommeLink))
+    Wait().until(ExpectedConditions.elementToBeClickable(showMoreFeaturedCommeLink))
     showMoreFeaturedCommeLink.click()
     this
   }
@@ -40,40 +40,27 @@ case class CommentModule(implicit driver: WebDriver)  {
   }
 
   def postNewComment(): CommentModule = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(postYourCommentButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(postYourCommentButton))
     postYourCommentButton.click()
     val commentDTS = driver.findElement(By.cssSelector("div.d-comment__inner > div.d-comment__meta > div.d-comment__meta-text > div.d-comment__timestamp > a.d-comment__timestamp > time.js-timestamp")).getText()
 
     assert(commentDTS == "Just now")
 
-    /*commentDTS should be ("Just now")
 
-    new CommentItem().isAvatarPresent()
-    new CommentItem().isDateStampPresent()
-
-    //commentDTS should be ("Just now")*/
 
     this
 
-    /*if (assert("Just now", driver.findElement(By.cssSelector("#comment-36908861 > div.d-comment__inner > div.d-comment__meta > div.d-comment__meta-text > div.d-comment__timestamp > a.d-comment__timestamp > time.js-timestamp")).getText())) {
-
-      System.err.println("Comment has posted")
-
-    } else {
-      System.err.println("Comment has no been posted")
-    }
-*/
 
   }
 
   def cancelNewComment(): CommentModule = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(cancelButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(cancelButton))
     cancelButton.click()
     this
   }
 
   def showAllComments(): CommentModule = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(showAllCommentsButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(showAllCommentsButton))
     showAllCommentsButton.click()
     this
   }
@@ -84,19 +71,19 @@ case class CommentModule(implicit driver: WebDriver)  {
   }
 
   def nextPage(): CommentModule = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(nextControl))
+    Wait().until(ExpectedConditions.elementToBeClickable(nextControl))
     nextControl.click()
     this
   }
 
   def previousPage(): CommentModule = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(previousControl))
+    Wait().until(ExpectedConditions.elementToBeClickable(previousControl))
     previousControl.click()
     this
   }
 
   def showAllReplies(): CommentModule = {
-    driverWait.until(ExpectedConditions.elementToBeClickable(showMoreRepliesButton))
+    Wait().until(ExpectedConditions.elementToBeClickable(showMoreRepliesButton))
     showMoreRepliesButton.click()
     this
   }
