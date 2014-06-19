@@ -1,7 +1,8 @@
 package com.gu.discussion.step
 
-import com.gu.automation.support.{Assert, Config, TestLogger}
+import com.gu.automation.support.{Wait, Assert, Config, TestLogger}
 import com.gu.discussion.page.{ArticlePage, CommentModule}
+import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
   case class CommentSteps (implicit driver: WebDriver, logger: TestLogger) {
@@ -20,14 +21,15 @@ import org.openqa.selenium.{By, WebDriver}
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
 
-    /*val commentDTS = driver.findElement(By.cssSelector("div.d-comment__inner > div.d-comment__meta > div.d-comment__meta-text > div.d-comment__timestamp > a.d-comment__timestamp > time.js-timestamp")).getText()
-*/
-    val newComment = driver.findElement(By.className("d-comment__body")).getText()
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
 
-    Assert.assert(newComment, "This is a test reply - Please ignore / delete as required. \n Lorem Ipsum Dispum reply", "Text does not match!")
+    val newComment: String = CommentModule().getNewCommentText
+
+    Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
+
     this
 
-  }
+      }
 
     /*def thenICanCancelAWrittenComment() = {
       logger.log("I can post a new comment")
@@ -56,9 +58,15 @@ import org.openqa.selenium.{By, WebDriver}
     logger.log("I can post a new reply")
     new CommentItem().replyToComment()
     new CommentItem().postReply()
-    this
+
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+
+    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
+
+    Assert.assert(newComment, "This is a test reply - Please ignore / delete as required.", "Text does not match!")
 
   }*/
 
 
-}
+
+  }

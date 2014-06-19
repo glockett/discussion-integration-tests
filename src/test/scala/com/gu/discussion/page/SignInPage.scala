@@ -9,7 +9,6 @@ import org.openqa.selenium.{By, WebDriver}
 
 case class SignInPage(implicit driver: WebDriver) {
 
-
   private def emailField = driver.findElement(By.id("email"))
 
   private def passwordField = driver.findElement(By.id("password"))

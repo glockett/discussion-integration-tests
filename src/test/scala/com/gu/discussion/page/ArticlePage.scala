@@ -15,17 +15,16 @@ case class ArticlePage(implicit driver: WebDriver) {
   private def gotoFeaturedComments = driver.findElement(By.className("CTA Top comment bottom read more"))
 
   def goToStartOfComments() = {
-    /*if (driverWait.until(ExpectedConditions.elementToBeClickable(commentCountLabel))
-      .isDisplayed()) {
+
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.content__main-column.content__main-column--article div.js-comment-count a.js-show-discussion")))
+
+    if (commentCountLabel.isDisplayed()) {
+
       commentCountLabel.click()
     } else {
       System.err.println("There are no comments for this article yet")
     }
-    */
 
-//    Wait().until(ExpectedConditions.elementToBeClickable(commentCountLabel))
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.content__main-column.content__main-column--article div.js-comment-count a.js-show-discussion")))
-    commentCountLabel.click()
     this
   }
 

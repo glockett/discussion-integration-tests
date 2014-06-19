@@ -1,6 +1,5 @@
 package com.gu.discussion.page
 
-import com.gu.automation.support.Assert
 import org.openqa.selenium.support.ui.Select
 import org.openqa.selenium.{By, WebDriver}
 
@@ -32,14 +31,19 @@ case class CommentModule(implicit driver: WebDriver) {
   }
 
   def addNewComment(): CommentModule = {
-    commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required. \n Lorem Ipsum Dispum " +
-      "comment thread text")
+    commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required.")
     this
+
   }
 
   def postNewComment(): CommentModule = {
     postYourCommentButton.click()
     this
+  }
+
+  def getNewCommentText: String = {
+    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
+    newComment
   }
 
   def cancelNewComment(): CommentModule = {
