@@ -13,6 +13,9 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
     new ArticlePage().goToStartOfComments()
 
+
+
+
     this
   }
 
@@ -26,6 +29,8 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
     val newComment: String = CommentModule().getNewCommentText
 
     Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
+
+    //Assert.assert(CommentItem().isAvatarPresent(), true, "Avatar is missing!")
 
     this
 
@@ -49,7 +54,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
 
   /*def thenICanCancelAWrittenComment() = {
-    logger.log("I can post a new comment")
+    logger.log("I can cancel a written comment")
     new CommentModule().addNewComment()
     new CommentModule().cancelNewComment()
 
@@ -65,7 +70,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 */
 
   /*def thenICanViewAllComments() = {
-    logger.log("I can post a new comment")
+    logger.log("I can view all comments")
     CommentModule().showAllComments()
     this
 

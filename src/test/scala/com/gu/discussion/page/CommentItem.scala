@@ -1,5 +1,6 @@
 package com.gu.discussion.page
 
+import com.gu.automation.support.Assert
 import org.openqa.selenium.{By, WebDriver}
 
 case class CommentItem(implicit driver: WebDriver) {
@@ -37,6 +38,7 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def showCommentPost(): CommentItem = {
     showCommentButton.click()
+
     this
   }
 
@@ -81,6 +83,7 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def isAvatarPresent(): Boolean = {
     commentAuthorAvatar.isDisplayed()
+
   }
 
   def isDateStampPresent(): Boolean = {
