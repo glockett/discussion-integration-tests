@@ -27,7 +27,6 @@ case class CommentItem(implicit driver: WebDriver) {
   private def commentTimeStamp = driver.findElement(By.className("d-comment__timestamp"))
 
   /*TODO list of functions/methods
-    Add a reply
     As a Staff member choose a comment to be a Featured comment (Pick)
     Report a comment
     Recommend a comment

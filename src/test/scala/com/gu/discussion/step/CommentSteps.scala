@@ -1,7 +1,7 @@
 package com.gu.discussion.step
 
 import com.gu.automation.support.{Assert, Config, TestLogger, Wait}
-import com.gu.discussion.page.{ArticlePage, CommentModule}
+import com.gu.discussion.page.{ArticlePage, CommentItem, CommentModule}
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
@@ -15,6 +15,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
     this
   }
+
 
   def thenICanPostANewComment() = {
     logger.log("I can post a new comment")
@@ -32,7 +33,22 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
   }
 
 
-  def thenICanCancelAWrittenComment() = {
+  def thenICanPostANewReply() = {
+    logger.log("I can post a new reply")
+    new CommentModule().showAllComments()
+    new CommentItem().replyToComment()
+    new CommentItem().postReply()
+
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+
+    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
+
+    Assert.assert(newComment, "This is a test reply - Please ignore / delete as required.", "Text does not match!")
+
+  }
+
+
+  /*def thenICanCancelAWrittenComment() = {
     logger.log("I can post a new comment")
     new CommentModule().addNewComment()
     new CommentModule().cancelNewComment()
@@ -46,7 +62,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
     this
 
   }
-
+*/
 
   /*def thenICanViewAllComments() = {
     logger.log("I can post a new comment")
@@ -59,19 +75,6 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
     logger.log("I can post a new reply")
     new CommentModule().sortCommentsByOrder("oldest")
     this
-
-  }*/
-
-  /*def thenICanPostANewReply() = {
-    logger.log("I can post a new reply")
-    new CommentItem().replyToComment()
-    new CommentItem().postReply()
-
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
-
-    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
-
-    Assert.assert(newComment, "This is a test reply - Please ignore / delete as required.", "Text does not match!")
 
   }*/
 

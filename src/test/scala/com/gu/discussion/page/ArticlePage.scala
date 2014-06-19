@@ -31,6 +31,7 @@ case class ArticlePage(implicit driver: WebDriver) {
     this
   }
 
+
   def viewFeaturedComments() = {
 
     /*if (featuredComment.getText().contains("Featured Content")) {
