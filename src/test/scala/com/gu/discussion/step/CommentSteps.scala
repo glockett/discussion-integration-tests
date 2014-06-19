@@ -16,7 +16,6 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
     this
   }
 
-
   def thenICanPostANewComment() = {
     logger.log("I can post a new comment")
     new CommentModule().addNewComment()
@@ -32,7 +31,6 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
   }
 
-
   def thenICanPostANewReply() = {
     logger.log("I can post a new reply")
     new CommentModule().showAllComments()
@@ -44,6 +42,8 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
     val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
 
     Assert.assert(newComment, "This is a test reply - Please ignore / delete as required.", "Text does not match!")
+
+    this
 
   }
 

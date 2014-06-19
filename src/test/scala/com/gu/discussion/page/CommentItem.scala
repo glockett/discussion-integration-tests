@@ -4,9 +4,11 @@ import org.openqa.selenium.{By, WebDriver}
 
 case class CommentItem(implicit driver: WebDriver) {
 
+  private val latestComment = driver.findElement(By.cssSelector(".discussion__comments__container .d-comment"))
+
   private def showCommentButton = driver.findElement(By.className("d-comment-box__show-parent"))
 
-  private def replyToCommentButton = driver.findElement(By.className("d-comment__action--reply-text"))
+  private def replyToCommentButton = latestComment.findElement(By.className("d-comment__action--reply"))
 
   private def commentTextArea = driver.findElement(By.cssSelector("textarea[name=\"body\"]"))
 
@@ -39,9 +41,12 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def replyToComment(): CommentItem = {
+
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required.")
-    this
+
+    CommentItem()
+
   }
 
   def postReply(): CommentItem = {

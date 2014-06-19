@@ -3,8 +3,6 @@ package com.gu.discussion.page
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
-import com.gu.automation.support.Wait
-import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
 case class SignInPage(implicit driver: WebDriver) {
