@@ -1,11 +1,11 @@
 package com.gu.discussion.step
 
-import com.gu.automation.support.{Wait, Assert, Config, TestLogger}
+import com.gu.automation.support.{Assert, Config, TestLogger, Wait}
 import com.gu.discussion.page.{ArticlePage, CommentModule}
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
-  case class CommentSteps (implicit driver: WebDriver, logger: TestLogger) {
+case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
   def whenIViewAnArticleWithComments() = {
     logger.log("I view comments on an article")
@@ -29,15 +29,23 @@ import org.openqa.selenium.{By, WebDriver}
 
     this
 
-      }
+  }
 
-    /*def thenICanCancelAWrittenComment() = {
-      logger.log("I can post a new comment")
-      new CommentModule().addNewComment()
-      new CommentModule().cancelNewComment()
-      this
 
-    }*/
+  def thenICanCancelAWrittenComment() = {
+    logger.log("I can post a new comment")
+    new CommentModule().addNewComment()
+    new CommentModule().cancelNewComment()
+
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+
+    val newComment: String = CommentModule().getNewCommentText
+
+    Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
+
+    this
+
+  }
 
 
   /*def thenICanViewAllComments() = {
@@ -68,5 +76,4 @@ import org.openqa.selenium.{By, WebDriver}
   }*/
 
 
-
-  }
+}

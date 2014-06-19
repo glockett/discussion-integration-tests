@@ -18,6 +18,9 @@ case class ArticlePage(implicit driver: WebDriver) {
 
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.content__main-column.content__main-column--article div.js-comment-count a.js-show-discussion")))
 
+    //TODO Istvan to have a look
+    // Wait().until(ExpectedConditions.visibilityOf(commentCountLabel))
+
     if (commentCountLabel.isDisplayed()) {
 
       commentCountLabel.click()
