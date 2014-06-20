@@ -52,6 +52,8 @@ case class ArticlePage(implicit driver: WebDriver) {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#comments > div.discussion__comments__container > div.discussion-container.js-discussion-container > a")))
 
     showAllCommentsLink.click()
+
+
   }
 
 

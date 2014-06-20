@@ -7,9 +7,9 @@ class CommentTests extends WebBaseTest {
 
   info("Set of Discussion tests to validate commenting on the NGW website")
 
-  feature("As a signed in registered user I can create a discussion thread") {
+  feature("As a signed in registered user I can contribute to a discussion") {
 
-    /*scenarioWeb("Add a new top level comment to an article") {
+    scenarioWeb("Add a new top level comment to an article") {
       given {
         SignInSteps().givenIAmSignedIn()
       }.when {
@@ -17,7 +17,7 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanPostANewComment()
       }
-    }*/
+    }
 
     /*scenarioWeb("Reply to a top level comment") {
       given {
@@ -36,6 +36,18 @@ class CommentTests extends WebBaseTest {
         _.whenIViewAllComments()
       }.then {
         _.thenICanReportAComment()
+        //Cannot easily test the endpoint as there is no API but we can use the moderation Tool if necessary
+
+      }
+    }
+
+    scenarioWeb("View a users discussion threads") {
+      given {
+        SignInSteps().givenIAmSignedIn()
+      }.when {
+        _.whenIViewAllComments()
+      }.then {
+        _.thenICanViewUserCommentHistory()
       }
     }
 

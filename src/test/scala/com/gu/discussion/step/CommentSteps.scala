@@ -1,7 +1,7 @@
 package com.gu.discussion.step
 
 import com.gu.automation.support.{Assert, Config, TestLogger, Wait}
-import com.gu.discussion.page.{ArticlePage, CommentItem, CommentModule}
+import com.gu.discussion.page.{UserProfilePage, ArticlePage, CommentItem, CommentModule}
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
@@ -66,7 +66,28 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
  }
 
+  /*def thenICanCancelAWrittenComment() = {
+   logger.log("I can cancel a written comment")
+   new CommentModule().addNewComment()
+   new CommentModule().cancelNewComment()
 
+   Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+
+   val newComment: String = CommentModule().getNewCommentText
+
+   Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
+
+   this
+
+ }
+*/
+
+  def thenICanViewUserCommentHistory(){
+    logger.log("I can view a users comment profile")
+
+    new UserProfilePage().ViewUserProfile()
+
+  }
 
 
  /*def thenICanCancelAWrittenComment() = {

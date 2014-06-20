@@ -3,6 +3,8 @@ package com.gu.discussion.page
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
+import com.gu.automation.support.Wait
+import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
 case class SignInPage(implicit driver: WebDriver) {
@@ -14,6 +16,8 @@ case class SignInPage(implicit driver: WebDriver) {
   private def signInButton = driver.findElement(By.cssSelector(".form-field>button"))
 
   def signInGUDetails(email: String, password: String): HomePage = {
+
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.id("password")))
 
     if (!"Sign in | Identity | The Guardian".equals(driver.getTitle())) {
       throw new IllegalStateException("This is not the sign in page")

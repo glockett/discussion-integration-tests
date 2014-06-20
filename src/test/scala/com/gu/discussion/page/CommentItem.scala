@@ -1,6 +1,7 @@
 package com.gu.discussion.page
 
-import com.gu.automation.support.Assert
+import org.apache.http.client.methods.HttpGet
+import org.apache.http.impl.client.DefaultHttpClient
 import org.openqa.selenium.support.ui.Select
 import org.openqa.selenium.{By, WebDriver}
 
@@ -53,7 +54,6 @@ case class CommentItem(implicit driver: WebDriver) {
   def replyToComment(): CommentItem = {
 
 
-
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required.")
 
@@ -83,13 +83,34 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def reportComment(): CommentItem = {
     reportCommentButton.click()
-    new Select(reportSelectControl).selectByVisibleText("Spam");
-    reportTextArea.sendKeys("This is a test report");
-    reportEmail.sendKeys("test.test@test.com");
-    sendReportButton.click();
+    new Select(reportSelectControl).selectByVisibleText("Spam")
+    reportTextArea.sendKeys("This is a test report")
+    reportEmail.sendKeys("test.test@test.com")
+    sendReportButton.click()
+
+    //getHTTPResponse("http://discussion.code.dev-guardianapis.com/discussion-api")
+
     this
   }
 
+  def getHTTPResponse(url: String): String = {
+    val httpClient = new DefaultHttpClient
+    val httpResponse = httpClient.execute(new HttpGet(url))
+    val entity = httpResponse.getEntity
+    var content = ""
+    if (entity != null) {
+      val inputStream = entity.getContent
+      content = io.Source.fromInputStream(inputStream).getLines.mkString
+      inputStream.close
+    }
+    System.out.println(httpResponse)
+    System.out.println(httpResponse)
+
+    httpClient.getConnectionManager.shutdown
+
+    return content
+
+  }
 
   def recommendComment(): CommentItem = {
     recommendCommentButton.click()
