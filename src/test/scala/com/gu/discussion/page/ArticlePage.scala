@@ -14,6 +14,8 @@ case class ArticlePage(implicit driver: WebDriver) {
 
   private def gotoFeaturedComments = driver.findElement(By.className("CTA Top comment bottom read more"))
 
+  private def showAllCommentsLink = driver.findElement(By.cssSelector("#comments > div.discussion__comments__container > div.discussion-container.js-discussion-container > a"))
+
   def goToStartOfComments() = {
 
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.content__main-column.content__main-column--article div.js-comment-count a.js-show-discussion")))
@@ -25,7 +27,7 @@ case class ArticlePage(implicit driver: WebDriver) {
 
       commentCountLabel.click()
     } else {
-      System.err.println("There are no comments for this article yet")
+      System.err.println("There are no comments for this article yet!")
     }
 
     this
@@ -43,5 +45,16 @@ case class ArticlePage(implicit driver: WebDriver) {
     gotoFeaturedComments.click()
 
   }
+
+
+  def showAllComments() = {
+
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#comments > div.discussion__comments__container > div.discussion-container.js-discussion-container > a")))
+
+    showAllCommentsLink.click()
+  }
+
+
+
 
 }

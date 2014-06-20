@@ -13,75 +13,91 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
     new ArticlePage().goToStartOfComments()
 
-
-
-
     this
   }
 
-  def thenICanPostANewComment() = {
-    logger.log("I can post a new comment")
-    new CommentModule().addNewComment()
-    new CommentModule().postNewComment()
+  def whenIViewAllComments() = {
+    logger.log("I view all comments for a given article")
+    driver.get(Config().getTestBaseUrl() + Config().getUserValue("testArticlePath"))
 
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+   new ArticlePage().showAllComments()
 
-    val newComment: String = CommentModule().getNewCommentText
-
-    Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
-
-    //Assert.assert(CommentItem().isAvatarPresent(), true, "Avatar is missing!")
-
-    this
-
-  }
-
-  def thenICanPostANewReply() = {
-    logger.log("I can post a new reply")
-    new CommentModule().showAllComments()
-    new CommentItem().replyToComment()
-    new CommentItem().postReply()
-
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
-
-    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
-
-    Assert.assert(newComment, "This is a test reply - Please ignore / delete as required.", "Text does not match!")
-
-    this
-
-  }
+   this
+ }
 
 
-  /*def thenICanCancelAWrittenComment() = {
-    logger.log("I can cancel a written comment")
-    new CommentModule().addNewComment()
-    new CommentModule().cancelNewComment()
+ def thenICanPostANewComment() = {
+   logger.log("I can post a new comment")
+   new CommentModule().addNewComment()
+   new CommentModule().postNewComment()
 
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+   Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
 
-    val newComment: String = CommentModule().getNewCommentText
+   val newComment: String = CommentModule().getNewCommentText
 
-    Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
+   Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
 
-    this
+   //Assert.assert(CommentItem().isAvatarPresent(), true, "Avatar is missing!")
 
-  }
+   this
+
+ }
+
+ def thenICanPostANewReply() = {
+   logger.log("I can post a new reply")
+   new CommentModule().showAllComments()
+   new CommentItem().replyToComment()
+   new CommentItem().postReply()
+
+   Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+
+   val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
+
+   Assert.assert(newComment, "This is a test reply - Please ignore / delete as required.", "Text does not match!")
+
+   this
+
+ }
+
+ def thenICanReportAComment() = {
+   logger.log("I can report a comment")
+
+   new CommentItem().reportComment()
+
+ }
+
+
+
+
+ /*def thenICanCancelAWrittenComment() = {
+   logger.log("I can cancel a written comment")
+   new CommentModule().addNewComment()
+   new CommentModule().cancelNewComment()
+
+   Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+
+   val newComment: String = CommentModule().getNewCommentText
+
+   Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
+
+   this
+
+ }
 */
 
-  /*def thenICanViewAllComments() = {
-    logger.log("I can view all comments")
-    CommentModule().showAllComments()
-    this
+ /*def thenICanViewAllComments() = {
+   logger.log("I can view all comments")
+   CommentModule().showAllComments()
+   this
 
-  }*/
+ }*/
 
-  /*def thenICanSortCommentOrder() = {
-    logger.log("I can post a new reply")
-    new CommentModule().sortCommentsByOrder("oldest")
-    this
+ /*def thenICanSortCommentOrder() = {
+   logger.log("I can post a new reply")
+   new CommentModule().sortCommentsByOrder("oldest")
+   this
 
-  }*/
+ }*/
 
 
 }

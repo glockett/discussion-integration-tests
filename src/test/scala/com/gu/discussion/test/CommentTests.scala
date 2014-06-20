@@ -9,7 +9,7 @@ class CommentTests extends WebBaseTest {
 
   feature("As a signed in registered user I can create a discussion thread") {
 
-    scenarioWeb("Add a new top level comment to an article") {
+    /*scenarioWeb("Add a new top level comment to an article") {
       given {
         SignInSteps().givenIAmSignedIn()
       }.when {
@@ -17,7 +17,7 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanPostANewComment()
       }
-    }
+    }*/
 
     /*scenarioWeb("Reply to a top level comment") {
       given {
@@ -29,16 +29,17 @@ class CommentTests extends WebBaseTest {
       }
     }*/
 
-    /*scenarioWeb("Cancel a written top level comment") {
+    scenarioWeb("Report a comment") {
       given {
         SignInSteps().givenIAmSignedIn()
       }.when {
-        _.whenIViewAnArticleWithComments()
+        _.whenIViewAllComments()
       }.then {
-        _.thenICanCancelAWrittenComment()
+        _.thenICanReportAComment()
       }
     }
-*/
+
+
 
   }
 }
