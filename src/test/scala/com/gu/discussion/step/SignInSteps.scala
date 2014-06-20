@@ -13,8 +13,6 @@ case class SignInSteps(implicit driver: WebDriver, logger: TestLogger) {
 
     new HomePage().goToSigninPage()
 
-
-
     val email = Config().getUserValue("email")
     val password = Config().getUserValue("password")
 

@@ -52,8 +52,6 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def replyToComment(): CommentItem = {
-
-
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required.")
 
@@ -93,6 +91,12 @@ case class CommentItem(implicit driver: WebDriver) {
     this
   }
 
+  def viewUserProfile() = {
+    commentAuthorAvatar.click()
+    this
+  }
+
+
   def getHTTPResponse(url: String): String = {
     val httpClient = new DefaultHttpClient
     val httpResponse = httpClient.execute(new HttpGet(url))
@@ -125,6 +129,8 @@ case class CommentItem(implicit driver: WebDriver) {
   def isDateStampPresent(): Boolean = {
     commentTimeStamp.isDisplayed()
   }
+
+
 
 
 }
