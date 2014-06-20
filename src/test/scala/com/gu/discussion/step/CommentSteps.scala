@@ -92,8 +92,8 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
     Assert.assert(userProfileName, Config().getUserValue("username"), "Profile name does not match!")
 
     UserProfilePage().viewProfileReplies()
-    UserProfilePage().viewProfileFeatured()
-    UserProfilePage().viewProfileComments()
+    //UserProfilePage().viewProfileFeatured()
+    //UserProfilePage().viewProfileComments()
 
   }
 
