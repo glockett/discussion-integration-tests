@@ -82,10 +82,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
   def thenICanViewUserCommentHistory() {
     logger.log("I can view a users profile comment history")
-    CommentItem().viewUserProfile()
-    new UserProfilePage().viewUserProfile()
-
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+    CommentItem().viewUserHistory()
 
     val userProfileName: String = UserProfilePage().getUserProfileName
 

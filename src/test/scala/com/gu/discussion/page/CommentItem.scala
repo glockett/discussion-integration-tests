@@ -37,7 +37,11 @@ case class CommentItem(implicit driver: WebDriver) {
 
   private def commentAuthorAvatar = latestComment.findElement(By.className("d-comment__avatar"))
 
+  private def commentAuthorLink =
+    latestComment.findElement(By.cssSelector(".d-comment__author a"))
+
   private def commentTimeStamp = latestComment.findElement(By.className("d-comment__timestamp"))
+
 
   /*TODO list of functions/methods
     As a Staff member choose a comment to be a Featured comment (Pick)
@@ -93,8 +97,19 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def viewUserProfile() = {
     commentAuthorAvatar.click()
+
     this
   }
+
+  def viewUserHistory() = {
+    commentAuthorLink.click()
+
+    UserProfilePage()
+
+  }
+
+
+
 
 
   def getHTTPResponse(url: String): String = {

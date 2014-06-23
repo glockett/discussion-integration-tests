@@ -4,43 +4,48 @@ import com.gu.automation.support.{Wait}
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
-case class UserProfilePage(implicit driver: WebDriver) {
+case class UserProfilePage(implicit driver: WebDriver) extends Locators{
 
-  private def commentsTab = driver.findElement(By.cssSelector("#js-context > div > div > div.identity-header > div.tabs.tabs--identity.js-visible > ol > li:nth-child(2) > a"))
 
-  private def repliesTab = driver.findElement(By.cssSelector("#js-context > div > div > div.identity-header > div.tabs.tabs--identity.js-visible > ol > li:nth-child(2) > a"))
+  private def commentsTab = driver.findElement(byDataTypeStream("discussions"))
 
-  private def featuredTab = driver.findElement(By.cssSelector("#js-context > div > div > div.identity-header > div.tabs.tabs--identity.js-visible > ol > li:nth-child(2) > a"))
+  private def repliesTab = driver.findElement(byDataTypeStream("replies"))
+
+  private def featuredTab = driver.findElement(byDataTypeStream("picks"))
+
+  private def profileName = driver.findElement(By className("user-profile__name"))
 
   def getUserProfileName: String = {
-    val userProfileName = driver.findElement(By.className("user-profile__name")).getText()
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By className("user-profile__name")))
+
+    val userProfileName = profileName.getText()
+
     userProfileName
   }
 
-  def viewUserProfile() = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#js-context > div > div > div.identity-header > div.tabs.tabs--identity.js-visible > ol > li:nth-child(2) > a")))
-
-    UserProfilePage()
-  }
 
   def viewProfileComments() = {
-    commentsTab.click()
-    
+    Wait().until(ExpectedConditions.presenceOfElementLocated(byDataTypeStream("discussions")))
 
-    UserProfilePage()
+    commentsTab.click()
+
+    this
   }
 
   def viewProfileReplies() = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(byDataTypeStream("replies")))
+
     repliesTab.click()
 
-
-    UserProfilePage()
+  this
   }
 
   def viewProfileFeatured() = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(byDataTypeStream("picks")))
+
     featuredTab.click()
 
-    UserProfilePage()
+    this
   }
 
 

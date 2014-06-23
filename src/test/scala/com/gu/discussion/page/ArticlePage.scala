@@ -51,7 +51,6 @@ case class ArticlePage(implicit driver: WebDriver) {
 
     showAllCommentsLink.click()
 
-
   }
 
 
