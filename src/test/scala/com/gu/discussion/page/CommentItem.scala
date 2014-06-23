@@ -108,10 +108,6 @@ case class CommentItem(implicit driver: WebDriver) {
 
   }
 
-
-
-
-
   def getHTTPResponse(url: String): String = {
     val httpClient = new DefaultHttpClient
     val httpResponse = httpClient.execute(new HttpGet(url))
