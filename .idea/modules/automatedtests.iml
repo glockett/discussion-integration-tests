@@ -72,8 +72,6 @@
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-core:2.3.2" level="project" />
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-databind:2.3.2" level="project" />
     <orderEntry type="library" name="SBT: com.google.guava:guava:16.0.1" level="project" />
-    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala-api_2.10:1.1" level="project" />
-    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala_2.10:1.14" level="project" />
     <orderEntry type="library" name="SBT: com.ning:async-http-client:1.8.8" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.akka:akka-actor_2.10:2.3.3" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.akka:akka-slf4j_2.10:2.3.3" level="project" />
@@ -101,6 +99,8 @@
     <orderEntry type="library" name="SBT: org.slf4j:jcl-over-slf4j:1.7.6" level="project" />
     <orderEntry type="library" name="SBT: org.slf4j:jul-to-slf4j:1.7.6" level="project" />
     <orderEntry type="library" name="SBT: org.slf4j:slf4j-api:1.7.7" level="project" />
+    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala-api_2.10:1.2" level="project" />
+    <orderEntry type="library" name="SBT: com.gu:web-automation-core-scala_2.10:1.15" level="project" />
   </component>
 </module>
 

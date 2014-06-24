@@ -9,4 +9,4 @@ resolvers ++= Seq(
 
 
 libraryDependencies ++= Seq(
-  "com.gu" % "web-automation-core-scala_2.10" % "1.14")
+  "com.gu" % "web-automation-core-scala_2.10" % "1.15")
