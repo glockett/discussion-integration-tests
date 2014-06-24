@@ -1,6 +1,6 @@
 package com.gu.discussion.page
 
-import com.gu.automation.support.Wait
+import com.gu.automation.support.{Config, Wait}
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
@@ -49,6 +49,16 @@ case class ArticlePage(implicit driver: WebDriver) {
 
     showAllCommentsLink.click()
 
+  }
+
+}
+
+
+object ArticlePage {
+
+  def goto()(implicit driver: WebDriver) = {
+    driver.get(Config().getTestBaseUrl() + Config().getUserValue("testArticlePath"))
+    ArticlePage()
   }
 
 }

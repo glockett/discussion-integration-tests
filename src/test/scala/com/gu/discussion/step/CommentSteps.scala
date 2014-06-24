@@ -1,16 +1,23 @@
 package com.gu.discussion.step
 
-import com.gu.automation.support.{Assert, Config, TestLogger, Wait}
+import com.gu.automation.support._
 import com.gu.discussion.page._
-import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 import org.scalatest.Matchers
 
-case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends Matchers {
+case class CommentSteps(implicit driver: WebDriver) extends Matchers with LoggingIn with TestLogging {
+
+  def givenIAmSignedIn() = {
+    logger.step("I am registered signed user and signed into NGW")
+
+    val loginPage = logInToGUPage(ArticlePage.goto)
+
+    CommentSteps()
+  }
 
   def whenIViewAnArticleWithComments() = {
-    logger.log("I view comments on an article")
-    driver.get(Config().getTestBaseUrl() + Config().getUserValue("testArticlePath"))
+    logger.step("I view comments on an article")
+
 
     new ArticlePage().goToStartOfComments()
 
@@ -18,34 +25,30 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
   }
 
   def whenIViewAllComments() = {
-    logger.log("I view all comments for a given article")
-    driver.get(Config().getTestBaseUrl() + Config().getUserValue("testArticlePath"))
+    logger.step("I view all comments for a given article")
 
     new ArticlePage().showAllComments()
-
 
     this
   }
 
 
   def thenICanPostANewComment() = {
-    logger.log("I can post a new comment")
+    logger.step("I can post a new comment")
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
 
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
-
     val newComment: String = CommentModule().getNewCommentText
 
-    //newComment should be("This is a test comment - Please ignore / delete as required.")
-    Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
+    newComment should be("This is a test comment - Please ignore / delete as required.")
+    //Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
 
     this
 
   }
 
   def thenICanPostANewReply() = {
-    logger.log("I can post a new reply")
+    logger.step("I can post a new reply")
     new CommentModule().showAllComments()
     new CommentItem().replyToComment()
     new CommentItem().postReply()
@@ -60,14 +63,14 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
   }
 
   def thenICanReportAComment() = {
-    logger.log("I can report a comment")
+    logger.step("I can report a comment")
 
     new CommentItem().reportComment()
 
   }
 
   def thenICanViewUserCommentHistory() {
-    logger.log("I can view a users profile comment history")
+    logger.step("I can view a users profile comment history")
 
     val originatingAuthor = CommentItem().getCommentAuthor()
 

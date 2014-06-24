@@ -1,7 +1,7 @@
 package com.gu.discussion.test
 
 import com.gu.automation.support.WebBaseTest
-import com.gu.discussion.step.SignInSteps
+import com.gu.discussion.step.{CommentSteps}
 
 class CommentTests extends WebBaseTest {
 
@@ -11,7 +11,7 @@ class CommentTests extends WebBaseTest {
 
     /*scenarioWeb("Add a new top level comment to an article") {
       given {
-        SignInSteps().givenIAmSignedIn()
+        CommentSteps().givenIAmSignedIn()
       }.when {
         _.whenIViewAnArticleWithComments()
       }.then {
@@ -21,7 +21,7 @@ class CommentTests extends WebBaseTest {
 
    scenarioWeb("Reply to a top level comment") {
       given {
-        SignInSteps().givenIAmSignedIn()
+        CommentSteps().givenIAmSignedIn()
       }.when {
         _.whenIViewAnArticleWithComments()
       }.then {
@@ -31,7 +31,7 @@ class CommentTests extends WebBaseTest {
 
     /* scenarioWeb("Report a comment") {
        given {
-         SignInSteps().givenIAmSignedIn()
+         CommentSteps().givenIAmSignedIn()
        }.when {
          _.whenIViewAllComments()
        }.then {
@@ -43,7 +43,7 @@ class CommentTests extends WebBaseTest {
 
     /*scenarioWeb("View a users discussion posts") {
       given {
-        SignInSteps().givenIAmSignedIn()
+        CommentSteps().givenIAmSignedIn()
       }.when {
         _.whenIViewAllComments()
       }.then {
