@@ -19,7 +19,6 @@ case class SignInSteps(implicit driver: WebDriver, logger: TestLogger) {
     new SignInPage().signInGUDetails(email, password)
 
     CommentSteps()
-
   }
 
 

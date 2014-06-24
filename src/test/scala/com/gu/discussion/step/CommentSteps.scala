@@ -92,13 +92,11 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
 
     val userProfileName: String = userHistory.getUserProfileName
 
-    //Assert.assert(userProfileName, originatingAuthor, "Profile name does not match!")
-    userProfileName should be (originatingAuthor)
+    userProfileName should be(originatingAuthor)
 
     UserProfilePage().viewProfileReplies()
     //UserProfilePage().viewProfileFeatured()
     //UserProfilePage().viewProfileComments()
-
   }
 
 
@@ -114,7 +112,6 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
 
     this
-
   }
  */
 
@@ -122,14 +119,12 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     logger.log("I can view all comments")
     CommentModule().showAllComments()
     this
-
   }*/
 
   /*def thenICanSortCommentOrder() = {
     logger.log("I can post a new reply")
     new CommentModule().sortCommentsByOrder("oldest")
     this
-
   }*/
 
 

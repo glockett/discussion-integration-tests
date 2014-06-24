@@ -1,11 +1,10 @@
 package com.gu.discussion.page
 
-import com.gu.automation.support.{Wait}
+import com.gu.automation.support.Wait
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
-case class UserProfilePage(implicit driver: WebDriver) extends Locators{
-
+case class UserProfilePage(implicit driver: WebDriver) extends Locators {
 
   private def commentsTab = driver.findElement(byDataTypeStream("discussions"))
 
@@ -29,7 +28,6 @@ case class UserProfilePage(implicit driver: WebDriver) extends Locators{
     Wait().until(ExpectedConditions.presenceOfElementLocated(byDataTypeStream("discussions")))
 
     commentsTab.click()
-
     this
   }
 
@@ -37,17 +35,14 @@ case class UserProfilePage(implicit driver: WebDriver) extends Locators{
     Wait().until(ExpectedConditions.presenceOfElementLocated(byDataTypeStream("replies")))
 
     repliesTab.click()
-
-  this
+    this
   }
 
   def viewProfileFeatured() = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(byDataTypeStream("picks")))
 
     featuredTab.click()
-
     this
   }
-
 
 }

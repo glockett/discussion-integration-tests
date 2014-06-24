@@ -41,11 +41,9 @@ case class CommentItem(implicit driver: WebDriver) {
 
   private def commentTimeStamp = latestComment.findElement(By.className("d-comment__timestamp"))
 
-
   /*TODO list of functions/methods
     As a Staff member choose a comment to be a Featured comment (Pick)
     Recommend a comment
-
    */
 
   def showCommentPost(): CommentItem = {
@@ -57,7 +55,6 @@ case class CommentItem(implicit driver: WebDriver) {
   def replyToComment(): CommentItem = {
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required.")
-
     CommentItem()
 
   }
@@ -90,13 +87,11 @@ case class CommentItem(implicit driver: WebDriver) {
     sendReportButton.click()
 
     //getHTTPResponse("http://discussion.code.dev-guardianapis.com/discussion-api")
-
     this
   }
 
   def viewUserProfile() = {
     commentAuthorAvatar.click()
-
     this
   }
 
@@ -144,8 +139,5 @@ case class CommentItem(implicit driver: WebDriver) {
   def isDateStampPresent(): Boolean = {
     commentTimeStamp.isDisplayed()
   }
-
-
-
 
 }

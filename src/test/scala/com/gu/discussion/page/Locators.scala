@@ -11,5 +11,4 @@ trait Locators {
   def byDataTypeContent(value: String) = By.cssSelector(s"[data-type-stream=$value]")
 
 
-
 }

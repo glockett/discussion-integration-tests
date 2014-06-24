@@ -29,19 +29,19 @@ class CommentTests extends WebBaseTest {
       }
     }*/
 
-   /* scenarioWeb("Report a comment") {
-      given {
-        SignInSteps().givenIAmSignedIn()
-      }.when {
-        _.whenIViewAllComments()
-      }.then {
-        _.thenICanReportAComment()
-        //Cannot easily test the endpoint as there is no API but we can use the moderation Tool if necessary
+    /* scenarioWeb("Report a comment") {
+       given {
+         SignInSteps().givenIAmSignedIn()
+       }.when {
+         _.whenIViewAllComments()
+       }.then {
+         _.thenICanReportAComment()
+         //Cannot easily test the endpoint as there is no API but we can use the moderation Tool if necessary
 
-      }
-    }*/
+       }
+     }*/
 
-    scenarioWeb("View a users discussion threads") {
+    scenarioWeb("View a users discussion posts") {
       given {
         SignInSteps().givenIAmSignedIn()
       }.when {
@@ -50,7 +50,6 @@ class CommentTests extends WebBaseTest {
         _.thenICanViewUserCommentHistory()
       }
     }
-
 
 
   }
