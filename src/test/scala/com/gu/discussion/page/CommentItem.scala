@@ -1,8 +1,9 @@
 package com.gu.discussion.page
 
+import com.gu.automation.support.Wait
 import org.apache.http.client.methods.HttpGet
 import org.apache.http.impl.client.DefaultHttpClient
-import org.openqa.selenium.support.ui.Select
+import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
 import org.openqa.selenium.{By, WebDriver}
 
 case class CommentItem(implicit driver: WebDriver) {
@@ -40,6 +41,8 @@ case class CommentItem(implicit driver: WebDriver) {
   private def commentAuthorLink = latestComment.findElement(By.cssSelector(".d-comment__author a"))
 
   private def commentTimeStamp = latestComment.findElement(By.className("d-comment__timestamp"))
+
+  private def newReply = driver.findElement(By.cssSelector(".d-comment--response p"))
 
   /*TODO list of functions/methods
     As a Staff member choose a comment to be a Featured comment (Pick)
@@ -107,23 +110,9 @@ case class CommentItem(implicit driver: WebDriver) {
 
   }
 
-  def getHTTPResponse(url: String): String = {
-    val httpClient = new DefaultHttpClient
-    val httpResponse = httpClient.execute(new HttpGet(url))
-    val entity = httpResponse.getEntity
-    var content = ""
-    if (entity != null) {
-      val inputStream = entity.getContent
-      content = io.Source.fromInputStream(inputStream).getLines.mkString
-      inputStream.close
-    }
-    System.out.println(httpResponse)
-    System.out.println(httpResponse)
-
-    httpClient.getConnectionManager.shutdown
-
-    return content
-
+  def getCommentReply() = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment--response p")))
+    newReply.getText()
   }
 
   def recommendComment(): CommentItem = {

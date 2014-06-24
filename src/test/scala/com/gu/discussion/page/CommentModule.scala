@@ -42,8 +42,9 @@ case class CommentModule(implicit driver: WebDriver) {
   }
 
   def getNewCommentText: String = {
-    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
-    newComment
+    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body"))
+
+    newComment.getText
   }
 
   def cancelNewComment(): CommentModule = {

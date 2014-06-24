@@ -37,7 +37,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
 
     val newComment: String = CommentModule().getNewCommentText
 
-
+    //newComment should be("This is a test comment - Please ignore / delete as required.")
     Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
 
     this
@@ -49,12 +49,11 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     new CommentModule().showAllComments()
     new CommentItem().replyToComment()
     new CommentItem().postReply()
+    new CommentItem().getCommentReply()
 
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
+    val newReply = CommentItem().getCommentReply()
 
-    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body")).getText()
-
-    Assert.assert(newComment, "This is a test reply - Please ignore / delete as required.", "Text does not match!")
+    newReply should be("This is a test reply - Please ignore / delete as required.")
 
     this
 
@@ -66,22 +65,6 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     new CommentItem().reportComment()
 
   }
-
-  /*def thenICanCancelAWrittenComment() = {
-   logger.log("I can cancel a written comment")
-   new CommentModule().addNewComment()
-   new CommentModule().cancelNewComment()
-
-   Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
-
-   val newComment: String = CommentModule().getNewCommentText
-
-   Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
-
-   this
-
- }
-*/
 
   def thenICanViewUserCommentHistory() {
     logger.log("I can view a users profile comment history")
@@ -99,21 +82,6 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     //UserProfilePage().viewProfileComments()
   }
 
-
-  /*def thenICanCancelAWrittenComment() = {
-    logger.log("I can cancel a written comment")
-    new CommentModule().addNewComment()
-    new CommentModule().cancelNewComment()
-
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
-
-    val newComment: String = CommentModule().getNewCommentText
-
-    Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
-
-    this
-  }
- */
 
   /*def thenICanViewAllComments() = {
     logger.log("I can view all comments")

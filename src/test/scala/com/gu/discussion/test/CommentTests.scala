@@ -19,7 +19,7 @@ class CommentTests extends WebBaseTest {
       }
     }*/
 
-    /*scenarioWeb("Reply to a top level comment") {
+   scenarioWeb("Reply to a top level comment") {
       given {
         SignInSteps().givenIAmSignedIn()
       }.when {
@@ -27,7 +27,7 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanPostANewReply()
       }
-    }*/
+    }
 
     /* scenarioWeb("Report a comment") {
        given {
@@ -41,7 +41,7 @@ class CommentTests extends WebBaseTest {
        }
      }*/
 
-    scenarioWeb("View a users discussion posts") {
+    /*scenarioWeb("View a users discussion posts") {
       given {
         SignInSteps().givenIAmSignedIn()
       }.when {
@@ -49,8 +49,7 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanViewUserCommentHistory()
       }
-    }
-
+    }*/
 
   }
 }
