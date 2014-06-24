@@ -89,7 +89,6 @@ case class CommentItem(implicit driver: WebDriver) {
     reportEmail.sendKeys("test.test@test.com")
     sendReportButton.click()
 
-    //getHTTPResponse("http://discussion.code.dev-guardianapis.com/discussion-api")
     this
   }
 
