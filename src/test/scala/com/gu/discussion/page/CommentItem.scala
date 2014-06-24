@@ -1,8 +1,6 @@
 package com.gu.discussion.page
 
 import com.gu.automation.support.Wait
-import org.apache.http.client.methods.HttpGet
-import org.apache.http.impl.client.DefaultHttpClient
 import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
 import org.openqa.selenium.{By, WebDriver}
 

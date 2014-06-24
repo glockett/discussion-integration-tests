@@ -2,7 +2,7 @@ package com.gu.discussion.step
 
 import com.gu.automation.support._
 import com.gu.discussion.page._
-import org.openqa.selenium.{By, WebDriver}
+import org.openqa.selenium.WebDriver
 import org.scalatest.Matchers
 
 case class CommentSteps(implicit driver: WebDriver) extends Matchers with LoggingIn with TestLogging {
@@ -18,7 +18,6 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
   def whenIViewAnArticleWithComments() = {
     logger.step("I view comments on an article")
 
-
     new ArticlePage().goToStartOfComments()
 
     this
@@ -32,7 +31,6 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     this
   }
 
-
   def thenICanPostANewComment() = {
     logger.step("I can post a new comment")
     new CommentModule().addNewComment()
@@ -41,7 +39,6 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     val newComment: String = CommentModule().getNewCommentText
 
     newComment should be("This is a test comment - Please ignore / delete as required.")
-    //Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
 
     this
 
@@ -59,14 +56,12 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     newReply should be("This is a test reply - Please ignore / delete as required.")
 
     this
-
   }
 
   def thenICanReportAComment() = {
     logger.step("I can report a comment")
 
     new CommentItem().reportComment()
-
   }
 
   def thenICanViewUserCommentHistory() {
@@ -97,6 +92,5 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     new CommentModule().sortCommentsByOrder("oldest")
     this
   }*/
-
 
 }

@@ -53,7 +53,6 @@ case class ArticlePage(implicit driver: WebDriver) {
 
 }
 
-
 object ArticlePage {
 
   def goto()(implicit driver: WebDriver) = {

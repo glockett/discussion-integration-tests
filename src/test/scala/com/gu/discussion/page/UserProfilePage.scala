@@ -23,7 +23,6 @@ case class UserProfilePage(implicit driver: WebDriver) extends Locators {
     userProfileName
   }
 
-
   def viewProfileComments() = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(byDataTypeStream("discussions")))
 
