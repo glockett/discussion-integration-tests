@@ -13,10 +13,11 @@ case class UserProfilePage(implicit driver: WebDriver) extends Locators{
 
   private def featuredTab = driver.findElement(byDataTypeStream("picks"))
 
-  private def profileName = driver.findElement(By className("user-profile__name"))
+  private def profileName = driver.findElement(By.className("user-profile__name"))
 
   def getUserProfileName: String = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By className("user-profile__name")))
+
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("user-profile__name")))
 
     val userProfileName = profileName.getText()
 

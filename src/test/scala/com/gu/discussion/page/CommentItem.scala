@@ -37,8 +37,7 @@ case class CommentItem(implicit driver: WebDriver) {
 
   private def commentAuthorAvatar = latestComment.findElement(By.className("d-comment__avatar"))
 
-  private def commentAuthorLink =
-    latestComment.findElement(By.cssSelector(".d-comment__author a"))
+  private def commentAuthorLink = latestComment.findElement(By.cssSelector(".d-comment__author a"))
 
   private def commentTimeStamp = latestComment.findElement(By.className("d-comment__timestamp"))
 
@@ -105,6 +104,11 @@ case class CommentItem(implicit driver: WebDriver) {
     commentAuthorLink.click()
 
     UserProfilePage()
+
+  }
+
+  def getCommentAuthor() = {
+    commentAuthorLink.getText()
 
   }
 

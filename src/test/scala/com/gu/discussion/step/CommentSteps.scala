@@ -4,8 +4,9 @@ import com.gu.automation.support.{Assert, Config, TestLogger, Wait}
 import com.gu.discussion.page._
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
+import org.scalatest.Matchers
 
-case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
+case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends Matchers {
 
   def whenIViewAnArticleWithComments() = {
     logger.log("I view comments on an article")
@@ -22,6 +23,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
     new ArticlePage().showAllComments()
 
+
     this
   }
 
@@ -34,6 +36,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".js-new-comments .d-comment__body")))
 
     val newComment: String = CommentModule().getNewCommentText
+
 
     Assert.assert(newComment, "This is a test comment - Please ignore / delete as required.", "Text does not match!")
 
@@ -82,11 +85,15 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) {
 
   def thenICanViewUserCommentHistory() {
     logger.log("I can view a users profile comment history")
-    CommentItem().viewUserHistory()
 
-    val userProfileName: String = UserProfilePage().getUserProfileName
+    val originatingAuthor = CommentItem().getCommentAuthor()
 
-    Assert.assert(userProfileName, Config().getUserValue("username"), "Profile name does not match!")
+    val userHistory = CommentItem().viewUserHistory()
+
+    val userProfileName: String = userHistory.getUserProfileName
+
+    //Assert.assert(userProfileName, originatingAuthor, "Profile name does not match!")
+    userProfileName should be (originatingAuthor)
 
     UserProfilePage().viewProfileReplies()
     //UserProfilePage().viewProfileFeatured()
