@@ -11,6 +11,8 @@ case class SignInSteps(implicit driver: WebDriver, logger: TestLogger) {
     logger.log("I am registered signed user and signed into NGW")
     driver.get(Config().getTestBaseUrl())
 
+    //val loginPage = logInToPage(LoginPage.goto, Config().getUserValue("email"), Config().getUserValue("password"))
+
     new HomePage().goToSigninPage()
 
     val email = Config().getUserValue("email")
