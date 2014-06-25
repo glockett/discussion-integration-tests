@@ -16,7 +16,7 @@ case class ArticlePage(implicit driver: WebDriver) {
 
   private def showAllCommentsLink = driver.findElement(By.cssSelector("#comments > div.discussion__comments__container > div.discussion-container.js-discussion-container > a"))
 
-  def goToStartOfComments(): ArticlePage ={
+  def goToStartOfComments(): ArticlePage = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.content__main-column.content__main-column--article div.js-comment-count a.js-show-discussion")))
 
     //TODO Istvan to have a look
@@ -42,7 +42,7 @@ case class ArticlePage(implicit driver: WebDriver) {
     this
   }
 
-  def showAllComments(): ArticlePage ={
+  def showAllComments(): ArticlePage = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#comments > div.discussion__comments__container > div.discussion-container.js-discussion-container > a")))
     showAllCommentsLink.click()
     this

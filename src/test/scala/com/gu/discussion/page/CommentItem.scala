@@ -7,42 +7,26 @@ import org.openqa.selenium.{By, WebDriver}
 case class CommentItem(implicit driver: WebDriver) {
 
   private val latestComment = driver.findElement(By.cssSelector(".discussion__comments__container .d-comment"))
-
   private def commentBody = latestComment.findElement(By.className("d-comment__body"))
-
   private def showCommentButton = latestComment.findElement(By.className("d-comment-box__show-parent"))
-
   private def replyToCommentButton = latestComment.findElement(By.className("d-comment__action--reply"))
-
   private def commentTextArea = latestComment.findElement(By.cssSelector("textarea[name=\"body\"]"))
-
   private def postReplyButton = latestComment.findElement(By.className("d-comment-box__submit"))
-
   private def cancelReplyButton = latestComment.findElement(By.className("d-comment-box__cancel"))
-
   private def pickCommentButton = latestComment.findElement(By.className("d-comment__action--pick"))
-
   private def reportCommentButton = latestComment.findElement(By.className("d-comment__action--report"))
-
   private def reportSelectControl = latestComment.findElement(By.name("category"))
-
   private def reportTextArea = latestComment.findElement(By.id("d-report-comment__reason"))
-
   private def reportEmail = latestComment.findElement(By.id("d-report-comment__email"))
-
   private def sendReportButton = latestComment.findElement(By.cssSelector("button.d-report-comment__submit"))
-
   private def showMoreRepliesButton = latestComment.findElement(By.className("d-show-more-replies"))
-
   private def recommendCommentButton = latestComment.findElement(By.className("d-comment__recommend-button"))
-
   private def commentAuthorAvatar = latestComment.findElement(By.className("d-comment__avatar"))
-
   private def commentAuthorLink = latestComment.findElement(By.cssSelector(".d-comment__author a"))
-
   private def commentTimeStamp = latestComment.findElement(By.className("d-comment__timestamp"))
-
-  private def newReply = latestComment.findElement(By.cssSelector(".d-comment--response p"))
+  private def recommendCommentCount = latestComment.findElement(By.className("d-comment__recommend--user-recommended"))
+  private def recommendCountOld = latestComment.findElement(By.cssSelector(".d-comment__recommend-count--old"))
+  private def recommendCountNew = latestComment.findElement(By.cssSelector(".d-comment__recommend-count--new"))
 
   /*TODO list of functions/methods
     As a Staff member choose a comment to be a Featured comment (Pick)
@@ -58,11 +42,12 @@ case class CommentItem(implicit driver: WebDriver) {
   def replyToComment(): CommentItem = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--reply")))
     replyToCommentButton.click()
-    commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required.")
+    commentTextArea.sendKeys("This is a test reply")
     CommentItem()
   }
 
   def postReply(): CommentItem = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__submit")))
     postReplyButton.click()
     this
   }
@@ -98,7 +83,6 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def viewUserProfile() = {
     commentAuthorAvatar.click()
-    this
   }
 
   def viewUserHistory() = {
@@ -110,8 +94,8 @@ case class CommentItem(implicit driver: WebDriver) {
     commentAuthorLink.getText()
   }
 
-
   def recommendComment(): CommentItem = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__recommend-button")))
     recommendCommentButton.click()
     this
   }
@@ -125,12 +109,31 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def getLatestCommentText: String = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__body")))
     commentBody.getText
   }
 
-  def getLatestCommentReply() = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment--response p")))
-    newReply.getText()
+  def getLatestCommentsLatestReply() = {
+    val newCommentURL = driver.getCurrentUrl()
+    val newCommentID = newCommentURL.substring(newCommentURL.indexOf("#") + 1)
+//    Wait().until(ExpectedConditions.presenceOfElementLocated(By.id(newCommentID)))
+    latestComment.findElement(By.cssSelector(s"#$newCommentID p")).getText()
   }
+
+
+  def getRecommendCommentCount(): CommentItem =  {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment__recommend--user-recommended")))
+    //get the current recommendCommentCount value
+    //recommendCommentCount.getAttribute()
+    this
+  }
+
+  def goToLatestComment(): CommentItem =  {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment--response p")))
+    commentBody.isDisplayed()
+    this
+  }
+
+
 
 }

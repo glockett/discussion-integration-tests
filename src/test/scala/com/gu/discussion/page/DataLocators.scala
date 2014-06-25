@@ -22,13 +22,11 @@ trait DataLocators {
 
   def getRandomEmailAddress() = {
     "user" + getTimeStamp() + "@gmail.com"
-    this
 
   }
 
   def getRandomUsername() = {
     "user" + getTimeStamp()
-    this
   }
 
 }

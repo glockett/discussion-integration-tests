@@ -13,6 +13,12 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     CommentSteps()
   }
 
+  def givenIAmGuestUser(): CommentSteps = {
+    logger.step("I am Guest user on NGW")
+    driver.get(Config().getTestBaseUrl() + Config().getUserValue("testArticlePath"))
+    this
+  }
+
   def whenIViewAnArticleWithComments() = {
     logger.step("I view comments on an article")
     new ArticlePage().goToStartOfComments()
@@ -39,10 +45,8 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     new CommentModule().showAllComments()
     new CommentItem().replyToComment()
     new CommentItem().postReply()
-    new CommentItem().getLatestCommentReply()
-
-    val newReply = CommentItem().getLatestCommentReply()
-    newReply should be("This is a test reply - Please ignore / delete as required.")
+    val newReply = CommentItem().getLatestCommentsLatestReply()
+    newReply should be("This is a test reply")
   }
 
   def thenICanReportAComment() = {
@@ -62,6 +66,13 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     UserProfilePage().viewProfileFeatured()
   }
 
+  def thenICanRecommendAComment() {
+    logger.step("I can recommend a comment")
+    val recommendCommentCount = CommentItem().getRecommendCommentCount()
+
+    CommentItem().recommendComment()
+    //recommendCommentCount should be(recommendCommentCount++1)
+  }
 
   def thenICanPickAComment() = {
     logger.step("I can Pick a comment")
