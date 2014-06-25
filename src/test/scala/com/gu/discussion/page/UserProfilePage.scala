@@ -4,7 +4,7 @@ import com.gu.automation.support.Wait
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
-case class UserProfilePage(implicit driver: WebDriver) extends Locators {
+case class UserProfilePage(implicit driver: WebDriver) extends DataLocators {
 
   private def commentsTab = driver.findElement(byDataTypeStream("discussions"))
 

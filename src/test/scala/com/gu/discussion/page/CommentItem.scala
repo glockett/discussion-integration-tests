@@ -8,7 +8,9 @@ case class CommentItem(implicit driver: WebDriver) {
 
   private val latestComment = driver.findElement(By.cssSelector(".discussion__comments__container .d-comment"))
 
-  private def showCommentButton = driver.findElement(By.className("d-comment-box__show-parent"))
+  private def commentBody = latestComment.findElement(By.className("d-comment__body"))
+
+  private def showCommentButton = latestComment.findElement(By.className("d-comment-box__show-parent"))
 
   private def replyToCommentButton = latestComment.findElement(By.className("d-comment__action--reply"))
 
@@ -40,7 +42,7 @@ case class CommentItem(implicit driver: WebDriver) {
 
   private def commentTimeStamp = latestComment.findElement(By.className("d-comment__timestamp"))
 
-  private def newReply = driver.findElement(By.cssSelector(".d-comment--response p"))
+  private def newReply = latestComment.findElement(By.cssSelector(".d-comment--response p"))
 
   /*TODO list of functions/methods
     As a Staff member choose a comment to be a Featured comment (Pick)
@@ -49,7 +51,6 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def showCommentPost(): CommentItem = {
     showCommentButton.click()
-
     this
   }
 
@@ -57,7 +58,6 @@ case class CommentItem(implicit driver: WebDriver) {
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required.")
     CommentItem()
-
   }
 
   def postReply(): CommentItem = {
@@ -86,7 +86,6 @@ case class CommentItem(implicit driver: WebDriver) {
     reportTextArea.sendKeys("This is a test report")
     reportEmail.sendKeys("test.test@test.com")
     sendReportButton.click()
-
     this
   }
 
@@ -97,14 +96,11 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def viewUserHistory() = {
     commentAuthorLink.click()
-
     UserProfilePage()
-
   }
 
   def getCommentAuthor() = {
     commentAuthorLink.getText()
-
   }
 
   def getCommentReply() = {
@@ -119,11 +115,14 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def isAvatarPresent(): Boolean = {
     commentAuthorAvatar.isDisplayed()
-
   }
 
   def isDateStampPresent(): Boolean = {
     commentTimeStamp.isDisplayed()
+  }
+
+  def getLatestCommentText: String = {
+    commentBody.getText
   }
 
 }

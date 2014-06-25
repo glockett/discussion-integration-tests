@@ -9,25 +9,19 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
 
   def givenIAmSignedIn() = {
     logger.step("I am registered signed user and signed into NGW")
-
-    val loginPage = logInToGUPage(ArticlePage.goto)
-
+    logInToGUPage(ArticlePage.goto)
     CommentSteps()
   }
 
   def whenIViewAnArticleWithComments() = {
     logger.step("I view comments on an article")
-
     new ArticlePage().goToStartOfComments()
-
     this
   }
 
   def whenIViewAllComments() = {
     logger.step("I view all comments for a given article")
-
     new ArticlePage().showAllComments()
-
     this
   }
 
@@ -36,12 +30,8 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
 
-    val newComment: String = CommentModule().getNewCommentText
-
+    val newComment: String = CommentItem().getLatestCommentText
     newComment should be("This is a test comment - Please ignore / delete as required.")
-
-    this
-
   }
 
   def thenICanPostANewReply() = {
@@ -52,25 +42,18 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     new CommentItem().getCommentReply()
 
     val newReply = CommentItem().getCommentReply()
-
     newReply should be("This is a test reply - Please ignore / delete as required.")
-
-    this
   }
 
   def thenICanReportAComment() = {
     logger.step("I can report a comment")
-
     new CommentItem().reportComment()
   }
 
   def thenICanViewUserCommentHistory() {
     logger.step("I can view a users profile comment history")
-
     val originatingAuthor = CommentItem().getCommentAuthor()
-
     val userHistory = CommentItem().viewUserHistory()
-
     val userProfileName: String = userHistory.getUserProfileName
 
     userProfileName should be(originatingAuthor)

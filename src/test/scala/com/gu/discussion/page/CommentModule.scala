@@ -23,8 +23,6 @@ case class CommentModule(implicit driver: WebDriver) {
 
   private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
 
-  private def newCommentDateStamp = driver.findElement(By.className("js-timestamp"))
-
   def showMoreFeaturedComments(): CommentModule = {
     showMoreFeaturedCommeLink.click()
     this
@@ -33,18 +31,11 @@ case class CommentModule(implicit driver: WebDriver) {
   def addNewComment(): CommentModule = {
     commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required.")
     this
-
   }
 
   def postNewComment(): CommentModule = {
     postYourCommentButton.click()
     this
-  }
-
-  def getNewCommentText: String = {
-    val newComment = driver.findElement(By.cssSelector(".js-new-comments .d-comment__body"))
-
-    newComment.getText
   }
 
   def cancelNewComment(): CommentModule = {
@@ -76,6 +67,5 @@ case class CommentModule(implicit driver: WebDriver) {
     showMoreRepliesButton.click()
     this
   }
-
 
 }

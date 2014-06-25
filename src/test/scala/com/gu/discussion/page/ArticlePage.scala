@@ -27,6 +27,8 @@ case class ArticlePage(implicit driver: WebDriver) {
       commentCountLabel.click()
     } else {
       System.err.println("There are no comments for this article yet!")
+
+      //Got to add a comment
     }
 
     this

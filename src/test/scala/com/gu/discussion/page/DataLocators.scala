@@ -5,14 +5,13 @@ import java.util.Calendar
 
 import org.openqa.selenium.By
 
-trait Locators {
+trait DataLocators {
 
   def byDataTypeStream(value: String) = By.cssSelector(s"[data-stream-type=$value]")
 
   def byDataLinkName(value: String) = By.cssSelector(s"[data-link-name=$value]")
 
   def byDataTypeContent(value: String) = By.cssSelector(s"[data-type-stream=$value]")
-
 
   def getTimeStamp() = {
     val today = Calendar.getInstance.getTime
