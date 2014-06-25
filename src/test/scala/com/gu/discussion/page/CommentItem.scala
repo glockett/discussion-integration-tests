@@ -50,11 +50,13 @@ case class CommentItem(implicit driver: WebDriver) {
    */
 
   def showCommentPost(): CommentItem = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__show-parent")))
     showCommentButton.click()
     this
   }
 
   def replyToComment(): CommentItem = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--reply")))
     replyToCommentButton.click()
     commentTextArea.sendKeys("This is a test reply - Please ignore / delete as required.")
     CommentItem()
@@ -71,16 +73,21 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def pickComment(): CommentItem = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--pick")))
     pickCommentButton.click()
     this
   }
 
   def showAllReplies(): CommentItem = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-show-more-replies")))
+
+    //TODO Cannot pick your own comment so need to choose another method and verify the comment has been picked
     showMoreRepliesButton.click()
     this
   }
 
   def reportComment(): CommentItem = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--report")))
     reportCommentButton.click()
     new Select(reportSelectControl).selectByVisibleText("Spam")
     reportTextArea.sendKeys("This is a test report")
@@ -103,10 +110,6 @@ case class CommentItem(implicit driver: WebDriver) {
     commentAuthorLink.getText()
   }
 
-  def getCommentReply() = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment--response p")))
-    newReply.getText()
-  }
 
   def recommendComment(): CommentItem = {
     recommendCommentButton.click()
@@ -123,6 +126,11 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def getLatestCommentText: String = {
     commentBody.getText
+  }
+
+  def getLatestCommentReply() = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment--response p")))
+    newReply.getText()
   }
 
 }

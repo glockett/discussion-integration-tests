@@ -1,6 +1,7 @@
 package com.gu.discussion.page
 
-import org.openqa.selenium.support.ui.Select
+import com.gu.automation.support.Wait
+import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
 import org.openqa.selenium.{By, WebDriver}
 
 case class CommentModule(implicit driver: WebDriver) {
@@ -29,6 +30,7 @@ case class CommentModule(implicit driver: WebDriver) {
   }
 
   def addNewComment(): CommentModule = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__body")))
     commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required.")
     this
   }

@@ -37,9 +37,18 @@ class CommentTests extends WebBaseTest {
        }.then {
          _.thenICanReportAComment()
          //Cannot easily test the endpoint as there is no API but we can use the moderation Tool if necessary
-
        }
      }
+
+    scenarioWeb("Pick a comment to become a Featured Comment") {
+      given {
+        CommentSteps().givenIAmSignedIn()
+      }.when {
+        _.whenIViewAllComments()
+      }.then {
+        _.thenICanPickAComment()
+      }
+    }
 
     scenarioWeb("View a users discussion posts") {
       given {

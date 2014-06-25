@@ -39,9 +39,9 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     new CommentModule().showAllComments()
     new CommentItem().replyToComment()
     new CommentItem().postReply()
-    new CommentItem().getCommentReply()
+    new CommentItem().getLatestCommentReply()
 
-    val newReply = CommentItem().getCommentReply()
+    val newReply = CommentItem().getLatestCommentReply()
     newReply should be("This is a test reply - Please ignore / delete as required.")
   }
 
@@ -59,19 +59,18 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     userProfileName should be(originatingAuthor)
 
     UserProfilePage().viewProfileReplies()
-    //UserProfilePage().viewProfileFeatured()
-    //UserProfilePage().viewProfileComments()
+    UserProfilePage().viewProfileFeatured()
   }
 
 
-  /*def thenICanViewAllComments() = {
-    logger.log("I can view all comments")
-    CommentModule().showAllComments()
+  def thenICanPickAComment() = {
+    logger.step("I can Pick a comment")
+    CommentItem().pickComment()
     this
-  }*/
+  }
 
   /*def thenICanSortCommentOrder() = {
-    logger.log("I can post a new reply")
+    logger.step("I can post a new reply")
     new CommentModule().sortCommentsByOrder("oldest")
     this
   }*/
