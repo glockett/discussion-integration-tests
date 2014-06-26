@@ -45,8 +45,9 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     new CommentModule().showAllComments()
     new CommentItem().replyToComment()
     new CommentItem().postReply()
+
     val newReply = CommentItem().getLatestCommentsLatestReply()
-    newReply should be("This is a test reply")
+    newReply should be("Test reply please ignore blah!!!!")
   }
 
   def thenICanReportAComment() = {
@@ -54,7 +55,7 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     new CommentItem().reportComment()
   }
 
-  def thenICanViewUserCommentHistory() {
+  def thenICanViewUserCommentHistory() = {
     logger.step("I can view a users profile comment history")
     val originatingAuthor = CommentItem().getCommentAuthor()
     val userHistory = CommentItem().viewUserHistory()
@@ -66,12 +67,17 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     UserProfilePage().viewProfileFeatured()
   }
 
-  def thenICanRecommendAComment() {
+  def thenICanRecommendAComment() = {
     logger.step("I can recommend a comment")
-    val recommendCommentCount = CommentItem().getRecommendCommentCount()
 
-    CommentItem().recommendComment()
-    //recommendCommentCount should be(recommendCommentCount++1)
+
+    val recommendCommentCount = CommentItem().recommendComment()
+
+    recommendCommentCount._1
+    recommendCommentCount._2
+
+    recommendCommentCount._2 should be >= recommendCommentCount._1
+
   }
 
   def thenICanPickAComment() = {
