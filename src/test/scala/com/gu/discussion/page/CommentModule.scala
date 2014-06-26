@@ -15,6 +15,8 @@ case class CommentModule(implicit driver: WebDriver) {
   private def postYourCommentButton = driver.findElement(By.className("d-comment-box__submit"))
   private def cancelButton = driver.findElement(By.className("d-comment-box__cancel"))
   private def sortOrderControl = new Select(driver.findElement(By.className("d-discussion__order-control")))
+
+
   private def previousControl = startComments.findElement(By.className(".d-discussion__pagination .pagination__item"))
   private def nextPageControl = startComments.findElement(By.cssSelector(".pagination__item pagination__item--prev .js-discussion-change-page"))
   private def lastPageControl = startComments.findElement(By.cssSelector(".d-discussion__pagination .pagination__item"))
