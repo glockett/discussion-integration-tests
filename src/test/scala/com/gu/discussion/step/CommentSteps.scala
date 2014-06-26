@@ -36,8 +36,9 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     new CommentModule().addNewComment()
     new CommentModule().postNewComment()
 
-    val newComment: String = CommentItem().getLatestCommentText
-    newComment should be("This is a test comment - Please ignore / delete as required.")
+    val newComment = CommentItem().getLatestCommentText()
+
+    newComment should be("This is a test comment --- ZZZZZZZZ")
   }
 
   def thenICanPostANewReply() = {
@@ -85,6 +86,9 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     CommentItem().pickComment()
     this
   }
+
+
+
 
   /*def thenICanSortCommentOrder() = {
     logger.step("I can post a new reply")

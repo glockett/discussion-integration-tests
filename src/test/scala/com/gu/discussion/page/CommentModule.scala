@@ -23,12 +23,20 @@ case class CommentModule(implicit driver: WebDriver) {
 
   def addNewComment(): CommentModule = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__body")))
-    commentTextArea.sendKeys("This is a test comment - Please ignore / delete as required.")
+    commentTextArea.sendKeys("This is a test comment --- ZZZZZZZZ")
     this
   }
 
   def postNewComment(): CommentModule = {
-    postYourCommentButton.click()
+      Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__submit")))
+      postYourCommentButton.click()
+
+      //Ugly hack to wait for URL to change
+      var retries = 10
+      while (!driver.getCurrentUrl().contains("#comment-") || retries < 0) {
+        Thread.sleep(500)
+        retries = retries - 1
+      }
     this
   }
 

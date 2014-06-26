@@ -115,17 +115,22 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def isDateStampPresent(): Boolean = {
     commentTimeStamp.isDisplayed()
+
   }
 
-  def getLatestCommentText: String = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__body")))
-    commentBody.getText
-  }
-
-  def getLatestCommentsLatestReply() = {
+  def getLatestCommentText() = {
     val newCommentURL = driver.getCurrentUrl()
     val newCommentID = newCommentURL.substring(newCommentURL.indexOf("#") + 1)
     driver.findElement(By.id(s"$newCommentID")).findElement(By.cssSelector(".d-comment__body p")).getText()
+  }
+
+
+
+
+  def getLatestCommentsLatestReply() = {
+    val newReplyURL = driver.getCurrentUrl()
+    val newReplyID = newReplyURL.substring(newReplyURL.indexOf("#") + 1)
+    driver.findElement(By.id(s"$newReplyID")).findElement(By.cssSelector(".d-comment__body p")).getText()
   }
 
   def goToLatestComment(): CommentItem =  {
@@ -135,3 +140,4 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
 }
+

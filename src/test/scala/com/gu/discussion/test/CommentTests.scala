@@ -9,7 +9,7 @@ class CommentTests extends WebBaseTest {
 
   feature("As a signed in registered user I can contribute to a discussion") {
 
-    /*scenarioWeb("Add a new top level comment to an article") {
+    scenarioWeb("Add a new top level comment to an article") {
       given {
         CommentSteps().givenIAmSignedIn()
       }.when {
@@ -17,9 +17,9 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanPostANewComment()
       }
-    }*/
+    }
 
-   /*scenarioWeb("Reply to a top level comment") {
+  /* scenarioWeb("Reply to a top level comment") {
       given {
         CommentSteps().givenIAmSignedIn()
       }.when {
@@ -27,8 +27,8 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanPostANewReply()
       }
-    }
-*/
+    }*/
+
     /*scenarioWeb("Report a comment") {
        given {
          CommentSteps().givenIAmSignedIn()
@@ -36,7 +36,7 @@ class CommentTests extends WebBaseTest {
          _.whenIViewAllComments()
        }.then {
          _.thenICanReportAComment()
-         //Cannot easily test the endpoint as there is no API but we can use the moderation Tool if necessary
+         //NOTE:  Cannot easily test the endpoint as there is no API but we could use the moderation Tool if necessary
        }
      }*/
 
@@ -60,7 +60,7 @@ class CommentTests extends WebBaseTest {
       }
     }*/
 
-    scenarioWeb("Recommend a User Comment") {
+    /*scenarioWeb("Recommend a User Comment") {
       given {
         CommentSteps().givenIAmGuestUser()
       }.when {
@@ -68,7 +68,7 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanRecommendAComment()
       }
-    }
+    }*/
 
   }
 }
