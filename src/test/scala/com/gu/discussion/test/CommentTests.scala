@@ -9,7 +9,7 @@ class CommentTests extends WebBaseTest {
 
   feature("As a signed in registered user I can contribute to a discussion") {
 
-    scenarioWeb("Add a new top level comment to an article") {
+    /*scenarioWeb("Add a new top level comment to an article") {
       given {
         CommentSteps().givenIAmSignedIn()
       }.when {
@@ -40,25 +40,15 @@ class CommentTests extends WebBaseTest {
        }
      }
 
-    /*scenarioWeb("Pick a comment to become a Featured Comment") {
-     given {
-       CommentSteps().givenIAmSignedIn()
-     }.when {
-       _.whenIViewAllComments()
-     }.then {
-       _.thenICanPickAComment()
-     }
-   }*/
-
-    scenarioWeb("Recommend a User Comment") {
-      given {
-        CommentSteps().givenIAmGuestUser()
-      }.when {
-        _.whenIViewAllComments()
-      }.then {
-        _.thenICanRecommendAComment()
-      }
-    }
+            /*scenarioWeb("Pick a comment to become a Featured Comment") {
+             given {
+               CommentSteps().givenIAmSignedIn()
+             }.when {
+               _.whenIViewAllComments()
+             }.then {
+               _.thenICanPickAComment()
+             }
+           }*/
 
     scenarioWeb("View a users discussion posts") {
       given {
@@ -69,6 +59,27 @@ class CommentTests extends WebBaseTest {
         _.thenICanViewUserCommentHistory()
       }
     }
+
+    scenarioWeb("Recommend a User Comment") {
+      given {
+        CommentSteps().givenIAmGuestUser()
+      }.when {
+        _.whenIViewAllComments()
+      }.then {
+        _.thenICanRecommendAComment()
+      }
+    }*/
+
+    scenarioWeb("navigate through comment pages") {
+      given {
+        CommentSteps().givenIAmGuestUser()
+      }.when {
+        _.whenIViewAllComments()
+      }.then {
+        _.thenICanNavigateCommentPages()
+      }
+    }
+
 
   }
 }

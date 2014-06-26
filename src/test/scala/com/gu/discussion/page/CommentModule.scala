@@ -6,15 +6,22 @@ import org.openqa.selenium.{By, WebDriver}
 
 case class CommentModule(implicit driver: WebDriver) {
 
+  private val startComments = driver.findElement(By.cssSelector(".discussion__comments__container" +
+    ".discussion-container .discussion__comments"))
+
   private def showMoreFeaturedCommeLink = driver.findElement(By.className("show-more__container--featured"))
   private def showAllCommentsButton = driver.findElement(By.className("d-discussion__show-all-comments"))
   private def commentTextArea = driver.findElement(By.className("d-comment-box__body"))
   private def postYourCommentButton = driver.findElement(By.className("d-comment-box__submit"))
   private def cancelButton = driver.findElement(By.className("d-comment-box__cancel"))
   private def sortOrderControl = new Select(driver.findElement(By.className("d-discussion__order-control")))
-  private def previousControl = driver.findElement(By.className("pagination__item--prev"))
-  private def nextControl = driver.findElement(By.className("pagination__item--next"))
+  private def previousControl = startComments.findElement(By.className(".d-discussion__pagination .pagination__item"))
+  private def nextPageControl = startComments.findElement(By.cssSelector(".pagination__item pagination__item--prev .js-discussion-change-page"))
+  private def lastPageControl = startComments.findElement(By.cssSelector(".d-discussion__pagination .pagination__item"))
+
+
   private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
+
 
   def showMoreFeaturedComments(): CommentModule = {
     showMoreFeaturedCommeLink.click()
@@ -55,8 +62,13 @@ case class CommentModule(implicit driver: WebDriver) {
     this
   }
 
-  def nextPage(): CommentModule = {
-    nextControl.click()
+
+
+
+
+  def gotoNextPage(): CommentModule = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.d-discussion__pagination .js-discussion-change-page")))
+      nextControl.click()
     this
   }
 
