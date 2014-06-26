@@ -27,8 +27,8 @@ case class CommentItem(implicit driver: WebDriver) {
   private def oldRecommendCommentCount = latestComment.findElement(By.cssSelector(".d-comment__recommend-count--old"))
   private def newRecommendCommentCount = latestComment.findElement(By.cssSelector(".d-comment__recommend-count--new"))
 
-    //TODO list of functions/methods
-    //As a Staff member choose a comment to be a Featured comment (Pick)
+    //TODO As a Staff member choose a comment to be a Featured comment (Pick)
+    // NOTE:  Cannot pick your own comment so need to choose another method and verify the comment has been picked
 
   def showCommentPost(): CommentItem = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__show-parent")))
@@ -69,8 +69,6 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def showAllReplies(): CommentItem = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-show-more-replies")))
-
-    //TODO Cannot pick your own comment so need to choose another method and verify the comment has been picked
     showMoreRepliesButton.click()
     this
   }
@@ -115,7 +113,6 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def isDateStampPresent(): Boolean = {
     commentTimeStamp.isDisplayed()
-
   }
 
   def getLatestCommentText() = {
@@ -123,9 +120,6 @@ case class CommentItem(implicit driver: WebDriver) {
     val newCommentID = newCommentURL.substring(newCommentURL.indexOf("#") + 1)
     driver.findElement(By.id(s"$newCommentID")).findElement(By.cssSelector(".d-comment__body p")).getText()
   }
-
-
-
 
   def getLatestCommentsLatestReply() = {
     val newReplyURL = driver.getCurrentUrl()

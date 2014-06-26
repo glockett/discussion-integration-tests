@@ -70,15 +70,12 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
 
   def thenICanRecommendAComment() = {
     logger.step("I can recommend a comment")
-
-
     val recommendCommentCount = CommentItem().recommendComment()
 
     recommendCommentCount._1
     recommendCommentCount._2
 
-    recommendCommentCount._2 should be >= recommendCommentCount._1
-
+    recommendCommentCount._2 should be > recommendCommentCount._1
   }
 
   def thenICanPickAComment() = {
@@ -86,9 +83,6 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     CommentItem().pickComment()
     this
   }
-
-
-
 
   /*def thenICanSortCommentOrder() = {
     logger.step("I can post a new reply")

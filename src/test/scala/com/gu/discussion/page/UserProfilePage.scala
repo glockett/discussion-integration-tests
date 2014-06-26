@@ -13,7 +13,6 @@ case class UserProfilePage(implicit driver: WebDriver) extends DataLocators {
 
   def getUserProfileName: String = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("user-profile__name")))
-
     val userProfileName = profileName.getText()
     userProfileName
   }

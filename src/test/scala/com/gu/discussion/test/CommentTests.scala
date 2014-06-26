@@ -19,7 +19,7 @@ class CommentTests extends WebBaseTest {
       }
     }
 
-  /* scenarioWeb("Reply to a top level comment") {
+   scenarioWeb("Reply to a top level comment") {
       given {
         CommentSteps().givenIAmSignedIn()
       }.when {
@@ -27,9 +27,9 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanPostANewReply()
       }
-    }*/
+    }
 
-    /*scenarioWeb("Report a comment") {
+    scenarioWeb("Report a comment") {
        given {
          CommentSteps().givenIAmSignedIn()
        }.when {
@@ -38,29 +38,19 @@ class CommentTests extends WebBaseTest {
          _.thenICanReportAComment()
          //NOTE:  Cannot easily test the endpoint as there is no API but we could use the moderation Tool if necessary
        }
-     }*/
+     }
 
     /*scenarioWeb("Pick a comment to become a Featured Comment") {
-      given {
-        CommentSteps().givenIAmSignedIn()
-      }.when {
-        _.whenIViewAllComments()
-      }.then {
-        _.thenICanPickAComment()
-      }
-    }*/
+     given {
+       CommentSteps().givenIAmSignedIn()
+     }.when {
+       _.whenIViewAllComments()
+     }.then {
+       _.thenICanPickAComment()
+     }
+   }*/
 
-    /*scenarioWeb("View a users discussion posts") {
-      given {
-        CommentSteps().givenIAmSignedIn()
-      }.when {
-        _.whenIViewAllComments()
-      }.then {
-        _.thenICanViewUserCommentHistory()
-      }
-    }*/
-
-    /*scenarioWeb("Recommend a User Comment") {
+    scenarioWeb("Recommend a User Comment") {
       given {
         CommentSteps().givenIAmGuestUser()
       }.when {
@@ -68,7 +58,17 @@ class CommentTests extends WebBaseTest {
       }.then {
         _.thenICanRecommendAComment()
       }
-    }*/
+    }
+
+    scenarioWeb("View a users discussion posts") {
+      given {
+        CommentSteps().givenIAmSignedIn()
+      }.when {
+        _.whenIViewAllComments()
+      }.then {
+        _.thenICanViewUserCommentHistory()
+      }
+    }
 
   }
 }
