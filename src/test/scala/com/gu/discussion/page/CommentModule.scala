@@ -7,27 +7,16 @@ import org.openqa.selenium.{By, WebDriver}
 case class CommentModule(implicit driver: WebDriver) {
 
   private val startComments = driver.findElement(By.cssSelector(".d-discussion .d-discussion__pagination .pagination"))
-
   private def showMoreFeaturedCommeLink = driver.findElement(By.className("show-more__container--featured"))
-
   private def showAllCommentsButton = driver.findElement(By.className("d-discussion__show-all-comments"))
-
   private def commentTextArea = driver.findElement(By.className("d-comment-box__body"))
-
   private def postYourCommentButton = driver.findElement(By.className("d-comment-box__submit"))
-
   private def cancelButton = driver.findElement(By.className("d-comment-box__cancel"))
-
   private def sortOrderControl = new Select(driver.findElement(By.className("d-discussion__order-control")))
-
   private def nextPageControl = startComments.findElement(By.cssSelector(".pagination__item--next .pagination__item-inner"))
-
   private def previousPageControl = startComments.findElement(By.cssSelector(".pagination__item--prev .pagination__item-inner"))
-
   private def firstPageControl = startComments.findElement(By.cssSelector(".pagination__item--first .pagination__item-inner"))
-
   private def lastPageControl = startComments.findElement(By.cssSelector(".pagination__item--last .pagination__item-inner"))
-
   private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
 
   def showAllReplies(): CommentModule = {
@@ -76,31 +65,35 @@ case class CommentModule(implicit driver: WebDriver) {
   }
 
   def gotoNextPage(): CommentModule = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".pagination .pagination__item--next .pagination__item-inner")))
     nextPageControl.click()
+    waitCommentsToLoad()
     println("Next Page")
     this
   }
 
   def gotoPreviousPage(): CommentModule = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".pagination .pagination__item--prev .pagination__item-inner")))
     previousPageControl.click()
+    waitCommentsToLoad()
     println("Previous Page")
     this
   }
 
   def gotofirstPage(): CommentModule = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".pagination .pagination__item--first .pagination__item-inner")))
     firstPageControl.click()
+    waitCommentsToLoad()
     println("First Page")
     this
   }
 
   def gotoLastPage(): CommentModule = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".pagination .pagination__item--last .pagination__item-inner")))
     lastPageControl.click()
+    waitCommentsToLoad()
     println("Last Page")
     this
+  }
+
+  def waitCommentsToLoad() = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".discussion__comments__container .preload-msg.d-discussion__loader.u-h")))
   }
 
 }
