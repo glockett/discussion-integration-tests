@@ -6,7 +6,7 @@ import org.openqa.selenium.{By, WebDriver}
 
 case class CommentModule(implicit driver: WebDriver) {
 
-  private val startComments = driver.findElement(By.cssSelector(".d-discussion .d-discussion__pagination"))
+  private val startComments = driver.findElement(By.cssSelector(".d-discussion .d-discussion__pagination .pagination"))
 
   private def showMoreFeaturedCommeLink = driver.findElement(By.className("show-more__container--featured"))
 
@@ -20,13 +20,13 @@ case class CommentModule(implicit driver: WebDriver) {
 
   private def sortOrderControl = new Select(driver.findElement(By.className("d-discussion__order-control")))
 
-  private def nextPageControl = startComments.findElement(By.cssSelector(".pagination .pagination__item--next .pagination__item-inner"))
+  private def nextPageControl = startComments.findElement(By.cssSelector(".pagination__item--next .pagination__item-inner"))
 
-  private def previousPageControl = driver.findElement(By.cssSelector(".pagination .pagination__item--prev .pagination__item-inner"))
+  private def previousPageControl = startComments.findElement(By.cssSelector(".pagination__item--prev .pagination__item-inner"))
 
-  private def firstPageControl = driver.findElement(By.cssSelector(".pagination .pagination__item--first .pagination__item-inner"))
+  private def firstPageControl = startComments.findElement(By.cssSelector(".pagination__item--first .pagination__item-inner"))
 
-  private def lastPageControl = startComments.findElement(By.cssSelector(".pagination .pagination__item--last .pagination__item-inner"))
+  private def lastPageControl = startComments.findElement(By.cssSelector(".pagination__item--last .pagination__item-inner"))
 
   private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
 
