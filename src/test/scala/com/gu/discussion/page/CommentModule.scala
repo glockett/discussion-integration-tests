@@ -22,14 +22,19 @@ case class CommentModule(implicit driver: WebDriver) {
 
   private def nextPageControl = startComments.findElement(By.cssSelector(".pagination .pagination__item--next .pagination__item-inner"))
 
-  private def previousPageControl = driver.findElement(By.cssSelector(".pagination .pagination__item--prev " +
-    ".pagination__item-inner"))
+  private def previousPageControl = driver.findElement(By.cssSelector(".pagination .pagination__item--prev .pagination__item-inner"))
 
   private def firstPageControl = driver.findElement(By.cssSelector(".pagination .pagination__item--first .pagination__item-inner"))
 
   private def lastPageControl = startComments.findElement(By.cssSelector(".pagination .pagination__item--last .pagination__item-inner"))
 
   private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
+
+  def showAllReplies(): CommentModule = {
+    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.d-discussion__pagination .js-discussion-change-page")))
+    showMoreRepliesButton.click()
+    this
+  }
 
   def showMoreFeaturedComments(): CommentModule = {
     showMoreFeaturedCommeLink.click()
@@ -95,12 +100,6 @@ case class CommentModule(implicit driver: WebDriver) {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".pagination .pagination__item--last .pagination__item-inner")))
     lastPageControl.click()
     println("Last Page")
-    this
-  }
-
-  def showAllReplies(): CommentModule = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.d-discussion__pagination .js-discussion-change-page")))
-    showMoreRepliesButton.click()
     this
   }
 

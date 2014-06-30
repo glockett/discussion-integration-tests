@@ -93,7 +93,6 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
     this
   }
 
-
   /*def thenICanSortCommentOrder() = {
     logger.step("I can post a new reply")
     new CommentModule().sortCommentsByOrder("oldest")
