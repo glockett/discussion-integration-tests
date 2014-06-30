@@ -6,8 +6,7 @@ import org.openqa.selenium.{By, WebDriver}
 
 case class CommentModule(implicit driver: WebDriver) {
 
-  private val startComments = driver.findElement(By.cssSelector(".discussion__comments__container" +
-    ".discussion-container .discussion__comments"))
+  private val startComments = driver.findElement(By.cssSelector(".d-discussion .d-discussion__pagination"))
 
   private def showMoreFeaturedCommeLink = driver.findElement(By.className("show-more__container--featured"))
   private def showAllCommentsButton = driver.findElement(By.className("d-discussion__show-all-comments"))
@@ -17,13 +16,15 @@ case class CommentModule(implicit driver: WebDriver) {
   private def sortOrderControl = new Select(driver.findElement(By.className("d-discussion__order-control")))
 
 
-  private def previousControl = startComments.findElement(By.className(".d-discussion__pagination .pagination__item"))
-  private def nextPageControl = startComments.findElement(By.cssSelector(".pagination__item pagination__item--prev .js-discussion-change-page"))
-  private def lastPageControl = startComments.findElement(By.cssSelector(".d-discussion__pagination .pagination__item"))
+  private def previousControl = startComments.findElement(By.cssSelector(".pagination .pagination__item--prev .pagination__item-inner"))
 
+  private def nextPageControl = startComments.findElement(By.cssSelector(".pagination .pagination__item--next .pagination__item-inner"))
+
+  private def firstPageControl = startComments.findElement(By.cssSelector(".pagination .pagination__item--first .pagination__item-inner"))
+
+  private def lastPageControl = startComments.findElement(By.cssSelector(".pagination .pagination__item--last .pagination__item-inner"))
 
   private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
-
 
   def showMoreFeaturedComments(): CommentModule = {
     showMoreFeaturedCommeLink.click()
@@ -64,13 +65,9 @@ case class CommentModule(implicit driver: WebDriver) {
     this
   }
 
-
-
-
-
   def gotoNextPage(): CommentModule = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.d-discussion__pagination .js-discussion-change-page")))
-      nextControl.click()
+      nextPageControl.click()
     this
   }
 
