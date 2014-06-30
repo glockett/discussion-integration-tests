@@ -87,10 +87,12 @@ case class CommentSteps(implicit driver: WebDriver) extends Matchers with Loggin
   def thenICanNavigateCommentPages() = {
     logger.step("I can traverse through Comment pages")
     new CommentModule().gotoNextPage()
-
-
+    new CommentModule().gotoLastPage()
+    new CommentModule().gotoPreviousPage()
+    new CommentModule().gotofirstPage()
     this
   }
+
 
   /*def thenICanSortCommentOrder() = {
     logger.step("I can post a new reply")
