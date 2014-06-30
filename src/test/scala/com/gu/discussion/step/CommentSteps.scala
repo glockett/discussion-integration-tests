@@ -5,7 +5,7 @@ import com.gu.discussion.page._
 import org.openqa.selenium.WebDriver
 import org.scalatest.Matchers
 
-case class CommentSteps(implicit driver: WebDriver) extends Matchers with LoggingIn with TestLogging {
+case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends Matchers with LoggingIn {
 
   def givenIAmSignedIn() = {
     logger.step("I am registered signed user and signed into NGW")

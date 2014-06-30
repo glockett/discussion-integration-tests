@@ -1,10 +1,10 @@
 package com.gu.discussion.page
 
-import com.gu.automation.support.Wait
+import com.gu.automation.support.{TestLogger, Wait}
 import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
 import org.openqa.selenium.{By, WebDriver}
 
-case class CommentModule(implicit driver: WebDriver) {
+case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
 
   private val startComments = driver.findElement(By.cssSelector(".d-discussion .d-discussion__pagination .pagination"))
   private def showMoreFeaturedCommeLink = driver.findElement(By.className("show-more__container--featured"))
@@ -67,28 +67,28 @@ case class CommentModule(implicit driver: WebDriver) {
   def gotoNextPage(): CommentModule = {
     nextPageControl.click()
     waitCommentsToLoad()
-    println("Next Page")
+    logger.info("Next Page")
     this
   }
 
   def gotoPreviousPage(): CommentModule = {
     previousPageControl.click()
     waitCommentsToLoad()
-    println("Previous Page")
+    logger.info("Previous Page")
     this
   }
 
   def gotofirstPage(): CommentModule = {
     firstPageControl.click()
     waitCommentsToLoad()
-    println("First Page")
+    logger.info("First Page")
     this
   }
 
   def gotoLastPage(): CommentModule = {
     lastPageControl.click()
     waitCommentsToLoad()
-    println("Last Page")
+    logger.info("Last Page")
     this
   }
 

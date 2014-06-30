@@ -1,10 +1,11 @@
 package com.gu.discussion.test
 
-import com.gu.automation.support.WebBaseTest
-import com.gu.discussion.step.{CommentSteps}
+import com.gu.automation.core.GivenWhenThen
+import com.gu.automation.support.WebDriverFeatureSpec
+import com.gu.discussion.step.CommentSteps
 import org.scalatest.Tag
 
-class CommentTests extends WebBaseTest {
+class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
 
   info("Set of Discussion tests to validate commenting on the NGW website")
 
@@ -71,7 +72,7 @@ class CommentTests extends WebBaseTest {
       }
     }
 
-    scenarioWeb("navigate through comment pages", Tag("WIP")) {
+    scenarioWeb("navigate through comment pages") {
       given {
         CommentSteps().givenIAmGuestUser()
       }.when {
