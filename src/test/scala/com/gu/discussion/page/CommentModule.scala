@@ -30,7 +30,7 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
   }
 
   def addNewComment(): CommentModule = {
-    commentTextArea.sendKeys("This is a test comment --- ZZZZZZZZ")
+    commentTextArea.sendKeys("This is a test comment - lorem ipsum dolor sit amet")
     this
   }
 

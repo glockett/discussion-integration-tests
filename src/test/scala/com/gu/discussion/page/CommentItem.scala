@@ -36,7 +36,7 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def replyToComment(): CommentItem = {
     replyToCommentButton.click()
-    commentTextArea.sendKeys("Test reply please ignore blah!!!!")
+    commentTextArea.sendKeys("Test reply please ignore - lorem ipsum dolor sit amet")
     CommentItem()
   }
 

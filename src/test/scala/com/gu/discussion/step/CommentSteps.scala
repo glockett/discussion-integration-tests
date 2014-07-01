@@ -38,7 +38,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
 
     val newComment = CommentItem().getLatestCommentText()
 
-    newComment should be("This is a test comment --- ZZZZZZZZ")
+    newComment should be("This is a test comment - lorem ipsum dolor sit amet")
   }
 
   def thenICanPostANewReply() = {
@@ -48,7 +48,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     new CommentItem().postReply()
 
     val newReply = CommentItem().getLatestCommentsLatestReply()
-    newReply should be("Test reply please ignore blah!!!!")
+    newReply should be("Test reply please ignore - lorem ipsum dolor sit amet")
   }
 
   def thenICanReportAComment() = {
