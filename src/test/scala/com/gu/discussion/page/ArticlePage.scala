@@ -11,8 +11,6 @@ case class ArticlePage(implicit driver: WebDriver) extends DataLocators {
 
   def goToStartOfComments(): ArticlePage = {
 
-    //TODO Istvan to have a look
-    // Wait().until(ExpectedConditions.visibilityOf(commentCountLabel))
     if (commentCountLabel.isDisplayed()) {
 
       commentCountLabel.click()
