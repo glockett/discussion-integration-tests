@@ -10,7 +10,6 @@ case class ArticlePage(implicit driver: WebDriver) extends DataLocators {
   private def showAllCommentsLink = driver.findElement(byDataLinkName("View all comments"))
 
   def goToStartOfComments(): ArticlePage = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.content__main-column.content__main-column--article div.js-comment-count a.js-show-discussion")))
 
     //TODO Istvan to have a look
     // Wait().until(ExpectedConditions.visibilityOf(commentCountLabel))

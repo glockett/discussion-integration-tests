@@ -20,7 +20,6 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
   private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
 
   def showAllReplies(): CommentModule = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.d-discussion__pagination .js-discussion-change-page")))
     showMoreRepliesButton.click()
     this
   }
@@ -31,13 +30,11 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
   }
 
   def addNewComment(): CommentModule = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__body")))
     commentTextArea.sendKeys("This is a test comment --- ZZZZZZZZ")
     this
   }
 
   def postNewComment(): CommentModule = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__submit")))
     postYourCommentButton.click()
 
     //Ugly hack to wait for URL to change

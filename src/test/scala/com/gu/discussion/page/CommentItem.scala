@@ -1,7 +1,6 @@
 package com.gu.discussion.page
 
-import com.gu.automation.support.Wait
-import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
+import org.openqa.selenium.support.ui.{Select}
 import org.openqa.selenium.{By, WebDriver}
 
 case class CommentItem(implicit driver: WebDriver) {
@@ -31,20 +30,18 @@ case class CommentItem(implicit driver: WebDriver) {
     // NOTE:  Cannot pick your own comment so need to choose another method and verify the comment has been picked
 
   def showCommentPost(): CommentItem = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__show-parent")))
     showCommentButton.click()
     this
   }
 
   def replyToComment(): CommentItem = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--reply")))
+    //Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--reply")))
     replyToCommentButton.click()
     commentTextArea.sendKeys("Test reply please ignore blah!!!!")
     CommentItem()
   }
 
   def postReply(): CommentItem = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment-box__submit")))
     postReplyButton.click()
 
     //Ugly hack to wait for URL to change
@@ -62,19 +59,16 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def pickComment(): CommentItem = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--pick")))
     pickCommentButton.click()
     this
   }
 
   def showAllReplies(): CommentItem = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-show-more-replies")))
     showMoreRepliesButton.click()
     this
   }
 
   def reportComment(): CommentItem = {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--report")))
     reportCommentButton.click()
     new Select(reportSelectControl).selectByVisibleText("Spam")
     reportTextArea.sendKeys("This is a test report")
@@ -98,7 +92,7 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def recommendComment(): (Int, Int) = {
 
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__recommend-button")))
+    //Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__recommend-button")))
     val oldRecommendCount = oldRecommendCommentCount.getText().toInt
 
     recommendCommentButton.click()
@@ -128,7 +122,7 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def goToLatestComment(): CommentItem =  {
-    Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment--response p")))
+    //Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment--response p")))
     commentBody.isDisplayed()
     this
   }
