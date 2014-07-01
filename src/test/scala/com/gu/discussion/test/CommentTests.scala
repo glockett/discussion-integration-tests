@@ -1,7 +1,7 @@
 package com.gu.discussion.test
 
 import com.gu.automation.core.GivenWhenThen
-import com.gu.automation.support.WebDriverFeatureSpec
+import com.gu.automation.support.{Config, WebDriverFeatureSpec}
 import com.gu.discussion.step.CommentSteps
 import org.scalatest.Tag
 

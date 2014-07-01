@@ -8,5 +8,5 @@ resolvers ++= Seq(
 
 libraryDependencies ++= Seq(
   "com.gu" % "web-automation-core-scala_2.10" % "1.19",
-  "com.gu" %% "teststash-logger" % "1.2"
+  "com.gu" %% "teststash-logger" % "1.3"
 )
