@@ -91,8 +91,6 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def recommendComment(): (Int, Int) = {
-
-    //Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__recommend-button")))
     val oldRecommendCount = oldRecommendCommentCount.getText().toInt
 
     recommendCommentButton.click()
@@ -122,7 +120,6 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def goToLatestComment(): CommentItem =  {
-    //Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".d-comment--response p")))
     commentBody.isDisplayed()
     this
   }
