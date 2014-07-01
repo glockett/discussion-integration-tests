@@ -72,7 +72,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
-    scenarioWeb("navigate through comment pages") {
+    scenarioWeb("navigate through comment pages", Tag("WIP")) {
       given {
         CommentSteps().givenIAmGuestUser()
       }.when {
