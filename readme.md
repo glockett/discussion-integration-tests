@@ -1,6 +1,4 @@
-#README
-
-##Issues and Assumptions
+Issues and Assumptions:
 
 1.  Test Registered user must have 'Staff Member" privileges in order to complete the automated tests. This is so we get around the limitation of only being able to add 1 comment per minute.
 
@@ -10,18 +8,18 @@
 
 4.  Add a local.conf file to the project root and paste the following, making changes where necessary:
 
-        "browser": " add the browser to be used for tests here ie. firefox "
-        "idApiRoot" : " add the Identity API root ie. https://idapi.code.dev-theguardian.com "
+        "browser": "firefox" - Replace with the browser of your choice to be used chrome, firefox or ie
+        "idApiRoot" : "https://idapi.code.dev-theguardian.com" - Replace with the Identity API root
         
-        "testBaseUrl": " add your testBaseURL here ie. http://m.code.dev-theguardian.com/ "
+        "testBaseUrl": "http://m.code.dev-theguardian.com/" - Replace with your testBaseURL here ]
         
-        "loginEmail" : " add your loginEmail here ie testuser@test.com "
-        "loginPassword" : " add loginPassword ie. PASSWORD here "
+        "loginEmail" : "testuser@test.com" - Replace with your test loginEmail here
+        "loginPassword" : "PASSWORD" - Replace with your test password here
         
         user: {
-          "testArticlePath": " add the path to the Test article here ie. /science/grrlscientist/2012/aug/07/3 "
+          "testArticlePath": "/science/grrlscientist/2012/aug/07/3" - Replace with your test article here
           
-##How to run individual tests
+How to run individual tests:
 Use this TAG to run individual tests - select:
     scenarioWeb("navigate through comment pages", Tag("WIP")) { ...
 
