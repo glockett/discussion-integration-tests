@@ -35,7 +35,6 @@ case class CommentItem(implicit driver: WebDriver) {
   }
 
   def replyToComment(): CommentItem = {
-    //Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("d-comment__action--reply")))
     replyToCommentButton.click()
     commentTextArea.sendKeys("Test reply please ignore blah!!!!")
     CommentItem()

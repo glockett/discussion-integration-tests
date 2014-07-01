@@ -1,7 +1,5 @@
 package com.gu.discussion.page
 
-import com.gu.automation.support.Wait
-import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.{By, WebDriver}
 
 case class UserProfilePage(implicit driver: WebDriver) extends DataLocators {
