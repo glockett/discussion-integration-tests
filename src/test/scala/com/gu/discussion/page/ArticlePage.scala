@@ -21,7 +21,6 @@ case class ArticlePage(implicit driver: WebDriver) extends DataLocators {
   }
 
   def showAllComments() = {
-    //Wait().until(ExpectedConditions.presenceOfElementLocated(byDataLinkName("View all comments")))
     showAllCommentsLink.click()
     this
   }

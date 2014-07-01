@@ -90,6 +90,7 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
   }
 
   def waitForCommentsToLoad() = {
+    //Need this wait for the page to reload/refresh which is actioned with javascript
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".discussion__comments__container .preload-msg.d-discussion__loader.u-h")))
   }
 
