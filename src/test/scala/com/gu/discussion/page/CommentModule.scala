@@ -63,33 +63,33 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
 
   def gotoNextPage(): CommentModule = {
     nextPageControl.click()
-    waitCommentsToLoad()
+    waitForCommentsToLoad()
     logger.info("Next Page")
     this
   }
 
   def gotoPreviousPage(): CommentModule = {
     previousPageControl.click()
-    waitCommentsToLoad()
+    waitForCommentsToLoad()
     logger.info("Previous Page")
     this
   }
 
   def gotofirstPage(): CommentModule = {
     firstPageControl.click()
-    waitCommentsToLoad()
+    waitForCommentsToLoad()
     logger.info("First Page")
     this
   }
 
   def gotoLastPage(): CommentModule = {
     lastPageControl.click()
-    waitCommentsToLoad()
+    waitForCommentsToLoad()
     logger.info("Last Page")
     this
   }
 
-  def waitCommentsToLoad() = {
+  def waitForCommentsToLoad() = {
     Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".discussion__comments__container .preload-msg.d-discussion__loader.u-h")))
   }
 
