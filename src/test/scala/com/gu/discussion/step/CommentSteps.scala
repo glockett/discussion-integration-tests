@@ -19,7 +19,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     CommentSteps()
   }
 
-  def givenIAmGuestUser(): CommentSteps = {
+  def givenIAmAGuestUser(): CommentSteps = {
     logger.step("I am Guest user on NGW")
     ArticlePage.goto
     this
@@ -31,7 +31,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     this
   }
 
-  def whenIViewAllComments() = {
+  def WhenIViewAllComments() = {
     logger.step("I view all comments for a given article")
     new ArticlePage().showAllComments()
     this

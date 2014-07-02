@@ -35,7 +35,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       given {
         CommentSteps().givenIAmSignedInAsStaff()
       }.when {
-        _.whenIViewAllComments()
+        _.WhenIViewAllComments()
       }.then {
         _.thenICanReportAComment()
         //NOTE:  Cannot easily test the endpoint as there is no API but we could use the moderation Tool if necessary
@@ -46,41 +46,50 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       given {
         CommentSteps().givenIAmSignedInAsStaff()
       }.when {
-        _.whenIViewAllComments()
+        _.WhenIViewAllComments()
       }.then {
         _.thenICanViewUserCommentHistory()
       }
     }
 
-    scenarioWeb("Recommend a User Comment") {
+    scenarioWeb("Recommend a users comment") {
       given {
-        CommentSteps().givenIAmGuestUser()
+        CommentSteps().givenIAmAGuestUser()
       }.when {
-        _.whenIViewAllComments()
+        _.WhenIViewAllComments()
       }.then {
         _.thenICanRecommendAComment()
       }
     }
 
-    scenarioWeb("navigate through comment pages") {
+    scenarioWeb("Navigate through comment pages", Tag("WIP")) {
       given {
-        CommentSteps().givenIAmGuestUser()
+        CommentSteps().givenIAmAGuestUser()
       }.when {
-        _.whenIViewAllComments()
+        _.WhenIViewAllComments()
       }.then {
         _.thenICanNavigateCommentPages()
       }
     }
 
-    scenarioWeb("Pick a comment to become a Featured Comment", Tag("WIP")) {
+    /*scenarioWeb("Pick a comment to become a Featured Comment", Tag("WIP")) {
       given {
         CommentSteps().givenIAmSignedInAsAMember()
       }.when {
-        _.whenIViewAllComments()
+        _.whenIViewAnArticleWithComments()
       }.then {
-        _.thenICanNavigateCommentPages()
+        _.thenICanPostANewComment()
       }
-    }
+
+      given {
+        CommentSteps().givenIAmSignedInAsStaff()
+      }.when {
+        _.WhenIViewAllComments()
+      }.then {
+        _.thenICanPickAComment()
+      }
+    }*/
+
 
   }
 }
