@@ -1,7 +1,7 @@
 package com.gu.discussion.test
 
 import com.gu.automation.core.GivenWhenThen
-import com.gu.automation.support.{Config, WebDriverFeatureSpec}
+import com.gu.automation.support.WebDriverFeatureSpec
 import com.gu.discussion.step.CommentSteps
 import org.scalatest.Tag
 
@@ -21,7 +21,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
-   scenarioWeb("Reply to a top level comment") {
+    scenarioWeb("Reply to a top level comment") {
       given {
         CommentSteps().givenIAmSignedIn()
       }.when {
@@ -32,25 +32,15 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
     }
 
     scenarioWeb("Report a comment") {
-       given {
-         CommentSteps().givenIAmSignedIn()
-       }.when {
-         _.whenIViewAllComments()
-       }.then {
-         _.thenICanReportAComment()
-         //NOTE:  Cannot easily test the endpoint as there is no API but we could use the moderation Tool if necessary
-       }
-     }
-
-            /*scenarioWeb("Pick a comment to become a Featured Comment") {
-             given {
-               CommentSteps().givenIAmSignedIn()
-             }.when {
-               _.whenIViewAllComments()
-             }.then {
-               _.thenICanPickAComment()
-             }
-           }*/
+      given {
+        CommentSteps().givenIAmSignedIn()
+      }.when {
+        _.whenIViewAllComments()
+      }.then {
+        _.thenICanReportAComment()
+        //NOTE:  Cannot easily test the endpoint as there is no API but we could use the moderation Tool if necessary
+      }
+    }
 
     scenarioWeb("View a users discussion posts") {
       given {
@@ -79,6 +69,16 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
         _.whenIViewAllComments()
       }.then {
         _.thenICanNavigateCommentPages()
+      }
+    }
+
+    scenarioWeb("Pick a comment to become a Featured Comment") {
+      given {
+        CommentSteps().givenIAmSignedIn()
+      }.when {
+        _.whenIViewAllComments()
+      }.then {
+        _.thenICanPickAComment()
       }
     }
 

@@ -12,7 +12,7 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
   private def commentTextArea = driver.findElement(By.className("d-comment-box__body"))
   private def postYourCommentButton = driver.findElement(By.className("d-comment-box__submit"))
   private def cancelButton = driver.findElement(By.className("d-comment-box__cancel"))
-  private def sortOrderControl = new Select(driver.findElement(By.className("d-discussion__order-control")))
+  private def sortOrderControl = driver.findElement(By.cssSelector(".discussion__comments > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > select:nth-child(1)"))
   private def nextPageControl = startComments.findElement(By.cssSelector(".pagination__item--next .pagination__item-inner"))
   private def previousPageControl = startComments.findElement(By.cssSelector(".pagination__item--prev .pagination__item-inner"))
   private def firstPageControl = startComments.findElement(By.cssSelector(".pagination__item--first .pagination__item-inner"))
@@ -26,6 +26,11 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
 
   def showMoreFeaturedComments(): CommentModule = {
     showMoreFeaturedCommeLink.click()
+    this
+  }
+
+  def sortOrderComments(): CommentModule = {
+    new Select(sortOrderControl).selectByVisibleText("oldest")
     this
   }
 
@@ -56,8 +61,9 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
     this
   }
 
-  def sortCommentsByOrder(sortOrder: String): CommentModule = {
-    sortOrderControl.selectByValue(sortOrder)
+  def sortCommentsByOrder(): CommentModule = {
+    new Select(sortOrderControl).selectByVisibleText("oldest")
+    logger.info("Sort ordered by Oldest")
     this
   }
 

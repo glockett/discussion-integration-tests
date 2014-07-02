@@ -15,7 +15,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
 
   def givenIAmGuestUser(): CommentSteps = {
     logger.step("I am Guest user on NGW")
-    driver.get(Config().getTestBaseUrl() + Config().getUserValue("testArticlePath"))
+    ArticlePage.goto
     this
   }
 
@@ -72,15 +72,16 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     logger.step("I can recommend a comment")
     val recommendCommentCount = CommentItem().recommendComment()
 
-    recommendCommentCount._1
-    recommendCommentCount._2
+    (recommendCommentCount._1, recommendCommentCount._2)
 
     recommendCommentCount._2 should be > recommendCommentCount._1
   }
 
   def thenICanPickAComment() = {
-    logger.step("I can Pick a comment")
-    CommentItem().pickComment()
+    logger.step("I can Pick a comment to Feature")
+
+    new CommentItem().pickComment()
+
     this
   }
 
@@ -90,13 +91,14 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     new CommentModule().gotoLastPage()
     new CommentModule().gotoPreviousPage()
     new CommentModule().gotofirstPage()
+    new CommentModule().sortCommentsByOrder()
     this
   }
 
-  /*def thenICanSortCommentOrder() = {
-    logger.step("I can post a new reply")
-    new CommentModule().sortCommentsByOrder("oldest")
+  def thenICanSortCommentOrder() = {
+    logger.step("I can sort comments ")
+    new CommentModule().sortCommentsByOrder()
     this
-  }*/
+  }
 
 }

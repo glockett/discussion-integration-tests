@@ -25,6 +25,9 @@ case class ArticlePage(implicit driver: WebDriver) extends DataLocators {
     this
   }
 
+
+
+
 }
 
 object ArticlePage {
