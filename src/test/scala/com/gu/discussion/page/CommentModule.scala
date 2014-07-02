@@ -63,35 +63,35 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
 
   def sortCommentsByOrder(): CommentModule = {
     new Select(sortOrderControl).selectByVisibleText("oldest")
-    logger.info("Sort ordered by Oldest")
+    logger.info("loading Sort order by Oldest")
     this
   }
 
   def gotoNextPage(): CommentModule = {
+    logger.info("loading Next page")
     nextPageControl.click()
     waitForCommentsToLoad()
-    logger.info("Next Page")
     this
   }
 
   def gotoPreviousPage(): CommentModule = {
+    logger.info("loading Previous page")
     previousPageControl.click()
     waitForCommentsToLoad()
-    logger.info("Previous Page")
     this
   }
 
   def gotofirstPage(): CommentModule = {
+    logger.info("loading First page")
     firstPageControl.click()
     waitForCommentsToLoad()
-    logger.info("First Page")
     this
   }
 
   def gotoLastPage(): CommentModule = {
+    logger.info("loading Last page")
     lastPageControl.click()
     waitForCommentsToLoad()
-    logger.info("Last Page")
     this
   }
 

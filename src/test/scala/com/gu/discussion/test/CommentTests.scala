@@ -72,16 +72,15 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
-    scenarioWeb("Pick a comment to become a Featured Comment", Tag("WIP")) {
+    scenarioWeb("Pick a comment to be Featured") {
       given {
         CommentSteps().iAmSignedInAsAMember()
       }.when {
         _.iCanPostANewComment()
         .iAmSignedInAsStaff()
       }.then {
-        _.iCanPickAComment()
+        _.iViewAllComments()
       }
-
     }
 
   }
