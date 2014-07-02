@@ -79,9 +79,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
 
   def thenICanPickAComment() = {
     logger.step("I can Pick a comment to Feature")
-
     new CommentItem().pickComment()
-
     this
   }
 
