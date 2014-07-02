@@ -9,7 +9,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
 
   def givenIAmSignedInAsAMember() = {
     logger.step("I am Staff user and signed into NGW")
-    logInToGUPage(ArticlePage.goto, "memberLogin")
+    logInToGUPage(ArticlePage.goto, Some("memberLogin"))
     CommentSteps()
   }
 
@@ -98,11 +98,5 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     new CommentModule().sortCommentsByOrder()
     this
   }
-
-  /*def thenICanSortCommentOrder() = {
-    logger.step("I can sort comments ")
-    new CommentModule().sortCommentsByOrder()
-    this
-  }*/
 
 }
