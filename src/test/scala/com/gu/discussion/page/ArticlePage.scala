@@ -1,13 +1,13 @@
 package com.gu.discussion.page
 
-import com.gu.automation.support.{Config, Wait}
-import org.openqa.selenium.support.ui.ExpectedConditions
+import com.gu.automation.support.Config
+import com.gu.discussion.support.ByExt
 import org.openqa.selenium.{By, WebDriver}
 
-case class ArticlePage(implicit driver: WebDriver) extends DataLocators {
+case class ArticlePage(implicit driver: WebDriver) {
 
   private def commentCountLabel = driver.findElement(By.cssSelector("div.content__main-column.content__main-column--article div.js-comment-count a.js-show-discussion"))
-  private def showAllCommentsLink = driver.findElement(byDataLinkName("View all comments"))
+  private def showAllCommentsLink = driver.findElement(ByExt.dataLinkName("View all comments"))
 
   def goToStartOfComments(): ArticlePage = {
 
@@ -24,9 +24,6 @@ case class ArticlePage(implicit driver: WebDriver) extends DataLocators {
     showAllCommentsLink.click()
     this
   }
-
-
-
 
 }
 

@@ -1,12 +1,14 @@
 package com.gu.discussion.page
 
+import com.gu.discussion.support.ByExt
 import org.openqa.selenium.{By, WebDriver}
 
-case class UserProfilePage(implicit driver: WebDriver) extends DataLocators {
 
-  private def commentsTab = driver.findElement(byDataTypeStream("discussions"))
-  private def repliesTab = driver.findElement(byDataTypeStream("replies"))
-  private def featuredTab = driver.findElement(byDataTypeStream("picks"))
+case class UserProfilePage(implicit driver: WebDriver) {
+
+  private def commentsTab = driver.findElement(ByExt.dataTypeStream("discussions"))
+  private def repliesTab = driver.findElement(ByExt.dataTypeStream("replies"))
+  private def featuredTab = driver.findElement(ByExt.dataTypeStream("picks"))
   private def profileName = driver.findElement(By.className("user-profile__name"))
 
   def getUserProfileName: String = {
