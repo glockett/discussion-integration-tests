@@ -14,13 +14,13 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
   }
 
   def iAmSignedInAsStaff() = {
-    logger.step("I am registered signed user and signed into NGW")
+    logger.step("I am Registered Member and signed into NGW")
     logInToGUPage(ArticlePage.goto)
     CommentSteps()
   }
 
   def iAmAGuestUser(): CommentSteps = {
-    logger.step("I am Guest user on NGW")
+    logger.step("I am Guest user to NGW")
     ArticlePage.goto
     this
   }
@@ -55,7 +55,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     new CommentItem().postReply()
 
     val newReply = CommentItem().getLatestCommentsLatestReply()
-    newReply should be("Test reply please ignore - lorem ipsum dolor sit amet"
+    newReply should be("Test reply please ignore - lorem ipsum dolor sit amet")
     this
   }
 
@@ -89,7 +89,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
   }
 
   def iCanPickAComment() = {
-    logger.step("I can Pick a comment to Feature")
+    logger.step("I can Pick a comment to be Featured")
     new CommentItem().pickComment()
     
     //assert if picked comment is now featured
@@ -98,7 +98,7 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
   }
 
   def iCanNavigateCommentPages() = {
-    logger.step("I can traverse through Comment pages")
+    logger.step("I can navigate through comments")
     new CommentModule().gotoNextPage()
     new CommentModule().gotoLastPage()
     new CommentModule().gotoPreviousPage()
