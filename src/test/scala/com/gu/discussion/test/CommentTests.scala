@@ -62,7 +62,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
-    scenarioWeb("Navigate through comment pages", Tag("WIP")) {
+    scenarioWeb("Navigate through comment pages") {
       given {
         CommentSteps().iAmAGuestUser()
       }.when {
@@ -72,13 +72,14 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
-    scenarioWeb("Pick a comment to be Featured") {
+    scenarioWeb("Pick a comment to be Featured", Tag("WIP")) {
       given {
         CommentSteps().iAmSignedInAsAMember()
       }.when {
         _.iCanPostANewComment()
         .iAmSignedInAsStaff()
       }.then {
+        //TODO change to a method to pick a comment here
         _.iViewAllComments()
       }
     }
