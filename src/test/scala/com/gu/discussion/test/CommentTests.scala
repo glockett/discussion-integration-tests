@@ -13,82 +13,76 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
 
     scenarioWeb("Add a new top level comment to an article") {
       given {
-        CommentSteps().givenIAmSignedInAsStaff()
+        CommentSteps().iAmSignedInAsStaff()
       }.when {
-        _.whenIViewAnArticleWithComments()
+        _.iViewAnArticleWithComments()
       }.then {
-        _.thenICanPostANewComment()
+        _.iCanPostANewComment()
       }
     }
 
     scenarioWeb("Reply to a top level comment") {
       given {
-        CommentSteps().givenIAmSignedInAsStaff()
+        CommentSteps().iAmSignedInAsStaff()
       }.when {
-        _.whenIViewAnArticleWithComments()
+        _.iViewAnArticleWithComments()
       }.then {
-        _.thenICanPostANewReply()
+        _.iCanPostANewReply()
       }
     }
 
     scenarioWeb("Report a comment") {
       given {
-        CommentSteps().givenIAmSignedInAsStaff()
+        CommentSteps().iAmSignedInAsStaff()
       }.when {
-        _.WhenIViewAllComments()
+        _.iViewAllComments()
       }.then {
-        _.thenICanReportAComment()
+        _.iCanReportAComment()
         //NOTE:  Cannot easily test the endpoint as there is no API but we could use the moderation Tool if necessary
       }
     }
 
     scenarioWeb("View a users discussion posts") {
       given {
-        CommentSteps().givenIAmSignedInAsStaff()
+        CommentSteps().iAmSignedInAsStaff()
       }.when {
-        _.WhenIViewAllComments()
+        _.iViewAllComments()
       }.then {
-        _.thenICanViewUserCommentHistory()
+        _.iCanViewUserCommentHistory()
       }
     }
 
     scenarioWeb("Recommend a users comment") {
       given {
-        CommentSteps().givenIAmAGuestUser()
+        CommentSteps().iAmAGuestUser()
       }.when {
-        _.WhenIViewAllComments()
+        _.iViewAllComments()
       }.then {
-        _.thenICanRecommendAComment()
+        _.iCanRecommendAComment()
       }
     }
 
     scenarioWeb("Navigate through comment pages", Tag("WIP")) {
       given {
-        CommentSteps().givenIAmAGuestUser()
+        CommentSteps().iAmAGuestUser()
       }.when {
-        _.WhenIViewAllComments()
+        _.iViewAllComments()
       }.then {
-        _.thenICanNavigateCommentPages()
+        _.iCanNavigateCommentPages()
       }
     }
 
-    /*scenarioWeb("Pick a comment to become a Featured Comment", Tag("WIP")) {
+    scenarioWeb("Pick a comment to become a Featured Comment", Tag("WIP")) {
       given {
-        CommentSteps().givenIAmSignedInAsAMember()
+        CommentSteps().iAmSignedInAsAMember()
       }.when {
-        _.whenIViewAnArticleWithComments()
+        _.iCanPostANewComment()
+        .iAmSignedInAsStaff()
       }.then {
-        _.thenICanPostANewComment()
+        _.iCanPickAComment()
       }
 
-      given {
-        CommentSteps().givenIAmSignedInAsStaff()
-      }.when {
-        _.WhenIViewAllComments()
-      }.then {
-        _.thenICanPickAComment()
-      }
-    }*/
+    }
 
   }
 }
