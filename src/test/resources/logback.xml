@@ -8,6 +8,6 @@
     </appender>
     <root level="info">
         <appender-ref ref="CONSOLE"/>
-        <!--<appender-ref ref="TSTASH"/>-->
+        <appender-ref ref="TSTASH"/>
     </root>
 </configuration>

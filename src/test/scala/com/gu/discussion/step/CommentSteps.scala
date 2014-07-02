@@ -7,7 +7,13 @@ import org.scalatest.Matchers
 
 case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends Matchers with LoggingIn {
 
-  def givenIAmSignedIn() = {
+  def givenIAmSignedInAsAMember() = {
+    logger.step("I am Staff user and signed into NGW")
+    logInToGUPage(ArticlePage.goto, "memberLogin")
+    CommentSteps()
+  }
+
+  def givenIAmSignedInAsStaff() = {
     logger.step("I am registered signed user and signed into NGW")
     logInToGUPage(ArticlePage.goto)
     CommentSteps()

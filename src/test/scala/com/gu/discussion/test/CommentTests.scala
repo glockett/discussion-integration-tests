@@ -13,7 +13,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
 
     scenarioWeb("Add a new top level comment to an article") {
       given {
-        CommentSteps().givenIAmSignedIn()
+        CommentSteps().givenIAmSignedInAsStaff()
       }.when {
         _.whenIViewAnArticleWithComments()
       }.then {
@@ -23,7 +23,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
 
     scenarioWeb("Reply to a top level comment") {
       given {
-        CommentSteps().givenIAmSignedIn()
+        CommentSteps().givenIAmSignedInAsStaff()
       }.when {
         _.whenIViewAnArticleWithComments()
       }.then {
@@ -33,7 +33,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
 
     scenarioWeb("Report a comment") {
       given {
-        CommentSteps().givenIAmSignedIn()
+        CommentSteps().givenIAmSignedInAsStaff()
       }.when {
         _.whenIViewAllComments()
       }.then {
@@ -44,7 +44,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
 
     scenarioWeb("View a users discussion posts") {
       given {
-        CommentSteps().givenIAmSignedIn()
+        CommentSteps().givenIAmSignedInAsStaff()
       }.when {
         _.whenIViewAllComments()
       }.then {
@@ -62,7 +62,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
-    scenarioWeb("navigate through comment pages", Tag("WIP")) {
+    scenarioWeb("navigate through comment pages") {
       given {
         CommentSteps().givenIAmGuestUser()
       }.when {
@@ -72,15 +72,15 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
-    /*scenarioWeb("Pick a comment to become a Featured Comment") {
+    scenarioWeb("Pick a comment to become a Featured Comment", Tag("WIP")) {
       given {
-        CommentSteps().givenIAmSignedIn()
+        CommentSteps().givenIAmSignedInAsAMember()
       }.when {
         _.whenIViewAllComments()
       }.then {
-        _.thenICanPickAComment()
+        _.thenICanNavigateCommentPages()
       }
-    }*/
+    }
 
   }
 }
