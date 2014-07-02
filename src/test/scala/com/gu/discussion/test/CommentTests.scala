@@ -90,6 +90,5 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }*/
 
-
   }
 }
