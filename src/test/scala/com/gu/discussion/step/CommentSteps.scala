@@ -95,10 +95,10 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
     this
   }
 
-  def thenICanSortCommentOrder() = {
+  /*def thenICanSortCommentOrder() = {
     logger.step("I can sort comments ")
     new CommentModule().sortCommentsByOrder()
     this
-  }
+  }*/
 
 }
