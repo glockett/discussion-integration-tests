@@ -50,8 +50,6 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
       Thread.sleep(500)
       retries = retries - 1
     }
-
-
     this
   }
 

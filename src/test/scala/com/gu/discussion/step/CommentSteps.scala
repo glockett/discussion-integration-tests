@@ -73,26 +73,26 @@ case class CommentSteps(implicit driver: WebDriver, logger: TestLogger) extends 
 
     userProfileName should be(originatingAuthor)
 
+    viewUserCommentReplies()
+    viewUserFeaturedComments()
+    this
+  }
+
+  def viewUserCommentReplies() = {
     UserProfilePage().viewProfileReplies()
+    this
+  }
+
+  def viewUserFeaturedComments() = {
     UserProfilePage().viewProfileFeatured()
     this
   }
 
   def iCanSearchUserComments() = {
-    logger.step("I can view a users profile comment history")
-    val originatingAuthor = CommentItem().getCommentAuthor()
-    val userHistory = CommentItem().viewUserHistory()
-    val userProfileName: String = userHistory.getUserProfileName
-
-    userProfileName should be(originatingAuthor)
-
-    //TODO search for text in posts
-
+    logger.step("I can search a users comment history")
+    viewUserFeaturedComments()
     this
   }
-
-
-
 
   def iCanRecommendAComment() = {
     logger.step("I can recommend a comment")

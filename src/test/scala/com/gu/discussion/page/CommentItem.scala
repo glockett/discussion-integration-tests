@@ -28,18 +28,18 @@ case class CommentItem(implicit driver: WebDriver) {
 
     //TODO As a Staff member choose a comment to be a Featured comment (Pick)
 
-  def showCommentPost() = {
+  def showCommentPost(): CommentItem = {
     showCommentButton.click()
     this
   }
 
-  def replyToComment()= {
+  def replyToComment(): CommentItem = {
     replyToCommentButton.click()
     commentTextArea.sendKeys("Test reply please ignore - lorem ipsum dolor sit amet")
     CommentItem()
   }
 
-  def postReply() = {
+  def postReply(): CommentItem = {
     postReplyButton.click()
 
     //Ugly hack to wait for URL to change
@@ -51,22 +51,22 @@ case class CommentItem(implicit driver: WebDriver) {
     this
   }
 
-  def cancelReply() = {
+  def cancelReply(): CommentItem = {
     cancelReplyButton.click()
     this
   }
 
-  def pickComment() = {
+  def pickComment(): CommentItem = {
     pickCommentButton.click()
     this
   }
 
-  def showAllReplies() = {
+  def showAllReplies(): CommentItem = {
     showMoreRepliesButton.click()
     this
   }
 
-  def reportComment() = {
+  def reportComment(): CommentItem = {
     reportCommentButton.click()
     new Select(reportSelectControl).selectByVisibleText("Spam")
     reportTextArea.sendKeys("This is a test report")
@@ -77,7 +77,6 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def viewUserProfile() = {
     commentAuthorAvatar.click()
-    this
   }
 
   def viewUserHistory() = {
@@ -87,7 +86,6 @@ case class CommentItem(implicit driver: WebDriver) {
 
   def getCommentAuthor() = {
     commentAuthorLink.getText()
-    this
   }
 
   def recommendComment(): (Int, Int) = {
@@ -111,17 +109,15 @@ case class CommentItem(implicit driver: WebDriver) {
     val newCommentURL = driver.getCurrentUrl()
     val newCommentID = newCommentURL.substring(newCommentURL.indexOf("#") + 1)
     driver.findElement(By.id(s"$newCommentID")).findElement(By.cssSelector(".d-comment__body p")).getText()
-    this
   }
 
   def getLatestCommentsLatestReply() = {
     val newReplyURL = driver.getCurrentUrl()
     val newReplyID = newReplyURL.substring(newReplyURL.indexOf("#") + 1)
     driver.findElement(By.id(s"$newReplyID")).findElement(By.cssSelector(".d-comment__body p")).getText()
-    this
   }
 
-  def goToLatestComment() =  {
+  def goToLatestComment(): CommentItem =  {
     commentBody.isDisplayed()
     this
   }
