@@ -52,6 +52,17 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
+    /*scenarioWeb("Search a users discussion posts") {
+      given {
+        CommentSteps().iAmAGuestUser()
+      }.when {
+        _.iViewAllComments()
+      }.then {
+        _.iCanSearchUserComments()
+      }
+    }
+*/
+
     scenarioWeb("Recommend a users comment") {
       given {
         CommentSteps().iAmAGuestUser()

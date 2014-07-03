@@ -19,6 +19,8 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
   private def lastPageControl = startComments.findElement(By.cssSelector(".pagination__item--last .pagination__item-inner"))
   private def showMoreRepliesButton = driver.findElement(By.className("d-show-more-replies"))
 
+  private def commentID = driver.findElement(By id ("d-comment-box__body"))
+
   def showAllReplies(): CommentModule = {
     showMoreRepliesButton.click()
     this
@@ -48,7 +50,7 @@ case class CommentModule(implicit driver: WebDriver, logger: TestLogger) {
       Thread.sleep(500)
       retries = retries - 1
     }
-    //TODO Store the commentID for the individual post
+
 
     this
   }
