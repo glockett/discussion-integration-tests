@@ -42,7 +42,7 @@ class CommentTests extends WebDriverFeatureSpec with GivenWhenThen {
       }
     }
 
-    scenarioWeb("View a users discussion posts") {
+    scenarioWeb("View a users discussion posts", Tag("WIP")) {
       given {
         CommentSteps().iAmSignedInAsStaff()
       }.when {

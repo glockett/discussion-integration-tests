@@ -7,6 +7,7 @@ resolvers ++= Seq(
   "Typesafe Releases" at "http://repo.typesafe.com/typesafe/releases/")
 
 libraryDependencies ++= Seq(
-  "com.gu" % "web-automation-core-scala_2.10" % "1.22",
-  "com.gu" %% "teststash-logger" % "1.4"
+  "com.gu" %% "scala-automation" % "1.0",
+  "com.gu" %% "scala-automation-web-signin" % "1.0",
+  "com.gu" %% "scala-automation-tstash-logger" % "1.0"
 )

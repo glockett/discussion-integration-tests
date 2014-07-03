@@ -41,12 +41,12 @@ case class UserProfilePage(implicit driver: WebDriver) {
 
   def waitForUserHistoryToLoad() = {
     //Need this wait for the page to reload/refresh which is actioned with javascript
-
-    //Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("disc-profile__user-info")))
+    //TODO wait for elements to appear
+    //Wait().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("activity-item__title")))
 
     /*val des =  driver.findElement(By.className("disc-profile__user-info"))
 
-    if(des.exists ){
+    if(des.exists){
       Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("disc-profile__user-info")))
     }else {
       Wait().until(ExpectedConditions.presenceOfElementLocated(By.className("activity-stream__empty")))
